@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="oIM-JW-F7C">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -126,7 +126,7 @@
         <!--FutureVC-->
         <scene sceneID="kwO-jG-8bd">
             <objects>
-                <viewController id="I9K-no-nYi" customClass="FutureVC" customModule="GameOnMockUp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FutureVC" id="I9K-no-nYi" customClass="FutureVC" customModule="GameOnMockUp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0v1-xf-LVD"/>
                         <viewControllerLayoutGuide type="bottom" id="bhP-5i-HnQ"/>
@@ -795,14 +795,14 @@
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="ageField" destination="enH-TJ-6Of" id="TF1-cE-uR5"/>
-                        <outlet property="confirmPasswordField" destination="4Xc-2J-mvo" id="tYK-cd-buR"/>
+                        <outlet property="ageField" destination="ATm-2n-LIH" id="GAR-nD-qIy"/>
+                        <outlet property="confirmPasswordField" destination="LPC-Zw-2IX" id="TKL-rK-iFG"/>
                         <outlet property="emailField" destination="rhB-it-PPI" id="v3z-xm-orj"/>
                         <outlet property="firstNameField" destination="Brw-hE-XCj" id="8Y9-MA-9sz"/>
-                        <outlet property="genderField" destination="Ul0-DI-I8q" id="TSg-wv-ERn"/>
+                        <outlet property="genderField" destination="GX3-Vb-rRx" id="jRz-1N-NcI"/>
                         <outlet property="lastNameField" destination="4QO-1B-C3S" id="gaA-xM-EF6"/>
-                        <outlet property="passwordField" destination="rhB-it-PPI" id="57y-Bc-dHW"/>
-                        <outlet property="zipCodeField" destination="LPC-Zw-2IX" id="ZuI-Dv-yeR"/>
+                        <outlet property="passwordField" destination="4Xc-2J-mvo" id="RIN-yQ-WNv"/>
+                        <outlet property="zipCodeField" destination="enH-TJ-6Of" id="wDL-8I-HOy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tXi-Oh-tCk" userLabel="First Responder" sceneMemberID="firstResponder"/>

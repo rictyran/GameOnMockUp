@@ -181,8 +181,8 @@
 			children = (
 				5AD066C61AA00B6A00876FA3 /* LoginVC.swift */,
 				5AD41A301AA6381B00ACFA78 /* RegistrationVC.swift */,
-				5AD41A341AA63A8200ACFA78 /* ChooserVC.swift */,
 				5AD41A361AA63ADF00ACFA78 /* FutureVC.swift */,
+				5AD41A341AA63A8200ACFA78 /* ChooserVC.swift */,
 				5AD41A381AA63B1B00ACFA78 /* LocationPickerVC.swift */,
 				5AD41A3A1AA63BAD00ACFA78 /* PlayerPickerVC.swift */,
 				5AD41A3C1AA63BD900ACFA78 /* WeatherVC.swift */,
