@@ -19,7 +19,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
     
-        Parse.setApplicationId("bcVknfGq1bDA7N49lStTu8D1GYh2KuhQp7GS3L8s", clientKey: "DvLRccnvpcCb44si4B66bWETsNC1oTruONDWtAzs")
+//        Parse.setApplicationId("bcVknfGq1bDA7N49lStTu8D1GYh2KuhQp7GS3L8s", clientKey: "DvLRccnvpcCb44si4B66bWETsNC1oTruONDWtAzs")
+        
+        
+        Parse.setApplicationId("WLCT1paiJCd6ZBkskps1bWOnyGUKf8jC2AFedlBk",
+            clientKey:"z701D8h7JrTIjFDOOowTx34bDINlK0aCcagz1MeX")
+        
         
         // Register for Push Notitications
         
@@ -31,6 +36,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         application.registerUserNotificationSettings(settings)
         application.registerForRemoteNotifications()
+        
+//        
+//        var mainSB = UIStoryboard(name: "Main", bundle: nil)
+//        
+//        var loginVC = mainSB.instantiateInitialViewController() as LoginVC
+//        
+//        window?.rootViewController = loginVC
+//        
         
         return true
     

@@ -9,6 +9,21 @@
 import UIKit
 
 class FutureVC: UIViewController {
+    
+    
+    
+    @IBAction func searchMapButton(sender: AnyObject) {
+        
+        var mapSB = UIStoryboard(name: "Map", bundle: nil)
+        var locVC = mapSB.instantiateInitialViewController() as LocationPickerVC
+        
+        presentViewController(locVC, animated: true, completion: nil)
+        
+        
+    }
+    
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()

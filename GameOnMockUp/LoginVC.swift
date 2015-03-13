@@ -37,6 +37,9 @@ class LoginVC: UIViewController {
         }
     }
     
+    
+    var currentUser = PFUser.currentUser()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

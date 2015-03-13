@@ -18,7 +18,6 @@
 		5AD41A311AA6381B00ACFA78 /* RegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD41A301AA6381B00ACFA78 /* RegistrationVC.swift */; };
 		5AD41A351AA63A8200ACFA78 /* ChooserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD41A341AA63A8200ACFA78 /* ChooserVC.swift */; };
 		5AD41A371AA63ADF00ACFA78 /* FutureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD41A361AA63ADF00ACFA78 /* FutureVC.swift */; };
-		5AD41A391AA63B1B00ACFA78 /* LocationPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD41A381AA63B1B00ACFA78 /* LocationPickerVC.swift */; };
 		5AD41A3B1AA63BAD00ACFA78 /* PlayerPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD41A3A1AA63BAD00ACFA78 /* PlayerPickerVC.swift */; };
 		5AD41A3D1AA63BD900ACFA78 /* WeatherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD41A3C1AA63BD900ACFA78 /* WeatherVC.swift */; };
 		5AD41A3F1AA63BFF00ACFA78 /* FeedbackVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD41A3E1AA63BFF00ACFA78 /* FeedbackVC.swift */; };
@@ -36,6 +35,13 @@
 		5AD41A581AA63F5C00ACFA78 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD41A571AA63F5C00ACFA78 /* libz.dylib */; };
 		5AD41A5A1AA63F6200ACFA78 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD41A591AA63F6200ACFA78 /* libsqlite3.dylib */; };
 		5ADB4E751AAF59FF00A44C91 /* PreferencesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADB4E741AAF59FF00A44C91 /* PreferencesVC.swift */; };
+		70FDE4FA1AB0D23D002CEAE5 /* FeedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FDE4F81AB0D23D002CEAE5 /* FeedData.swift */; };
+		70FDE4FB1AB0D23D002CEAE5 /* FourSquareRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FDE4F91AB0D23D002CEAE5 /* FourSquareRequest.swift */; };
+		70FDE4FD1AB0D272002CEAE5 /* LocationPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FDE4FC1AB0D272002CEAE5 /* LocationPickerVC.swift */; };
+		70FDE5021AB0E40E002CEAE5 /* MatchProfileTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FDE5011AB0E40E002CEAE5 /* MatchProfileTVC.swift */; };
+		70FDE5041AB0E46F002CEAE5 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FDE5031AB0E46F002CEAE5 /* FeedCell.swift */; };
+		70FDE5081AB103FB002CEAE5 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70FDE5071AB103FB002CEAE5 /* Map.storyboard */; };
+		70FDE50B1AB119ED002CEAE5 /* ArrowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FDE50A1AB119ED002CEAE5 /* ArrowButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +70,6 @@
 		5AD41A301AA6381B00ACFA78 /* RegistrationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationVC.swift; sourceTree = "<group>"; };
 		5AD41A341AA63A8200ACFA78 /* ChooserVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooserVC.swift; sourceTree = "<group>"; };
 		5AD41A361AA63ADF00ACFA78 /* FutureVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FutureVC.swift; sourceTree = "<group>"; };
-		5AD41A381AA63B1B00ACFA78 /* LocationPickerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationPickerVC.swift; sourceTree = "<group>"; };
 		5AD41A3A1AA63BAD00ACFA78 /* PlayerPickerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerPickerVC.swift; sourceTree = "<group>"; };
 		5AD41A3C1AA63BD900ACFA78 /* WeatherVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherVC.swift; sourceTree = "<group>"; };
 		5AD41A3E1AA63BFF00ACFA78 /* FeedbackVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackVC.swift; sourceTree = "<group>"; };
@@ -83,6 +88,13 @@
 		5AD41A591AA63F6200ACFA78 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		5AD41A5B1AA63FAE00ACFA78 /* GameOnMockUp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GameOnMockUp-Bridging-Header.h"; sourceTree = "<group>"; };
 		5ADB4E741AAF59FF00A44C91 /* PreferencesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesVC.swift; sourceTree = "<group>"; };
+		70FDE4F81AB0D23D002CEAE5 /* FeedData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedData.swift; sourceTree = "<group>"; };
+		70FDE4F91AB0D23D002CEAE5 /* FourSquareRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourSquareRequest.swift; sourceTree = "<group>"; };
+		70FDE4FC1AB0D272002CEAE5 /* LocationPickerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationPickerVC.swift; sourceTree = "<group>"; };
+		70FDE5011AB0E40E002CEAE5 /* MatchProfileTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchProfileTVC.swift; sourceTree = "<group>"; };
+		70FDE5031AB0E46F002CEAE5 /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		70FDE5071AB103FB002CEAE5 /* Map.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
+		70FDE50A1AB119ED002CEAE5 /* ArrowButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrowButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +150,8 @@
 		5AD066C11AA00B6A00876FA3 /* GameOnMockUp */ = {
 			isa = PBXGroup;
 			children = (
+				70FDE5091AB10412002CEAE5 /* MapProfile */,
+				70FDE4F71AB0D220002CEAE5 /* Models */,
 				5AACD5781AA8EAED008E2F6B /* PrettyButtons.swift */,
 				5AD066C81AA00B6A00876FA3 /* Main.storyboard */,
 				5AD41A321AA6385E00ACFA78 /* View Controllers */,
@@ -183,7 +197,6 @@
 				5AD41A301AA6381B00ACFA78 /* RegistrationVC.swift */,
 				5AD41A341AA63A8200ACFA78 /* ChooserVC.swift */,
 				5AD41A361AA63ADF00ACFA78 /* FutureVC.swift */,
-				5AD41A381AA63B1B00ACFA78 /* LocationPickerVC.swift */,
 				5AD41A3A1AA63BAD00ACFA78 /* PlayerPickerVC.swift */,
 				5AD41A3C1AA63BD900ACFA78 /* WeatherVC.swift */,
 				5AD41A3E1AA63BFF00ACFA78 /* FeedbackVC.swift */,
@@ -219,6 +232,27 @@
 			);
 			name = Frameworks;
 			path = GameOnMockUp;
+			sourceTree = "<group>";
+		};
+		70FDE4F71AB0D220002CEAE5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				70FDE4F81AB0D23D002CEAE5 /* FeedData.swift */,
+				70FDE4F91AB0D23D002CEAE5 /* FourSquareRequest.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		70FDE5091AB10412002CEAE5 /* MapProfile */ = {
+			isa = PBXGroup;
+			children = (
+				70FDE50A1AB119ED002CEAE5 /* ArrowButton.swift */,
+				70FDE4FC1AB0D272002CEAE5 /* LocationPickerVC.swift */,
+				70FDE5031AB0E46F002CEAE5 /* FeedCell.swift */,
+				70FDE5011AB0E40E002CEAE5 /* MatchProfileTVC.swift */,
+				70FDE5071AB103FB002CEAE5 /* Map.storyboard */,
+			);
+			name = MapProfile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,6 +337,7 @@
 			files = (
 				5AD066CA1AA00B6A00876FA3 /* Main.storyboard in Resources */,
 				5AD41A2F1AA4F5CB00ACFA78 /* tennisball.png in Resources */,
+				70FDE5081AB103FB002CEAE5 /* Map.storyboard in Resources */,
 				5AD066CF1AA00B6A00876FA3 /* LaunchScreen.xib in Resources */,
 				5AD066CC1AA00B6A00876FA3 /* Images.xcassets in Resources */,
 			);
@@ -323,15 +358,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				5AD066C71AA00B6A00876FA3 /* LoginVC.swift in Sources */,
-				5AD41A391AA63B1B00ACFA78 /* LocationPickerVC.swift in Sources */,
+				70FDE5021AB0E40E002CEAE5 /* MatchProfileTVC.swift in Sources */,
 				5AD41A311AA6381B00ACFA78 /* RegistrationVC.swift in Sources */,
+				70FDE50B1AB119ED002CEAE5 /* ArrowButton.swift in Sources */,
+				70FDE4FA1AB0D23D002CEAE5 /* FeedData.swift in Sources */,
 				5AD41A3D1AA63BD900ACFA78 /* WeatherVC.swift in Sources */,
+				70FDE4FD1AB0D272002CEAE5 /* LocationPickerVC.swift in Sources */,
 				5AD41A3B1AA63BAD00ACFA78 /* PlayerPickerVC.swift in Sources */,
 				5AD41A3F1AA63BFF00ACFA78 /* FeedbackVC.swift in Sources */,
 				5AD41A371AA63ADF00ACFA78 /* FutureVC.swift in Sources */,
 				5AACD5791AA8EAED008E2F6B /* PrettyButtons.swift in Sources */,
 				5AD41A351AA63A8200ACFA78 /* ChooserVC.swift in Sources */,
+				70FDE5041AB0E46F002CEAE5 /* FeedCell.swift in Sources */,
 				5AD066C51AA00B6A00876FA3 /* AppDelegate.swift in Sources */,
+				70FDE4FB1AB0D23D002CEAE5 /* FourSquareRequest.swift in Sources */,
 				5ADB4E751AAF59FF00A44C91 /* PreferencesVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
