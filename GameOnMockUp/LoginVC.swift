@@ -9,19 +9,19 @@
 import UIKit
 
 class LoginVC: UIViewController {
-
+    
     @IBOutlet var emailField: UITextField!
     @IBOutlet var passwordField: UITextField!
     
-//    @IBOutlet var buttonBottomConstraint: NSLayoutConstraint!
+    //    @IBOutlet var buttonBottomConstraint: NSLayoutConstraint!
     
     // Check to see if user is logged in:
     
     
     override func viewDidLoad() {
-       
+        
         super.viewDidLoad()
-       
+        
         checkIfLoggedIn()
         
         println(isLoggedIn)
@@ -29,14 +29,14 @@ class LoginVC: UIViewController {
     }
     
     func login() {
-//        
-//        var user = PFUser()
-//        
-//        user.password = passwordField.text
-//        user.email = emailField.text
-//        user.username = emailField.text
-//
-    
+        //
+        //        var user = PFUser()
+        //
+        //        user.password = passwordField.text
+        //        user.email = emailField.text
+        //        user.username = emailField.text
+        //
+        
         PFUser.logInWithUsernameInBackground(emailField.text, password: passwordField.text) {
             (user: PFUser!, error: NSError!) -> Void in
             
@@ -54,50 +54,54 @@ class LoginVC: UIViewController {
                 var defaultAction = UIAlertAction(title: "Ok", style: .Default, handler: nil)
                 
                 alertViewController.addAction(defaultAction)
-
+                
                 
                 // alert saying login failed
                 
                 // do nothing, user should type in email and password or choose to create an account
-            
+                
                 println("cant log in with \(self.emailField.text) and \(self.passwordField.text)")
             }
+        }
         
-            var currentUser = PFUser.currentUser()
-            if currentUser != nil {
-                // Do stuff with the user
-            } else {
-                // Show the signup or login screen
-            }
+        
+        var currentUser = PFUser.currentUser()
+        
+        
+        if currentUser != nil {
+            // Do stuff with the user
+        } else {
+            // Show the signup or login screen
         }
     }
     
-//        NSNotificationCenter.defaultCenter().addObserverForName(UIKeyboardWillShowNotification, object: nil, queue: NSOperationQueue.mainQueue()) { (notification) -> Void in
-//            
-//            if let kbSize = notification.userInfo?[UIKeyboardFrameEndUserInfoKey]?.CGRectValue().size {
-//                
-//                self.buttonBottomConstraint.constant = 20 + kbSize.height
-//                
-//                self.view.layoutIfNeeded()
-//                
-//            }
-//            
-//        }
-//        
-//        // self.view.frame.origin.y = -kbSize.height
-//        
-//        NSNotificationCenter.defaultCenter().addObserverForName(UIKeyboardWillHideNotification, object: nil, queue: NSOperationQueue.mainQueue()) { (notification) -> Void in
-//            
-//            self.buttonBottomConstraint.constant = 20
-//            
-//            self.view.layoutIfNeeded()
-//            
-//            
-//            
-//        }
     
-        @IBAction func loginButton(sender: AnyObject) {
+    //        NSNotificationCenter.defaultCenter().addObserverForName(UIKeyboardWillShowNotification, object: nil, queue: NSOperationQueue.mainQueue()) { (notification) -> Void in
+    //
+    //            if let kbSize = notification.userInfo?[UIKeyboardFrameEndUserInfoKey]?.CGRectValue().size {
+    //
+    //                self.buttonBottomConstraint.constant = 20 + kbSize.height
+    //
+    //                self.view.layoutIfNeeded()
+    //
+    //            }
+    //
+    //        }
+    //
+    //        // self.view.frame.origin.y = -kbSize.height
+    //
+    //        NSNotificationCenter.defaultCenter().addObserverForName(UIKeyboardWillHideNotification, object: nil, queue: NSOperationQueue.mainQueue()) { (notification) -> Void in
+    //
+    //            self.buttonBottomConstraint.constant = 20
+    //
+    //            self.view.layoutIfNeeded()
+    //
+    //
+    //
+    //        }
     
+    @IBAction func loginButton(sender: AnyObject) {
+        
         var fieldsArray: [String] = [emailField.text,passwordField.text]
         
         if find(fieldsArray, "") != nil {
@@ -129,7 +133,7 @@ class LoginVC: UIViewController {
                     var defaultAction = UIAlertAction(title: "Ok", style: .Default, handler: nil)
                     
                     alertViewController.addAction(defaultAction)
-
+                    
                 }
             })
         }
@@ -163,12 +167,12 @@ class LoginVC: UIViewController {
             
         } else {
             
-//            login()
-//            
+            //            login()
+            //
         }
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
@@ -177,7 +181,7 @@ class LoginVC: UIViewController {
 }
 
 
-    
+
 
 
 
