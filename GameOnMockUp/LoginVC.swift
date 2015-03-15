@@ -76,30 +76,7 @@ class LoginVC: UIViewController {
     }
     
     
-    //        NSNotificationCenter.defaultCenter().addObserverForName(UIKeyboardWillShowNotification, object: nil, queue: NSOperationQueue.mainQueue()) { (notification) -> Void in
-    //
-    //            if let kbSize = notification.userInfo?[UIKeyboardFrameEndUserInfoKey]?.CGRectValue().size {
-    //
-    //                self.buttonBottomConstraint.constant = 20 + kbSize.height
-    //
-    //                self.view.layoutIfNeeded()
-    //
-    //            }
-    //
-    //        }
-    //
-    //        // self.view.frame.origin.y = -kbSize.height
-    //
-    //        NSNotificationCenter.defaultCenter().addObserverForName(UIKeyboardWillHideNotification, object: nil, queue: NSOperationQueue.mainQueue()) { (notification) -> Void in
-    //
-    //            self.buttonBottomConstraint.constant = 20
-    //
-    //            self.view.layoutIfNeeded()
-    //
-    //
-    //
-    //        }
-    
+        
     @IBAction func loginButton(sender: AnyObject) {
         
         var fieldsArray: [String] = [emailField.text,passwordField.text]
