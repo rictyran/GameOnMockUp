@@ -34,21 +34,21 @@ class MatchProfileTVC: UITableViewController {
         }
         
         
-        func refreshFeed()  {
-            
-            
-            FeedData.mainData().refreshFeedItems { () -> () in
-                
-                self.tableView.reloadData()
-                
-            }
-            
-        }
+//       func refreshFeed()  {
+//            
+//            
+//            FeedData.mainData().refreshFeedItems { () -> () in
+//                
+//                 self.tableView.reloadData()
+//                
+//            }
+//            
+        //}
         
         override func viewWillAppear(animated: Bool) {
             super.viewWillAppear(animated)
             
-            refreshFeed()
+            //refreshFeed()
             
         }
         
@@ -63,7 +63,7 @@ class MatchProfileTVC: UITableViewController {
             
             
             
-            return FeedData.mainData().feedItems.count
+            return 5
         }
         
         
@@ -73,10 +73,10 @@ class MatchProfileTVC: UITableViewController {
             // Configure the cell...
             
             
-            let player = FeedData.mainData().feedItems[indexPath.row]
-            
-            cell.playerInfo = player
-            
+//            let player = FeedData.mainData().feedItems[indexPath.row]
+//        
+//            cell.playerProfile = player
+//            
             //        cell.textLabel?.text = player["name"] as? String
             
             
@@ -86,17 +86,17 @@ class MatchProfileTVC: UITableViewController {
         
         
         
-        override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-            FeedData.mainData().selectedPlayer = FeedData.mainData().feedItems[indexPath.row]
-            
-            
-            var detailVC = storyboard?.instantiateViewControllerWithIdentifier("MatchProfile") as UIViewController
-            
-            navigationController?.pushViewController(detailVC, animated: true)
-            
-            
-        }
-    
+//        override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+////            FeedData.mainData().selectedPlayer = FeedData.mainData().feedItems[indexPath.row]
+////            
+//            
+//            var detailVC = storyboard?.instantiateViewControllerWithIdentifier("MatchProfile") as UIViewController
+//            
+//            navigationController?.pushViewController(detailVC, animated: true)
+//            
+//            
+//        }
+//    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

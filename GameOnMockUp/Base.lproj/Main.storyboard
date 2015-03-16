@@ -728,7 +728,7 @@
         <!--PreferencesVC-->
         <scene sceneID="22P-q9-Env">
             <objects>
-                <viewController id="54u-Av-vfU" customClass="PreferencesVC" customModule="GameOnMockUp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PreferencesVC" id="54u-Av-vfU" customClass="PreferencesVC" customModule="GameOnMockUp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gyQ-i7-vvw"/>
                         <viewControllerLayoutGuide type="bottom" id="b4r-Tp-2MB"/>

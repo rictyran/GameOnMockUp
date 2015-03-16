@@ -15,6 +15,8 @@ class RegistrationVC: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         
     }
     
+    var chosenSkillLevel = ""
+    
     @IBOutlet var firstNameField: UITextField!
     @IBOutlet var lastNameField: UITextField!
     @IBOutlet var emailField: UITextField!
@@ -66,7 +68,7 @@ class RegistrationVC: UIViewController, UIPickerViewDataSource, UIPickerViewDele
 //            userQuery.whereKey("zipCode", equalTo: zipCodeField.text)
 //            userQuery.whereKey("age", equalTo: ageField.text)
 //            userQuery.whereKey("gender", equalTo: genderField.text)
-            
+//            
 
 
         
@@ -95,30 +97,28 @@ class RegistrationVC: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         user.password = passwordField.text
         user.email = emailField.text
         user.username = emailField.text
+        user["firstName"] = firstNameField.text
+        user["lastName"] = lastNameField.text
+        user["zipCode"] = zipCodeField.text
+//        user["age"] = ageField.text
+        user["gender"] = genderField.text
+        user["skillLevel"] = chosenSkillLevel
        
-        
-        println(user.password)
         
         user.signUpInBackgroundWithBlock {
             (succeeded: Bool!, error: NSError!) -> Void in
             
             if error == nil {
                 
-//                println(user)
+
+                var PVC = self.storyboard?.instantiateViewControllerWithIdentifier("PreferencesVC") as? UIViewController
                 
-                var user = PFUser.currentUser()
-                
-            
-                var playerProfile: PFObject = PFObject(className: "playerProfile")
-                playerProfile["firstName"] = self.firstNameField.text
-                playerProfile["lastName"] = self.lastNameField.text
-                playerProfile["zipCode"] = self.zipCodeField.text
-                playerProfile["age"] = self.ageField.text
-                playerProfile["gender"] = self.genderField.text
-                playerProfile["user"] = user
-                playerProfile.saveInBackgroundWithBlock({ (succeeded: Bool!, error: NSError!) -> Void in
-                
-                })
+                UIApplication.sharedApplication().keyWindow?.rootViewController = PVC
+
+//                user["user"] = user
+//                user.saveInBackgroundWithBlock({ (succeeded: Bool!, error: NSError!) -> Void in
+//                    
+//                })
                 
                 self.firstNameField.text = ""
                 self.lastNameField.text = ""
@@ -129,8 +129,11 @@ class RegistrationVC: UIViewController, UIPickerViewDataSource, UIPickerViewDele
                 self.ageField.text = ""
                 self.genderField.text = ""
                 
-                println(playerProfile)
                 
+                
+                
+             
+               
                 
                 // Hooray! Let them use the app now.
                 
@@ -141,6 +144,7 @@ class RegistrationVC: UIViewController, UIPickerViewDataSource, UIPickerViewDele
                 // Show the errorString somewhere and let the user try again.
             }
         }
+    }
     
         
 //                NSNotificationCenter.defaultCenter().addObserverForName(UIKeyboardWillShowNotification, object: nil, queue: NSOperationQueue.mainQueue()) { (notification) -> Void in
@@ -171,7 +175,7 @@ class RegistrationVC: UIViewController, UIPickerViewDataSource, UIPickerViewDele
 //        
 //        
 //        
-    }
+    
     
     var skillLevel = ["Beginner","Intermediate","Advanced","USTA_1.5","USTA_2.0","USTA_2.5","USTA_3.0","USTA_3.5","USTA_4.0","USTA_4.5","USTA_5.0","USTA_5.5","USTA_6.0-7.0","ALTA_C","ALTA_B","ALTA_A","ALTA_AA"]
     
@@ -196,6 +200,7 @@ class RegistrationVC: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
     
     {
+        chosenSkillLevel = skillLevel[row]
         
         NSLog("Skill level chosen %@",skillLevel[row])
         

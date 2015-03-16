@@ -29,6 +29,9 @@ class LocationPickerVC: UIViewController, CLLocationManagerDelegate, MKMapViewDe
     
     
     
+
+    
+    
     var lManager = CLLocationManager()
     
     
@@ -61,24 +64,24 @@ class LocationPickerVC: UIViewController, CLLocationManagerDelegate, MKMapViewDe
         
     }
     
-    func refreshFeed() {
-        
-        
-        FeedData.mainData().refreshFeedItems { () -> () in
-            
-            
-            self.createAnnotationsWithCourts(FeedData.mainData().feedItems)
-            
-            
-        }
-        
-    }
-    
-    
+//    func refreshFeed() {
+//        
+//        
+//        FeedData.mainData().refreshFeedItems { () -> () in
+//            
+//            
+//            self.createAnnotationsWithCourts(FeedData.mainData().feedItems)
+//            
+//            
+//        }
+//        
+//    }
+//    
+//    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        refreshFeed()
+//        refreshFeed()
         
     }
     
@@ -221,7 +224,7 @@ class LocationPickerVC: UIViewController, CLLocationManagerDelegate, MKMapViewDe
     func buttonClicked (sender : ArrowButton!) {
         println("Button Clicked")
         
-        self.performSegueWithIdentifier("MatchProfile", sender: ArrowButton())
+        self.performSegueWithIdentifier("CallOut", sender: ArrowButton())
         
     }
     
@@ -275,7 +278,7 @@ class LocationPickerVC: UIViewController, CLLocationManagerDelegate, MKMapViewDe
       //  FeedData.mainData().selectedSeat = FeedData.mainData().feedItems[index]
         
         
-        var detailVC = storyboard?.instantiateViewControllerWithIdentifier("MatchProfile") as MatchProfileTVC
+        var detailVC = storyboard?.instantiateViewControllerWithIdentifier("CallOut") as CallOutVC
         
         navigationController?.pushViewController(detailVC, animated: true)
         

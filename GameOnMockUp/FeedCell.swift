@@ -11,14 +11,15 @@ import UIKit
 class FeedCell: UITableViewCell {
     
     
-    var playerInfo: PFObject? {
+    var playerProfile: PFObject? {
         
         didSet {
             
-            nameLabel.text = playerInfo?["name"] as? String
+            nameLabel.text = playerProfile?["firstName"] as? String
+       
             
             
-            let userImageFile = playerInfo?["image"] as PFFile
+            let userImageFile = playerProfile?["image"] as PFFile
             
             userImageFile.getDataInBackgroundWithBlock {
                 
