@@ -39,11 +39,8 @@
 		70BAA9581AB6FDD800A95960 /* PlayersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BAA9571AB6FDD800A95960 /* PlayersTableViewCell.swift */; };
 		70BAA95A1AB701B200A95960 /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BAA9591AB701B200A95960 /* CircleButton.swift */; };
 		70BAA95C1AB7148700A95960 /* PlayerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BAA95B1AB7148700A95960 /* PlayerData.swift */; };
-		70BAA95E1AB71A7000A95960 /* CallOutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BAA95D1AB71A7000A95960 /* CallOutVC.swift */; };
 		70FDE4FB1AB0D23D002CEAE5 /* FourSquareRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FDE4F91AB0D23D002CEAE5 /* FourSquareRequest.swift */; };
 		70FDE4FD1AB0D272002CEAE5 /* LocationPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FDE4FC1AB0D272002CEAE5 /* LocationPickerVC.swift */; };
-		70FDE5021AB0E40E002CEAE5 /* MatchProfileTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FDE5011AB0E40E002CEAE5 /* MatchProfileTVC.swift */; };
-		70FDE5041AB0E46F002CEAE5 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FDE5031AB0E46F002CEAE5 /* FeedCell.swift */; };
 		70FDE5081AB103FB002CEAE5 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70FDE5071AB103FB002CEAE5 /* Map.storyboard */; };
 		70FDE50B1AB119ED002CEAE5 /* ArrowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FDE50A1AB119ED002CEAE5 /* ArrowButton.swift */; };
 /* End PBXBuildFile section */
@@ -96,11 +93,8 @@
 		70BAA9571AB6FDD800A95960 /* PlayersTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayersTableViewCell.swift; sourceTree = "<group>"; };
 		70BAA9591AB701B200A95960 /* CircleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
 		70BAA95B1AB7148700A95960 /* PlayerData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerData.swift; sourceTree = "<group>"; };
-		70BAA95D1AB71A7000A95960 /* CallOutVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallOutVC.swift; sourceTree = "<group>"; };
 		70FDE4F91AB0D23D002CEAE5 /* FourSquareRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourSquareRequest.swift; sourceTree = "<group>"; };
 		70FDE4FC1AB0D272002CEAE5 /* LocationPickerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationPickerVC.swift; sourceTree = "<group>"; };
-		70FDE5011AB0E40E002CEAE5 /* MatchProfileTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchProfileTVC.swift; sourceTree = "<group>"; };
-		70FDE5031AB0E46F002CEAE5 /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		70FDE5071AB103FB002CEAE5 /* Map.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
 		70FDE50A1AB119ED002CEAE5 /* ArrowButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrowButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -256,10 +250,7 @@
 			children = (
 				70FDE50A1AB119ED002CEAE5 /* ArrowButton.swift */,
 				70BAA9591AB701B200A95960 /* CircleButton.swift */,
-				70BAA95D1AB71A7000A95960 /* CallOutVC.swift */,
 				70FDE4FC1AB0D272002CEAE5 /* LocationPickerVC.swift */,
-				70FDE5031AB0E46F002CEAE5 /* FeedCell.swift */,
-				70FDE5011AB0E40E002CEAE5 /* MatchProfileTVC.swift */,
 				70FDE5071AB103FB002CEAE5 /* Map.storyboard */,
 				70BAA9551AB6FC4900A95960 /* PlayerTableViewController.swift */,
 				70BAA9571AB6FDD800A95960 /* PlayersTableViewCell.swift */,
@@ -370,9 +361,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5AD066C71AA00B6A00876FA3 /* LoginVC.swift in Sources */,
-				70FDE5021AB0E40E002CEAE5 /* MatchProfileTVC.swift in Sources */,
 				5AD41A311AA6381B00ACFA78 /* RegistrationVC.swift in Sources */,
-				70BAA95E1AB71A7000A95960 /* CallOutVC.swift in Sources */,
 				70FDE50B1AB119ED002CEAE5 /* ArrowButton.swift in Sources */,
 				5AD41A3D1AA63BD900ACFA78 /* WeatherVC.swift in Sources */,
 				70BAA95C1AB7148700A95960 /* PlayerData.swift in Sources */,
@@ -383,7 +372,6 @@
 				5AD41A3F1AA63BFF00ACFA78 /* FeedbackVC.swift in Sources */,
 				5AD41A371AA63ADF00ACFA78 /* FutureVC.swift in Sources */,
 				5AACD5791AA8EAED008E2F6B /* PrettyButtons.swift in Sources */,
-				70FDE5041AB0E46F002CEAE5 /* FeedCell.swift in Sources */,
 				70BAA95A1AB701B200A95960 /* CircleButton.swift in Sources */,
 				70BAA9561AB6FC4900A95960 /* PlayerTableViewController.swift in Sources */,
 				5AD066C51AA00B6A00876FA3 /* AppDelegate.swift in Sources */,

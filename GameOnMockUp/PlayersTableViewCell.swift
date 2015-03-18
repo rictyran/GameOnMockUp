@@ -10,11 +10,19 @@ import UIKit
 
 class PlayersTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel:UILabel!
+    
+    @IBOutlet weak var skillLabel: UILabel!
+    
+    @IBOutlet weak var locLabel: UILabel!
+    
+    @IBOutlet weak var ageLabel: UILabel!
+    
+    @IBOutlet weak var genderLabel: UILabel!
+    
     @IBOutlet weak var postImageView:UIImageView!
     
     
-    
-    @IBOutlet weak var subtitleLabel: UILabel!
+
     
     
     override func awakeFromNib() {

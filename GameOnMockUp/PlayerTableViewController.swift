@@ -10,6 +10,10 @@ import UIKit
 
 class PlayerTableViewController: UITableViewController {
     
+    @IBAction func backButton(sender: AnyObject) {
+        
+        dismissViewControllerAnimated(true, completion: nil)
+    }
     
     @IBAction func matchUp(sender: AnyObject) {
         //match up player preferences
@@ -18,51 +22,68 @@ class PlayerTableViewController: UITableViewController {
     }
     
     
-    var players: [PFObject] = []
+    @IBAction func fiveMileButton(sender: AnyObject) {
+        
+    }
+    @IBAction func tenMileButton(sender: AnyObject) {
+        
+    }
+    @IBAction func twentyMileButton(sender: AnyObject) {
+        
+    }
     
-    let postTitles = [""];
+    
+    
+    
+    
+    
+    let postImages = ["female2"]
+    
+    var players: [PFUser] = []
+    
+    let postTitles = ["Name"]
     
     let ageRange = [""]
+    
+    let skillLevel = [""]
+    
+    let gender = ["gender"]
     
     var postShown = [Bool](count: 6, repeatedValue: false)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+//        var chosenAgeRanges:[String] = []
+//        var geoCoder = CLGeocoder()
+//        var chosenSkillLevel:[String] = []
+//        var chosenGender:[String] = []
+//        
+//        
+//        var selfLocation = CLLocation()
+//        
+//        var playerQuery = PFUser.query()
+//        
         
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
-        
-        var geoCoder = CLGeocoder()
-        
-//        PFUser.currentUser()["zipCode"]
-        
-        geoCoder.geocodeAddressString("30092", completionHandler: { (placemarks, error) -> Void in
-            
-            for placemark in placemarks as [CLPlacemark] {
-                
-                let l = placemark.location
-                
-            }
-            
-        })
-        
-        var selfLocation = CLLocation()
-        
-        var playerQuery = PFQuery(className: "playerProfile")
-        
-        playerQuery.whereKey("location", nearGeoPoint: PFGeoPoint(location: selfLocation), withinMiles: 5)
-        
-        playerQuery.whereKey("ageRange", containedIn: ["20-29","30-39"])
-        playerQuery.whereKey("skillLevel", containedIn: [""])
-        playerQuery.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
-            
-            // update players = objects & reloadData
-            
-        }
+                //buttons for narrowing down to 10 and 5 mile radius
+//        playerQuery.whereKey("location", nearGeoPoint: PFGeoPoint(location: selfLocation), withinMiles: 20)
+//
+//        if chosenAgeRanges.count > 0 { playerQuery.whereKey("ageRange", containedIn: chosenAgeRanges) }
+//        
+//        if chosenSkillLevel.count > 0 { playerQuery.whereKey("skillLevel", containedIn: chosenSkillLevel)}
+//        
+//        playerQuery.whereKey("gender", containedIn: gender)
+//        
+//        
+//        playerQuery.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
+//            
+//            // update players = objects & reloadData
+//            self.players = objects as [PFUser]
+//            
+//            self.tableView.reloadData()
+//            
+//        }
         
         
     }
@@ -81,6 +102,7 @@ class PlayerTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Return the number of rows in the section.
+        //return players.count
         return postTitles.count
     }
     
@@ -89,14 +111,16 @@ class PlayerTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as PlayersTableViewCell
         
         // Configure the cell...   If let statments
-        
-        cell.titleLabel.text = postTitles[indexPath.row]
-
-        cell.subtitleLabel.text = ageRange[indexPath.row]
-//        if let playerProfile["firstName"] as? String {
-//            cell.titleLabel.text = playerProfile
-//        }
+        cell.postImageView.image = UIImage(named: postImages[indexPath.row])
 //        
+ //       let player = players[indexPath.row]
+//        
+        //cell.titleLabel.text = player["name"] as? String
+//
+//        cell.subtitleLabel.text = ageRange[indexPath.row]
+    // cell.titleLabel.text = postTitles[indexPath.row]
+    //  cell.skillLabel.text = skillLevel[indexPath.row]
+        
         
         return cell
     }
