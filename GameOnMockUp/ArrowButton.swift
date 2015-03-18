@@ -13,6 +13,7 @@ import UIKit
 
 @IBDesignable class ArrowButton: UIButton {
 
+    var coordinate: CLLocationCoordinate2D?
    
     @IBInspectable var strokeSize: CGFloat = 1
     @IBInspectable var strokeColor: UIColor = UIColor.redColor()

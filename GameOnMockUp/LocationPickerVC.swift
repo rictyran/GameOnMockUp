@@ -28,15 +28,30 @@ class LocationPickerVC: UIViewController, CLLocationManagerDelegate, MKMapViewDe
     @IBOutlet weak var mapView: MKMapView!
     
     
+    @IBOutlet weak var backgroundImageView: UIImageView!
+    
+    @IBAction func backButton(sender: AnyObject) {
+        
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+
+    
     
     var lManager = CLLocationManager()
     
-    
+     private var imageSet = ["Courts", "Court"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let selectedImageIndex = Int(arc4random_uniform(1))
         
+        // Apply blurring effect
+        backgroundImageView.image = UIImage(named: imageSet[selectedImageIndex])
+        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.Light)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = view.bounds
+        backgroundImageView.addSubview(blurEffectView)
         
         mapView.delegate = self
         
@@ -61,118 +76,14 @@ class LocationPickerVC: UIViewController, CLLocationManagerDelegate, MKMapViewDe
         
     }
     
-    func refreshFeed() {
-        
-        
-        FeedData.mainData().refreshFeedItems { () -> () in
-            
-            
-            self.createAnnotationsWithCourts(FeedData.mainData().feedItems)
-            
-            
-        }
-        
-    }
-    
-    
+   
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        refreshFeed()
+
         
     }
     
-//    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
-//        
-//        mapView.showsUserLocation = true
-//        
-//        
-//        
-//        dispatch_once(&onceToken) { () -> Void in
-//            
-//            println(locations.last)
-//            
-//            if let location = locations.last as? CLLocation {
-//                
-//                self.mapView.centerCoordinate = location.coordinate
-//                
-//                let span = MKCoordinateSpanMake(0.1, 0.1)
-//                
-//                let region = MKCoordinateRegion(center: location.coordinate, span: span)
-//                
-//                self.mapView.setRegion(region, animated: true)
-//                
-//                
-//                              var annotationArray = self.mapView.annotations
-//                self.mapView.showAnnotations(annotationArray, animated: true)
-//                
-//                
-//                
-//                
-//                
-//            }
-//            
-//        }
-//        
-//        lManager.stopUpdatingLocation()
-//        
-//    }
-//    
-//    
-//    func createAnnotationsWithVenues(venues: [AnyObject]) {
-//        
-//        for venue in venues as [[String:AnyObject]] {
-//            
-//            
-//            let locationInfo = venue["location"] as [String:AnyObject]
-//            
-//            let lat = locationInfo["lat"] as CLLocationDegrees
-//            let lng = locationInfo["lng"] as CLLocationDegrees
-//            
-//            let coordinate = CLLocationCoordinate2DMake(lat,lng)
-//            
-//            let annotation = MKPointAnnotation()
-//            
-//            annotation.setCoordinate(coordinate)
-//            
-//            mapView.addAnnotation(annotation)
-//        }
-//        
-//    }
-//    
-//
-//    
-//    override func didReceiveMemoryWarning() {
-//        super.didReceiveMemoryWarning()
-//        // Dispose of any resources that can be recreated.
-//    }
-//    
-//    func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
-//        
-//        
-//        if annotation is MKUserLocation {
-//            //return nil so map view draws "blue dot" for standard user location
-//            return nil
-//        }
-//        
-//        let reuseId = "pin"
-//        
-//        var pinView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId) as? MKPinAnnotationView
-//        if pinView == nil {
-//            pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
-//            pinView!.canShowCallout = true
-//            pinView!.animatesDrop = true
-//            pinView!.pinColor = .Purple
-//        }
-//        else {
-//            pinView!.annotation = annotation
-//        }
-//        
-//        return pinView
-//    }
-//    
-//    
-//}
     // MAKE ANNOTATIONS FOR FEED ITEMS
     
     func createAnnotationsWithCourts(courts: [PFObject]) {
@@ -218,14 +129,7 @@ class LocationPickerVC: UIViewController, CLLocationManagerDelegate, MKMapViewDe
         
     }
     
-    func buttonClicked (sender : ArrowButton!) {
-        println("Button Clicked")
-        
-        self.performSegueWithIdentifier("MatchProfile", sender: ArrowButton())
-        
-    }
     
-  
     
     func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
         
@@ -244,14 +148,17 @@ class LocationPickerVC: UIViewController, CLLocationManagerDelegate, MKMapViewDe
         
         
         annotationView.rightCalloutAccessoryView = rightArrowButton
-        
-        
         annotationView.canShowCallout = true
         
         
+        /////
+        rightArrowButton.coordinate = annotation.coordinate
+        
+      
         
         rightArrowButton.addTarget(self, action: "buttonClicked:", forControlEvents: UIControlEvents.TouchUpInside)
-     
+       
+    
         
         
         if annotation is MKUserLocation {
@@ -270,17 +177,8 @@ class LocationPickerVC: UIViewController, CLLocationManagerDelegate, MKMapViewDe
     
     func mapView(mapView: MKMapView!, annotationView view: MKAnnotationView!, calloutAccessoryControlTapped control: UIControl!) {
         
-      //  let index = (view.annotation as MyPointAnnotation).index
-        
-      //  FeedData.mainData().selectedSeat = FeedData.mainData().feedItems[index]
-        
-        
-        var detailVC = storyboard?.instantiateViewControllerWithIdentifier("MatchProfile") as MatchProfileTVC
-        
-        navigationController?.pushViewController(detailVC, animated: true)
-        
-        
-        
+    
+        view.annotation.title
     }
     
     
@@ -305,18 +203,8 @@ class LocationPickerVC: UIViewController, CLLocationManagerDelegate, MKMapViewDe
                 
                 self.mapView.setRegion(region, animated: true)
                 
-                  var foursquareData = FourSquareRequest.requestVenuesWithLocation(location)
+                var foursquareData = FourSquareRequest.requestVenuesWithLocation(location)
                 
-                
-                //
-                //                let venues = CLLocationManagerDelegate.conformsToProtocol(self)
-                //
-                //
-                //                println(venues)
-                //
-                // self.createAnnotationsWithVenues(venues)
-                
-                //request to foursquare for venues with location
                 
                 var annotationArray = self.mapView.annotations
                 self.mapView.showAnnotations(annotationArray, animated: true)
@@ -345,26 +233,10 @@ class LocationPickerVC: UIViewController, CLLocationManagerDelegate, MKMapViewDe
                     if let venueName = venueName { annotation.title = venueName }
         
                     self.mapView.addAnnotation(annotation)
+            
                     
                     
-                    
-                    
-                    //PARSE
-                    
-                    
-//                    let geoPoint = PFGeoPoint(latitude: lat, longitude: lng)
-//                    
-//                    let userLocation = PFObject(className: "UserLocation")
-//                    
-//                    userLocation["location"] = geoPoint
-//                    
-//                    userLocation.saveInBackgroundWithBlock(nil)
-//                    
-//                    let geoPoint1 = userLocation["location"] as PFGeoPoint
-//                    
-//                    let location = CLLocation(latitude: geoPoint1.latitude, longitude: geoPoint1.longitude)
-                    
-                    
+       
                 }
                 
                 
@@ -373,16 +245,28 @@ class LocationPickerVC: UIViewController, CLLocationManagerDelegate, MKMapViewDe
         }
     }
     
-    
-    /*
-    // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    // Get the new view controller using segue.destinationViewController.
-    // Pass the selected object to the new view controller.
+    func buttonClicked (sender : ArrowButton!) {
+        println("Button Clicked")
+
+        let myCurrentMapItem = MKMapItem.mapItemForCurrentLocation()
+        
+        let destPlacemark = MKPlacemark(coordinate: sender.coordinate!, addressDictionary: nil)
+        let destMapItem = MKMapItem(placemark: destPlacemark)
+        
+        let options = [MKLaunchOptionsDirectionsModeKey:MKLaunchOptionsDirectionsModeDriving]
+        
+        MKMapItem.openMapsWithItems([myCurrentMapItem,destMapItem], launchOptions: options)
+
+        
     }
-    */
     
-}//END
+    
+
+    }//end
+    
+
+    
+
+    
+
 
