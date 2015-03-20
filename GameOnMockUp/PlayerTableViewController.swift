@@ -1,3 +1,4 @@
+
 //
 //  PlayerTableViewController.swift
 //  GameOnMockUp
@@ -8,6 +9,10 @@
 
 import UIKit
 
+
+  var newCell: String!
+
+
 class PlayerTableViewController: UITableViewController {
     
     @IBAction func backButton(sender: AnyObject) {
@@ -15,20 +20,30 @@ class PlayerTableViewController: UITableViewController {
         dismissViewControllerAnimated(true, completion: nil)
     }
     
-    @IBAction func matchUp(sender: AnyObject) {
-        //match up player preferences
-        
-        
-    }
+
+
     
+  
+    
+    // Change to segmented controls
     
     @IBAction func fiveMileButton(sender: AnyObject) {
+        
+        mileDistance = 5
+        refreshPlayers()
+ 
         
     }
     @IBAction func tenMileButton(sender: AnyObject) {
         
+        mileDistance = 10
+        refreshPlayers()
+        
     }
     @IBAction func twentyMileButton(sender: AnyObject) {
+        
+        mileDistance = 20
+        refreshPlayers()
         
     }
     
@@ -37,54 +52,67 @@ class PlayerTableViewController: UITableViewController {
     
     
     
-    let postImages = ["female2"]
+   // let postImages = ["female2"]
     
     var players: [PFUser] = []
     
-    let postTitles = ["Name"]
+    let postTitles = ["firstName"]
     
-    let ageRange = [""]
+    var mileDistance: Double = 10
     
-    let skillLevel = [""]
+    let ageRange: [String] = []
     
-    let gender = ["gender"]
+    let skillLevel: [String] = []
+    
+    let gender = ""
     
     var postShown = [Bool](count: 6, repeatedValue: false)
+    
+    
+    var chosenAgeRanges:[String] = []
+    var chosenSkillLevel:[String] = []
+    var chosenGender:[String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        var chosenAgeRanges:[String] = []
-//        var geoCoder = CLGeocoder()
-//        var chosenSkillLevel:[String] = []
-//        var chosenGender:[String] = []
-//        
-//        
-//        var selfLocation = CLLocation()
-//        
-//        var playerQuery = PFUser.query()
-//        
+        refreshPlayers()
         
         
-                //buttons for narrowing down to 10 and 5 mile radius
-//        playerQuery.whereKey("location", nearGeoPoint: PFGeoPoint(location: selfLocation), withinMiles: 20)
-//
-//        if chosenAgeRanges.count > 0 { playerQuery.whereKey("ageRange", containedIn: chosenAgeRanges) }
-//        
-//        if chosenSkillLevel.count > 0 { playerQuery.whereKey("skillLevel", containedIn: chosenSkillLevel)}
-//        
-//        playerQuery.whereKey("gender", containedIn: gender)
-//        
-//        
-//        playerQuery.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
-//            
-//            // update players = objects & reloadData
-//            self.players = objects as [PFUser]
-//            
-//            self.tableView.reloadData()
-//            
-//        }
+    }
+    
+    func refreshPlayers() {
         
+        var playerQuery = PFUser.query()
+        
+        if let selfGeo = PFUser.currentUser()["location"] as? PFGeoPoint {
+            
+            // add buttons for narrowing down to 10 and 5 mile radius
+            
+            playerQuery.whereKey("location", nearGeoPoint: selfGeo, withinMiles: mileDistance)
+            
+        }
+        
+        
+        
+        if chosenAgeRanges.count > 0 { playerQuery.whereKey("ageRange", containedIn: chosenAgeRanges) }
+        
+        if chosenSkillLevel.count > 0 { playerQuery.whereKey("skillLevel", containedIn: chosenSkillLevel)}
+        //
+        if gender != "" { playerQuery.whereKey("gender", equalTo: gender) }
+        //
+        
+        playerQuery.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
+            
+            // update players = objects & reloadData
+            self.players = objects as [PFUser]
+            
+            println(self.players)
+            
+            self.tableView.reloadData()
+            
+        }
+
         
     }
     
@@ -102,24 +130,24 @@ class PlayerTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Return the number of rows in the section.
-        //return players.count
-        return postTitles.count
+        return players.count
+        //return postTitles.count
     }
     
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> PlayersTableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as PlayersTableViewCell
         
         // Configure the cell...   If let statments
-        cell.postImageView.image = UIImage(named: postImages[indexPath.row])
+      //  cell.postImageView.image = UIImage(named: postImages[indexPath.row])
 //        
- //       let player = players[indexPath.row]
-//        
-        //cell.titleLabel.text = player["name"] as? String
-//
-//        cell.subtitleLabel.text = ageRange[indexPath.row]
-    // cell.titleLabel.text = postTitles[indexPath.row]
-    //  cell.skillLabel.text = skillLevel[indexPath.row]
+        let player = players[indexPath.row]
+        println(players)
+        cell.titleLabel.text = player["firstName"] as? String
+        cell.skillLabel.text = player["skillLevel"] as? String
+        cell.locLabel.text = player["zipCode"] as? String
+        cell.ageLabel.text = player["ageRange"] as? String
+        cell.genderLabel.text = player["gender"] as? String
         
         
         return cell
@@ -154,8 +182,24 @@ class PlayerTableViewController: UITableViewController {
         
     }
     
-    
-    
+  
+  
+ 
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        let cell = tableView.cellForRowAtIndexPath(indexPath) as PlayersTableViewCell
+        
+        newCell = cell.titleLabel.text
+        
+        var schedulerViewController = storyboard?.instantiateViewControllerWithIdentifier("SVC") as SchedulerVCViewController
+        
+        
+        navigationController?.pushViewController(schedulerViewController, animated: true)
+        
+       
+        
+    }
+//
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {

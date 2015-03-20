@@ -31,7 +31,7 @@ class FutureVC: UIViewController {
         
         let selectedImageIndex = Int(arc4random_uniform(1))
         
-        // Apply blurring effect
+        //blurring effect
         backgroundImageView.image = UIImage(named: imageSet[selectedImageIndex])
         let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.Light)
         let blurEffectView = UIVisualEffectView(effect: blurEffect)

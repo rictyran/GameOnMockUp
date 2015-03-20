@@ -46,7 +46,7 @@ class LocationPickerVC: UIViewController, CLLocationManagerDelegate, MKMapViewDe
         // Do any additional setup after loading the view, typically from a nib.
         let selectedImageIndex = Int(arc4random_uniform(1))
         
-        // Apply blurring effect
+        // blurring effect
         backgroundImageView.image = UIImage(named: imageSet[selectedImageIndex])
         let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.Light)
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
@@ -140,6 +140,20 @@ class LocationPickerVC: UIViewController, CLLocationManagerDelegate, MKMapViewDe
         
         var rightArrowButton = ArrowButton(frame: CGRectMake(0, 0, 22, 22))
         
+        
+        var leftButton = UIButton(frame: CGRectMake(0, 0, 22, 22))
+        
+         //leftButton = UIButton.buttonWithType(UIButtonType.System) as UIButton
+        leftButton.backgroundColor = UIColor.yellowColor()
+        leftButton.layer.cornerRadius = 22 / 2
+        var saveLabel = UILabel()
+        leftButton.titleLabel?.text = "Save"
+        leftButton.titleLabel?.textColor = UIColor.blackColor()
+        
+//        leftButton.setTitle("Save", forState: UIControlState.Normal)
+//        leftButton.addTarget(self, action: "Action:", forControlEvents: UIControlEvents.TouchUpInside)
+      
+        
         rightArrowButton.strokeSize = 2
         rightArrowButton.leftInset = 8
         rightArrowButton.rightInset = 8
@@ -148,6 +162,9 @@ class LocationPickerVC: UIViewController, CLLocationManagerDelegate, MKMapViewDe
         
         
         annotationView.rightCalloutAccessoryView = rightArrowButton
+        
+        annotationView.leftCalloutAccessoryView = leftButton
+        
         annotationView.canShowCallout = true
         
         
