@@ -36,6 +36,9 @@
 		5AD41A581AA63F5C00ACFA78 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD41A571AA63F5C00ACFA78 /* libz.dylib */; };
 		5AD41A5A1AA63F6200ACFA78 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD41A591AA63F6200ACFA78 /* libsqlite3.dylib */; };
 		5ADB4E751AAF59FF00A44C91 /* PreferencesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADB4E741AAF59FF00A44C91 /* PreferencesVC.swift */; };
+		705ACE541ABB3FB500F8B8E1 /* SchedulerVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705ACE531ABB3FB500F8B8E1 /* SchedulerVCViewController.swift */; };
+		7063B1BB1ABC928600D71784 /* PendingEventsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7063B1BA1ABC928600D71784 /* PendingEventsTVC.swift */; };
+		7063B1BD1ABC93F300D71784 /* PendingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7063B1BC1ABC93F300D71784 /* PendingTableViewCell.swift */; };
 		70BAA9561AB6FC4900A95960 /* PlayerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BAA9551AB6FC4900A95960 /* PlayerTableViewController.swift */; };
 		70BAA9581AB6FDD800A95960 /* PlayersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BAA9571AB6FDD800A95960 /* PlayersTableViewCell.swift */; };
 		70BAA95A1AB701B200A95960 /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BAA9591AB701B200A95960 /* CircleButton.swift */; };
@@ -91,6 +94,9 @@
 		5AD41A591AA63F6200ACFA78 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		5AD41A5B1AA63FAE00ACFA78 /* GameOnMockUp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GameOnMockUp-Bridging-Header.h"; sourceTree = "<group>"; };
 		5ADB4E741AAF59FF00A44C91 /* PreferencesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesVC.swift; sourceTree = "<group>"; };
+		705ACE531ABB3FB500F8B8E1 /* SchedulerVCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchedulerVCViewController.swift; sourceTree = "<group>"; };
+		7063B1BA1ABC928600D71784 /* PendingEventsTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PendingEventsTVC.swift; sourceTree = "<group>"; };
+		7063B1BC1ABC93F300D71784 /* PendingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PendingTableViewCell.swift; sourceTree = "<group>"; };
 		70BAA9551AB6FC4900A95960 /* PlayerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerTableViewController.swift; sourceTree = "<group>"; };
 		70BAA9571AB6FDD800A95960 /* PlayersTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayersTableViewCell.swift; sourceTree = "<group>"; };
 		70BAA9591AB701B200A95960 /* CircleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
@@ -257,6 +263,9 @@
 				70FDE5071AB103FB002CEAE5 /* Map.storyboard */,
 				70BAA9551AB6FC4900A95960 /* PlayerTableViewController.swift */,
 				70BAA9571AB6FDD800A95960 /* PlayersTableViewCell.swift */,
+				705ACE531ABB3FB500F8B8E1 /* SchedulerVCViewController.swift */,
+				7063B1BA1ABC928600D71784 /* PendingEventsTVC.swift */,
+				7063B1BC1ABC93F300D71784 /* PendingTableViewCell.swift */,
 			);
 			name = MapProfile;
 			sourceTree = "<group>";
@@ -365,8 +374,10 @@
 			files = (
 				5AD066C71AA00B6A00876FA3 /* LoginVC.swift in Sources */,
 				5AD41A311AA6381B00ACFA78 /* RegistrationVC.swift in Sources */,
+				7063B1BD1ABC93F300D71784 /* PendingTableViewCell.swift in Sources */,
 				70FDE50B1AB119ED002CEAE5 /* ArrowButton.swift in Sources */,
 				5AD41A3D1AA63BD900ACFA78 /* WeatherVC.swift in Sources */,
+				7063B1BB1ABC928600D71784 /* PendingEventsTVC.swift in Sources */,
 				70BAA95C1AB7148700A95960 /* PlayerData.swift in Sources */,
 				5A51F6CF1AB36EEC00A043A9 /* ChooserVC.swift in Sources */,
 				70FDE4FD1AB0D272002CEAE5 /* LocationPickerVC.swift in Sources */,
@@ -380,6 +391,7 @@
 				5AD066C51AA00B6A00876FA3 /* AppDelegate.swift in Sources */,
 				70FDE4FB1AB0D23D002CEAE5 /* FourSquareRequest.swift in Sources */,
 				5ADB4E751AAF59FF00A44C91 /* PreferencesVC.swift in Sources */,
+				705ACE541ABB3FB500F8B8E1 /* SchedulerVCViewController.swift in Sources */,
 				5AAB2E181AB8957A002B9E4F /* Checkbox.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

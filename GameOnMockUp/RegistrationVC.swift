@@ -123,7 +123,22 @@ class RegistrationVC: UIViewController, UIPickerViewDataSource, UIPickerViewDele
                 
                 var user = PFUser.currentUser()
                 
-                user.save()
+                
+                var geoCoder = CLGeocoder()
+                
+                geoCoder.geocodeAddressString(self.zipCodeField.text, completionHandler: { (placemarks, error) -> Void in
+                    
+                    if let placemark = placemarks.first as? CLPlacemark {
+                        
+                        user["location"] = PFGeoPoint(location: placemark.location)
+                        
+                        user.saveInBackgroundWithBlock(nil)
+                        
+                    }
+                    
+                    
+                })
+                
                 
                 println("saved success")
                 
