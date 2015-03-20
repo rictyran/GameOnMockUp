@@ -101,7 +101,7 @@
         <!--Player Table View Controller-->
         <scene sceneID="gyV-9q-94K">
             <objects>
-                <tableViewController id="IXf-xt-3Ub" customClass="PlayerTableViewController" customModule="GameOnMockUp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="PlayerTVC" id="IXf-xt-3Ub" customClass="PlayerTableViewController" customModule="GameOnMockUp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="251" sectionHeaderHeight="22" sectionFooterHeight="22" id="I1K-Cf-6kh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

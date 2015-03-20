@@ -31,7 +31,9 @@ class RegistrationVC: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     @IBOutlet var passwordField: UITextField!
     @IBOutlet var confirmPasswordField: UITextField!
     @IBOutlet var zipCodeField: UITextField!
-    @IBOutlet var genderField: UITextField!
+//    @IBOutlet var genderField: UITextField!
+    
+    @IBOutlet var genderController: UISegmentedControl!
     
     @IBAction func createAccount(sender: AnyObject) {
         
@@ -41,9 +43,10 @@ class RegistrationVC: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         println(passwordField.text)
         println(confirmPasswordField.text)
         println(zipCodeField.text)
-        println(genderField.text)
         
-        var fieldValues: [String] = [firstNameField.text,lastNameField.text,emailField.text,passwordField.text,confirmPasswordField.text,zipCodeField.text,genderField.text]
+//        println(genderField.text)
+        
+        var fieldValues: [String] = [firstNameField.text,lastNameField.text,emailField.text,passwordField.text,confirmPasswordField.text,zipCodeField.text]
         
         if find(fieldValues, "") != nil {
             
@@ -67,7 +70,6 @@ class RegistrationVC: UIViewController, UIPickerViewDataSource, UIPickerViewDele
             
         } else {
             
-            
             println("all fields are good and login")
             
             var userQuery = PFUser.query()
@@ -85,7 +87,13 @@ class RegistrationVC: UIViewController, UIPickerViewDataSource, UIPickerViewDele
                     println("signUp called")
                     self.signUp()
                     
+                    
                 }
+                
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let PVC = self.storyboard?.instantiateViewControllerWithIdentifier("PreferencesVC") as PreferencesVC
+                
+                self.presentViewController(PVC, animated: true, completion: nil)                
             }
         }
     }
@@ -102,13 +110,11 @@ class RegistrationVC: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         user["firstName"] = firstNameField.text
         user["lastName"] = lastNameField.text
         user["zipCode"] = zipCodeField.text
-        user["gender"] = genderField.text
+//        user["gender"] = genderField.text
         user["skillLevel"] = chosenSkillLevel
         user["ageRange"] = chosenAgeRange
-        
-        user["gender"] = genderField.text
         user["skillLevel"] = chosenSkillLevel
-        //        user["gender"] = chosenGender
+        user["gender"] = chosenGender
         
         user.signUpInBackgroundWithBlock {
             (succeeded: Bool!, error: NSError!) -> Void in
@@ -121,9 +127,6 @@ class RegistrationVC: UIViewController, UIPickerViewDataSource, UIPickerViewDele
                 
                 println("saved success")
                 
-                var PVC = self.storyboard?.instantiateViewControllerWithIdentifier("PreferencesVC") as? UIViewController
-                
-                UIApplication.sharedApplication().keyWindow?.rootViewController = PVC
                 
                 self.firstNameField.text = ""
                 self.lastNameField.text = ""
@@ -131,7 +134,7 @@ class RegistrationVC: UIViewController, UIPickerViewDataSource, UIPickerViewDele
                 self.passwordField.text = ""
                 self.confirmPasswordField.text = ""
                 self.zipCodeField.text = ""
-                self.genderField.text = ""
+//                self.genderField.text = ""
                 
                 // Hooray! Let them use the app now.
                 
@@ -223,6 +226,21 @@ class RegistrationVC: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         self.view.endEditing(true)
     }
     
+    @IBAction func selectGender(sender: AnyObject) {
+        
+        if genderController.selectedSegmentIndex == 0 {
+            
+            chosenGender = "male"
+            
+            println(chosenGender)
+        }
+        
+            chosenGender = "female"
+        
+            println(chosenGender)
+        
+        
+    }
 }
 
 //            userQuery.whereKey("firstName", equalTo: firstNameField.text)
