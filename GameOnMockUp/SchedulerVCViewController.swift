@@ -8,7 +8,13 @@
 
 import UIKit
 
-class SchedulerVCViewController: UIViewController {
+var cellOne: String!
+var cellTwo: String!
+var cellThree: String!
+
+class SchedulerVCViewController: UIViewController, UIAlertViewDelegate {
+    
+    
     
     var playerTable = PlayerTableViewController()
     
@@ -22,18 +28,39 @@ class SchedulerVCViewController: UIViewController {
     
     @IBOutlet weak var backgroundImageView: UIImageView!
   
- //   @IBOutlet weak var bottomTextConstraint: NSLayoutConstraint!
+ 
     
     
   
-    @IBAction func sendMessage(sender: AnyObject) {
+ 
+    @IBAction func saveEvent(sender: AnyObject) {
+    
+        cellOne = nameLabel.text
+        cellTwo = dateLabel.text
+        cellThree = locTextField.text
         
         
        savingEvent()
         
+        presentViewController(PendingEventsTVC(), animated: true, completion: nil)
+        
         
     }
     
+    
+    
+    
+    @IBAction func sendPush(sender: AnyObject) {
+    
+    
+        var alert = UIAlertView(title: "Notify Player", message: "Send a message", delegate: self,
+            cancelButtonTitle: "Cancel",
+            otherButtonTitles: "Send")
+        
+        alert.alertViewStyle = UIAlertViewStyle.PlainTextInput
+        
+        alert.show()
+    }
     
     
    
@@ -42,6 +69,8 @@ class SchedulerVCViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+
 
        nameLabel.text = newCell
       println(nameLabel.text)
@@ -58,32 +87,6 @@ class SchedulerVCViewController: UIViewController {
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.frame = view.bounds
         backgroundImageView.addSubview(blurEffectView)
-        
-        
-        
-        
-        
-//        NSNotificationCenter.defaultCenter().addObserverForName(UIKeyboardWillShowNotification, object: nil, queue: NSOperationQueue.mainQueue()) { (notification) -> Void in
-//            
-//            var kbSize = notification.userInfo?[UIKeyboardFrameEndUserInfoKey]?.CGRectValue().size
-//            
-//            self.bottomTextConstraint.constant = 20 + kbSize!.height
-//           
-//            
-//            self.view.layoutIfNeeded()
-//            
-//        }
-        
-        
-//        NSNotificationCenter.defaultCenter().addObserverForName(UIKeyboardWillHideNotification, object: nil, queue: NSOperationQueue.mainQueue()) { (notification) -> Void in
-//            
-//            
-//            self.bottomTextConstraint.constant = 20
-//            
-//            
-//            self.view.layoutIfNeeded()
-//            
-//        }
     
      
     }
@@ -129,6 +132,9 @@ class SchedulerVCViewController: UIViewController {
         self.view.endEditing(true)
     }
 
+    
+   
+    
     /*
     // MARK: - Navigation
 

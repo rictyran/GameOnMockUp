@@ -10,7 +10,7 @@ import UIKit
 
 class PendingTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var postmageView: UIImageView!
+   
     
     
     @IBOutlet weak var titleLabel: UILabel!
