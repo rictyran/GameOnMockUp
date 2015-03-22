@@ -93,7 +93,7 @@ class RegistrationVC: UIViewController, UIPickerViewDataSource, UIPickerViewDele
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let PVC = self.storyboard?.instantiateViewControllerWithIdentifier("PreferencesVC") as PreferencesVC
                 
-                self.presentViewController(PVC, animated: true, completion: nil)                
+                self.presentViewController(PVC, animated: true, completion: nil)
             }
         }
     }

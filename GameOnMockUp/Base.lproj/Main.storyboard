@@ -159,7 +159,11 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <items>
                                     <navigationItem title="Scheduled Events" id="Off-SQ-5R8">
-                                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="7ek-za-g0W"/>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="7ek-za-g0W">
+                                            <connections>
+                                                <action selector="searchMapButton:" destination="I9K-no-nYi" id="pSv-5A-VTB"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>

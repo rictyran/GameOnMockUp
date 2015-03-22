@@ -173,6 +173,7 @@
 		5AD066C21AA00B6A00876FA3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5AAB2E171AB8957A002B9E4F /* Checkbox.swift */,
 				5AD41A331AA6389000ACFA78 /* Images */,
 				5AD066CD1AA00B6A00876FA3 /* LaunchScreen.xib */,
 				5AD066CB1AA00B6A00876FA3 /* Images.xcassets */,
@@ -211,7 +212,6 @@
 				5AD41A3A1AA63BAD00ACFA78 /* PlayerPickerVC.swift */,
 				5AD41A3C1AA63BD900ACFA78 /* WeatherVC.swift */,
 				5AD41A3E1AA63BFF00ACFA78 /* FeedbackVC.swift */,
-				5AAB2E171AB8957A002B9E4F /* Checkbox.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
