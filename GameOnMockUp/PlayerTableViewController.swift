@@ -22,32 +22,7 @@ class PlayerTableViewController: UITableViewController {
     
 
 
-    
-  
-    
-    // Change to segmented controls
-    
-    @IBAction func fiveMileButton(sender: AnyObject) {
-        
-        mileDistance = 5
-        refreshPlayers()
- 
-        
-    }
-    @IBAction func tenMileButton(sender: AnyObject) {
-        
-        mileDistance = 10
-        refreshPlayers()
-        
-    }
-    @IBAction func twentyMileButton(sender: AnyObject) {
-        
-        mileDistance = 20
-        refreshPlayers()
-        
-    }
-    
-    
+    @IBOutlet weak var segControl: UISegmentedControl!
     
     
     
@@ -56,7 +31,7 @@ class PlayerTableViewController: UITableViewController {
     
     var players: [PFUser] = []
     
-    let postTitles = ["firstName"]
+    let postTitles = []
     
     var mileDistance: Double = 10
     
@@ -116,6 +91,31 @@ class PlayerTableViewController: UITableViewController {
         
     }
     
+    
+    @IBAction func segChosen(sender: AnyObject) {
+        
+        if segControl.selectedSegmentIndex == 0 {
+            
+            mileDistance = 5
+            refreshPlayers()
+            
+        } else if segControl.selectedSegmentIndex == 1 {
+            
+            mileDistance = 10
+            refreshPlayers()
+            
+        } else {
+            
+            mileDistance = 20
+            refreshPlayers()
+        }
+        
+        println(mileDistance)
+        
+    }
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -131,16 +131,14 @@ class PlayerTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Return the number of rows in the section.
         return players.count
-        //return postTitles.count
+        
     }
     
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> PlayersTableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as PlayersTableViewCell
+  
         
-        // Configure the cell...   If let statments
-      //  cell.postImageView.image = UIImage(named: postImages[indexPath.row])
-//        
         let player = players[indexPath.row]
         println(players)
         cell.titleLabel.text = player["firstName"] as? String
@@ -164,11 +162,7 @@ class PlayerTableViewController: UITableViewController {
         postShown[indexPath.row] = true
         
         
-        // Define the initial state (Before the animation)
-        // cell.alpha = 0
-        
-        // Define the final state (After the animation)
-        // UIView.animateWithDuration(1.0, animations: { cell.alpha = 1 })
+       
         
         
         // Define the initial state (Before the animation)

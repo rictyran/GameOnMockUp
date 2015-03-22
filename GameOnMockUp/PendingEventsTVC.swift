@@ -8,15 +8,19 @@
 
 import UIKit
 
-var schedInfo = SchedulerVCViewController()
+
 
 class PendingEventsTVC: UITableViewController {
 
-    var scheduleInfo = SchedulerVCViewController()
+   let cells = [cellOne, cellTwo, cellThree]
+    
+  var postShown = [Bool](count: 6, repeatedValue: false)
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -34,29 +38,52 @@ class PendingEventsTVC: UITableViewController {
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
-        return 0
+        return 1
     }
 
+ 
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return 0
+                return cells.count
+        
+        //return 5
     }
+    
 
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as PendingTableViewCell
-
-       cell.titleLabel.text = "Frank"
-       cell.dateLabel.text = "12/13"
-       cell.locLabel.text = "Tennis"
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> PendingTableViewCell {
         
+        let cell = tableView.dequeueReusableCellWithIdentifier("Celly", forIndexPath: indexPath) as PendingTableViewCell
         
-
+                cell.titleLabel.text = cellOne
+                cell.dateLabel.text = cellTwo
+                cell.locLabel.text = cellThree
+        
         return cell
+       
     }
     
+    
+    
+        
+  
 
+    
+    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        
+        
+        if postShown[indexPath.row] {
+            return
+        }
+        
+        postShown[indexPath.row] = true
+    }
+    
+    
+    
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {

@@ -16,7 +16,7 @@ import UIKit
     var coordinate: CLLocationCoordinate2D?
    
     @IBInspectable var strokeSize: CGFloat = 1
-    @IBInspectable var strokeColor: UIColor = UIColor.redColor()
+    @IBInspectable var strokeColor: UIColor = UIColor.blueColor()
     @IBInspectable var isRounded: Bool = true
     @IBInspectable var isReversed: Bool = false
     

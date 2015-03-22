@@ -28,7 +28,6 @@ class LocationPickerVC: UIViewController, CLLocationManagerDelegate, MKMapViewDe
     @IBOutlet weak var mapView: MKMapView!
     
     
-    @IBOutlet weak var backgroundImageView: UIImageView!
     
     @IBAction func backButton(sender: AnyObject) {
         
@@ -39,19 +38,11 @@ class LocationPickerVC: UIViewController, CLLocationManagerDelegate, MKMapViewDe
     
     var lManager = CLLocationManager()
     
-     private var imageSet = ["Courts", "Court"]
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        let selectedImageIndex = Int(arc4random_uniform(1))
-        
-        // blurring effect
-        backgroundImageView.image = UIImage(named: imageSet[selectedImageIndex])
-        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.Light)
-        let blurEffectView = UIVisualEffectView(effect: blurEffect)
-        blurEffectView.frame = view.bounds
-        backgroundImageView.addSubview(blurEffectView)
         
         mapView.delegate = self
         
@@ -138,21 +129,39 @@ class LocationPickerVC: UIViewController, CLLocationManagerDelegate, MKMapViewDe
         
         var annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "myAnn")
         
-        var rightArrowButton = ArrowButton(frame: CGRectMake(0, 0, 22, 22))
+        var rightArrowButton = ArrowButton(frame: CGRectMake(0, 0, 30, 30))
         
         
-        var leftButton = UIButton(frame: CGRectMake(0, 0, 22, 22))
+       // var leftButton = UIButton(frame: CGRectMake(0, 0, 30, 30))
         
-         //leftButton = UIButton.buttonWithType(UIButtonType.System) as UIButton
-        leftButton.backgroundColor = UIColor.yellowColor()
-        leftButton.layer.cornerRadius = 22 / 2
-        var saveLabel = UILabel()
-        leftButton.titleLabel?.text = "Save"
-        leftButton.titleLabel?.textColor = UIColor.blackColor()
+        //leftButton = UIButton.buttonWithType(UIButtonType.System) as UIButton
+        //leftButton.backgroundColor = UIColor.yellowColor()
+        //leftButton.layer.cornerRadius = 30 / 2
+        
+       // leftButton.titleLabel?.text = "Save"
+        //leftButton.titleLabel?.textColor = UIColor.blackColor()
         
 //        leftButton.setTitle("Save", forState: UIControlState.Normal)
 //        leftButton.addTarget(self, action: "Action:", forControlEvents: UIControlEvents.TouchUpInside)
-      
+//        
+//        let label1 = UILabel(frame: CGRectMake(0, 0, 15, 15))
+//        label1.textColor = UIColor.blackColor()
+//        label1.text = "Save"
+//        label1.addSubview(leftButton)
+//        
+        
+        let label = UILabel(frame: CGRectMake(0, 0, 5, 5))
+        label.text = "Save"
+        label.addSubview(label)
+        
+        let button = UIButton.buttonWithType(UIButtonType.System) as UIButton
+        button.frame = CGRectMake(0, 0, 30, 30)
+        button.backgroundColor = UIColor.yellowColor()
+        button.layer.cornerRadius = 30 / 2
+        button.setTitle("Save", forState: UIControlState.Normal)
+        button.addTarget(self, action: "confirmPressed:", forControlEvents: UIControlEvents.TouchUpInside)
+        button.addSubview(button)
+        
         
         rightArrowButton.strokeSize = 2
         rightArrowButton.leftInset = 8
@@ -163,7 +172,7 @@ class LocationPickerVC: UIViewController, CLLocationManagerDelegate, MKMapViewDe
         
         annotationView.rightCalloutAccessoryView = rightArrowButton
         
-        annotationView.leftCalloutAccessoryView = leftButton
+        annotationView.leftCalloutAccessoryView = button
         
         annotationView.canShowCallout = true
         
