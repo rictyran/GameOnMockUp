@@ -25,10 +25,10 @@ class PreferencesVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
     
     var chosenSkillLevel = ""
     var chosenAgeRange = ""
-    var chosenGender = ""
-    var chosenWeekday = ""
-    var chosenSaturday = ""
-    var chosenSunday = ""
+    var chosenGender = "Either"
+    var chosenWeekday = "None"
+    var chosenSaturday = "None"
+    var chosenSunday = "None"
 
     func setPreferences() {
         
@@ -68,16 +68,22 @@ class PreferencesVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
     
         setPreferences()
         
-        let mapStoryboard = UIStoryboard(name: "Map", bundle: nil)
-        let PTVC = mapStoryboard.instantiateViewControllerWithIdentifier("PlayerTVC") as PlayerTableViewController
+//        var mapStoryboard = UIStoryboard(name: "Map", bundle: nil)
+//        let PTVC = mapStoryboard.instantiateViewControllerWithIdentifier("PlayerTVC") as PlayerTableViewController
+//        
+//        self.presentViewController(PTVC, animated: true, completion: nil)
         
-        self.presentViewController(PTVC, animated: true, completion: nil)
+        var mapSB = UIStoryboard(name: "Map", bundle: nil)
+        var PTVC = mapSB.instantiateInitialViewController() as UINavigationController
+        
+        presentViewController(PTVC, animated: true, completion: nil)
+
         
     }
     
-    var skillLevel = ["Beginner","Intermediate","Advanced","USTA_1.5","USTA_2.0","USTA_2.5","USTA_3.0","USTA_3.5","USTA_4.0","USTA_4.5","USTA_5.0","USTA_5.5","USTA_6.0-7.0","ALTA_C","ALTA_B","ALTA_A","ALTA_AA"]
+    var skillLevel = ["","Beginner","Intermediate","Advanced","USTA_1.5","USTA_2.0","USTA_2.5","USTA_3.0","USTA_3.5","USTA_4.0","USTA_4.5","USTA_5.0","USTA_5.5","USTA_6.0-7.0","ALTA_C","ALTA_B","ALTA_A","ALTA_AA"]
     
-    var ageRange = ["18-29","30-39","40-49","50-59","60-69","70-79","80+"]
+    var ageRange = ["","18-29","30-39","40-49","50-59","60-69","70-79","80+"]
 
     
     @IBAction func weekdayChosen(sender: AnyObject) {
@@ -86,19 +92,13 @@ class PreferencesVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
             
             chosenWeekday = "None"
             
-            println(chosenWeekday)
-            
         } else if weekdayController.selectedSegmentIndex == 1 {
             
             chosenWeekday = "Morning"
-            
-            println(chosenWeekday)
         
         } else if weekdayController.selectedSegmentIndex == 2 {
             
             chosenWeekday = "Afternoon"
-            
-            println(chosenWeekday)
         
         } else {
         
@@ -183,21 +183,36 @@ class PreferencesVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
         
     }
     
+//    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int{
+//        
+//        var toReturn: Int = 0
+//        
+//        if component == 0 {
+//            
+//           toReturn = skillLevel.count
+//        
+//        } else if component == 1 {
+//            
+//            toReturn = ageRange.count
+//        }
+//         return toReturn
+//
+//    }
+    
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int{
-        
-        var toReturn: Int = 0
         
         if component == 0 {
             
-           toReturn = skillLevel.count
-        
-        } else if component == 1 {
+            return skillLevel.count
             
-            toReturn = ageRange.count
+        } else {
+            
+            return ageRange.count
+            
         }
-         return toReturn
-
     }
+    
+    
     
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String!{
         

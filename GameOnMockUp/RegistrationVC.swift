@@ -22,7 +22,7 @@ class RegistrationVC: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     var chosenSkillLevel = ""
     var chosenAgeRange = ""
-    var chosenGender = ""
+    var chosenGender = "Male"
     
     
     @IBOutlet var firstNameField: UITextField!
@@ -162,9 +162,9 @@ class RegistrationVC: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         }
     }
     
-    var skillLevel = ["Beginner","Intermediate","Advanced","USTA_1.5","USTA_2.0","USTA_2.5","USTA_3.0","USTA_3.5","USTA_4.0","USTA_4.5","USTA_5.0","USTA_5.5","USTA_6.0-7.0","ALTA_C","ALTA_B","ALTA_A","ALTA_AA"]
+    var skillLevel = ["","Beginner","Intermediate","Advanced","USTA_1.5","USTA_2.0","USTA_2.5","USTA_3.0","USTA_3.5","USTA_4.0","USTA_4.5","USTA_5.0","USTA_5.5","USTA_6.0-7.0","ALTA_C","ALTA_B","ALTA_A","ALTA_AA"]
     
-    var ageRange = ["18-29","30-39","40-49","50-59","60-69","70-79","80+"]
+    var ageRange = ["","18-29","30-39","40-49","50-59","60-69","70-79","80+"]
     
     //    var gender = ["female","male"]
     
@@ -245,15 +245,25 @@ class RegistrationVC: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         
         if genderController.selectedSegmentIndex == 0 {
             
-            chosenGender = "male"
+            chosenGender = "Male"
             
             println(chosenGender)
-        }
         
-            chosenGender = "female"
+        } else if genderController.selectedSegmentIndex == 1 {
+        
+            chosenGender = "Female"
         
             println(chosenGender)
         
+        } else {
+            
+            genderController.selectedSegmentIndex = 0
+            
+            chosenGender = "Male"
+            
+            println(chosenGender)
+            
+        }
         
     }
 }
