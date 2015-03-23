@@ -21,15 +21,7 @@ class PlayersTableViewCell: UITableViewCell {
     
     @IBOutlet weak var postImageView:UIImageView!
     
-    @IBOutlet weak var sportRateLabel: UILabel!
-    
-    @IBOutlet weak var relRateLabel: UILabel!
-
-    @IBOutlet weak var sportRateImage: UIImageView!
-    
-    @IBOutlet weak var relRateImage: UIImageView!
-    
-    
+       
     
     override func awakeFromNib() {
         super.awakeFromNib()

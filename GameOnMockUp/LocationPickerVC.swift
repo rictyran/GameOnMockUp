@@ -13,6 +13,13 @@ import CoreLocation
 var onceToken:dispatch_once_t = 0
 
 
+
+
+
+
+var venueLocation: String!
+
+
 class MyPointAnnotation: MKPointAnnotation {
     
     var index: Int = 0
@@ -24,6 +31,9 @@ class MyPointAnnotation: MKPointAnnotation {
 }
 
 class LocationPickerVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
+    
+    
+    
     
     @IBOutlet weak var mapView: MKMapView!
     
@@ -109,10 +119,9 @@ class LocationPickerVC: UIViewController, CLLocationManagerDelegate, MKMapViewDe
             information.title = courts["name"] as String
             information.subtitle = "subtitle"
             
-            
+
             
             mapView.addAnnotation(information)
-            
             
            
         }
@@ -132,36 +141,21 @@ class LocationPickerVC: UIViewController, CLLocationManagerDelegate, MKMapViewDe
         var rightArrowButton = ArrowButton(frame: CGRectMake(0, 0, 30, 30))
         
         
-       // var leftButton = UIButton(frame: CGRectMake(0, 0, 30, 30))
-        
-        //leftButton = UIButton.buttonWithType(UIButtonType.System) as UIButton
-        //leftButton.backgroundColor = UIColor.yellowColor()
-        //leftButton.layer.cornerRadius = 30 / 2
-        
-       // leftButton.titleLabel?.text = "Save"
-        //leftButton.titleLabel?.textColor = UIColor.blackColor()
-        
-//        leftButton.setTitle("Save", forState: UIControlState.Normal)
-//        leftButton.addTarget(self, action: "Action:", forControlEvents: UIControlEvents.TouchUpInside)
-//        
-//        let label1 = UILabel(frame: CGRectMake(0, 0, 15, 15))
-//        label1.textColor = UIColor.blackColor()
-//        label1.text = "Save"
-//        label1.addSubview(leftButton)
-//        
-        
-        let label = UILabel(frame: CGRectMake(0, 0, 5, 5))
+        let label = UILabel(frame: CGRectMake(0, 0, 10, 5))
         label.text = "Save"
-        label.addSubview(label)
         
-        let button = UIButton.buttonWithType(UIButtonType.System) as UIButton
-        button.frame = CGRectMake(0, 0, 30, 30)
-        button.backgroundColor = UIColor.yellowColor()
-        button.layer.cornerRadius = 30 / 2
-        button.setTitle("Save", forState: UIControlState.Normal)
-        button.addTarget(self, action: "confirmPressed:", forControlEvents: UIControlEvents.TouchUpInside)
-        button.addSubview(button)
+        label.textColor = UIColor.blackColor()
+        label.addSubview(annotationView)
         
+        let locButton = UIButton.buttonWithType(UIButtonType.System) as UIButton
+        locButton.frame = CGRectMake(0, 0, 40, 40)
+        locButton.backgroundColor = UIColor.yellowColor()
+        locButton.layer.cornerRadius = 40 / 2
+        locButton.setTitle("Save", forState: UIControlState.Normal)
+        locButton.addTarget(self, action: "locationPressed:", forControlEvents: UIControlEvents.TouchUpInside)
+        locButton.addSubview(annotationView)
+        
+       
         
         rightArrowButton.strokeSize = 2
         rightArrowButton.leftInset = 8
@@ -172,7 +166,7 @@ class LocationPickerVC: UIViewController, CLLocationManagerDelegate, MKMapViewDe
         
         annotationView.rightCalloutAccessoryView = rightArrowButton
         
-        annotationView.leftCalloutAccessoryView = button
+        annotationView.leftCalloutAccessoryView = locButton
         
         annotationView.canShowCallout = true
         
@@ -203,7 +197,15 @@ class LocationPickerVC: UIViewController, CLLocationManagerDelegate, MKMapViewDe
     
     func mapView(mapView: MKMapView!, annotationView view: MKAnnotationView!, calloutAccessoryControlTapped control: UIControl!) {
         
-    
+        
+        // TODO: make this so it only sets venueLocation if the left calloutaccessory was tapped
+        
+        
+        if (control == view.leftCalloutAccessoryView) {
+            
+            venueLocation = view.annotation.title}
+        
+       
         view.annotation.title
     }
     
@@ -286,6 +288,29 @@ class LocationPickerVC: UIViewController, CLLocationManagerDelegate, MKMapViewDe
         
     }
     
+    func locationPressed (sender : UIButton) {
+        println("location Pressed")
+        
+       
+        
+        var schedulerViewController = storyboard?.instantiateViewControllerWithIdentifier("SVC") as SchedulerVCViewController
+        
+        
+        navigationController?.pushViewController(schedulerViewController, animated: true)
+        
+        
+       
+        
+        
+        
+    }
+    
+    
+    
+    
+    
+    
+   
     
 
     }//end

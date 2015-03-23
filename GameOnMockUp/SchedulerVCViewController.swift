@@ -12,6 +12,7 @@ var cellOne: String!
 var cellTwo: String!
 var cellThree: String!
 
+
 class SchedulerVCViewController: UIViewController, UIAlertViewDelegate {
     
     
@@ -23,46 +24,64 @@ class SchedulerVCViewController: UIViewController, UIAlertViewDelegate {
     @IBOutlet weak var datePicker: UIDatePicker!
     
     @IBOutlet weak var dateLabel: UILabel!
-    
-    @IBOutlet weak var locTextField: UITextField!
+   
     
     @IBOutlet weak var backgroundImageView: UIImageView!
   
  
+    @IBOutlet weak var locLabel: UILabel!
     
     
+    @IBAction func mapButton(sender: AnyObject) {
+        
+        
+        var locVC = storyboard?.instantiateViewControllerWithIdentifier("LVC") as LocationPickerVC
+        
+        
+        navigationController?.pushViewController(locVC, animated: true)
+        
+    }
   
- 
-    @IBAction func saveEvent(sender: AnyObject) {
     
-        cellOne = nameLabel.text
-        cellTwo = dateLabel.text
-        cellThree = locTextField.text
+    @IBAction func saveSendPush(sender: AnyObject) {
         
+        let actionSheetController: UIAlertController = UIAlertController(title: "Notify Player", message: "", preferredStyle: .Alert)
         
-       savingEvent()
+        //Create and add the Cancel action
+        let cancelAction: UIAlertAction = UIAlertAction(title: "Cancel", style: .Cancel) { action -> Void in
+            //Do some stuff
+        }
+        actionSheetController.addAction(cancelAction)
+        //Create and an option action
+        let sendAction: UIAlertAction = UIAlertAction(title: "Send", style: .Default) { action -> Void in
+            //Do some other stuff
+            
+            cellOne = self.nameLabel.text
+            cellTwo = self.dateLabel.text
+            cellThree = self.locLabel.text
+            
+            self.savingEvent()
+            
+            
+            let vc = self.storyboard?.instantiateViewControllerWithIdentifier("pendingEventsTVC") as PendingEventsTVC
+            
+             self.navigationController?.pushViewController(vc, animated: true)
+
+            
+        }
+        actionSheetController.addAction(sendAction)
+        //Add a text field
+        actionSheetController.addTextFieldWithConfigurationHandler { textField -> Void in
+            //TextField configuration
+            textField.textColor = UIColor.blueColor()
+        }
         
-        presentViewController(PendingEventsTVC(), animated: true, completion: nil)
-        
-        
+        //Present the AlertController
+        self.presentViewController(actionSheetController, animated: true, completion: nil)
     }
     
-    
-    
-    
-    @IBAction func sendPush(sender: AnyObject) {
-    
-    
-        var alert = UIAlertView(title: "Notify Player", message: "Send a message", delegate: self,
-            cancelButtonTitle: "Cancel",
-            otherButtonTitles: "Send")
         
-        alert.alertViewStyle = UIAlertViewStyle.PlainTextInput
         
-        alert.show()
-    }
-    
-    
    
     
     private var imageSet = ["image1"]
@@ -72,9 +91,11 @@ class SchedulerVCViewController: UIViewController, UIAlertViewDelegate {
         
 
 
+      
        nameLabel.text = newCell
       println(nameLabel.text)
         
+       
         
         datePicker.addTarget(self, action: Selector("datePickerChanged:"), forControlEvents: UIControlEvents.ValueChanged)
  
@@ -90,13 +111,15 @@ class SchedulerVCViewController: UIViewController, UIAlertViewDelegate {
     
      
     }
+    
+  
 
     func savingEvent() {
     
     var createEvent = PFObject(className:"Event")
     createEvent["name"] = nameLabel.text
     createEvent["date"] = datePicker.date
-    createEvent["setLocation"] = locTextField.text
+    createEvent["setLocation"] = locLabel.text
         
     createEvent.saveInBackgroundWithBlock {
     (success: Bool, error: NSError!) -> Void in
@@ -133,6 +156,18 @@ class SchedulerVCViewController: UIViewController, UIAlertViewDelegate {
     }
 
     
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
+        if venueLocation == nil {
+            locLabel.text = "Choose Location-->"
+        }else{
+        
+        
+        locLabel.text = venueLocation
+        println(locLabel.text)
+    }
+    }
    
     
     /*
