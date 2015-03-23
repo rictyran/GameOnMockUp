@@ -21,13 +21,22 @@ class PlayerTableViewController: UITableViewController {
     }
     
 
+    @IBAction func registerButton(sender: AnyObject) {
+        
+//        var mainSB = UIStoryboard(name: "Main", bundle: nil)
+//        var loginVC = mainSB.instantiateInitialViewController() as UINavigationController
+//        
+//        presentViewController(LoginVC(), animated: true, completion: nil)
+    
+    
+    }
 
     @IBOutlet weak var segControl: UISegmentedControl!
     
     
+    // change image with chosen gender
     
-    
-   // let postImages = ["female2"]
+//    let postImages = ["female2", "male"]
     
     var players: [PFUser] = []
     
@@ -41,7 +50,7 @@ class PlayerTableViewController: UITableViewController {
     
     let gender = ""
     
-    var postShown = [Bool](count: 6, repeatedValue: false)
+    var postShown = [Bool](count: 20, repeatedValue: false)
     
     
     var chosenAgeRanges:[String] = []
@@ -75,7 +84,9 @@ class PlayerTableViewController: UITableViewController {
         if chosenSkillLevel.count > 0 { playerQuery.whereKey("skillLevel", containedIn: chosenSkillLevel)}
         //
         if gender != "" { playerQuery.whereKey("gender", equalTo: gender) }
-        //
+        
+        
+        
         
         playerQuery.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
             
@@ -147,6 +158,11 @@ class PlayerTableViewController: UITableViewController {
         cell.ageLabel.text = player["ageRange"] as? String
         cell.genderLabel.text = player["gender"] as? String
         
+        if cell.genderLabel.text == "male" {
+            cell.postImageView.image = (UIImage (named: "male"))
+        } else {
+            cell.postImageView.image = (UIImage (named: "female2"))
+        }
         
         return cell
     }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="wl4-y1-Fui">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="lQk-mX-bys">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
@@ -33,10 +33,10 @@
             </objects>
             <point key="canvasLocation" x="1003" y="1209"/>
         </scene>
-        <!--Location PickerVC-->
+        <!--LVC-->
         <scene sceneID="KGW-Ro-wJC">
             <objects>
-                <viewController id="Cz4-z9-cmO" customClass="LocationPickerVC" customModule="GameOnMockUp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LVC" title="LVC" id="Cz4-z9-cmO" customClass="LocationPickerVC" customModule="GameOnMockUp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WNO-xo-Noe"/>
                         <viewControllerLayoutGuide type="bottom" id="m0d-Pb-Gyr"/>
@@ -179,7 +179,11 @@
                     </tableView>
                     <toolbarItems>
                         <barButtonItem width="112" style="plain" systemItem="fixedSpace" id="giW-5I-TCf"/>
-                        <barButtonItem title="Register" id="JyG-Gs-ywn"/>
+                        <barButtonItem title="Register" id="JyG-Gs-ywn">
+                            <connections>
+                                <action selector="registerButton:" destination="IXf-xt-3Ub" id="7O3-2o-2Ad"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem width="111" style="plain" systemItem="fixedSpace" id="bEm-yd-pTU"/>
                     </toolbarItems>
                     <navigationItem key="navigationItem" id="kk0-wu-86s">
@@ -209,7 +213,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fOa-ob-ePZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2567" y="1699"/>
+            <point key="canvasLocation" x="2387" y="1693"/>
         </scene>
         <!--SchedulerVC View Controller-->
         <scene sceneID="5Zw-XZ-Zjr">
@@ -232,11 +236,6 @@
                                     <!--2015-03-19 17:42:11 +0000-->
                                 </date>
                             </datePicker>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="as2-4d-AeI">
-                                <rect key="frame" x="16" y="194" width="288" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MM/DD/YY HH:MM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BGn-4o-OGV">
                                 <rect key="frame" x="16" y="266" width="288" height="19"/>
                                 <constraints>
@@ -266,49 +265,63 @@
                                     </mask>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x2l-ct-vJd">
+                                <rect key="frame" x="267" y="184" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Fro-Nx-EJE"/>
+                                    <constraint firstAttribute="width" constant="40" id="QRv-Te-Xbq"/>
+                                </constraints>
+                                <state key="normal" image="map">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="mapButton:" destination="2LH-pg-cie" eventType="touchUpInside" id="Hmn-0b-4Xt"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Location --&gt;" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WuS-zh-fgg">
+                                <rect key="frame" x="16" y="184" width="240" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="QfH-EA-sGH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Dec-Df-Bqa" firstAttribute="top" secondItem="BGn-4o-OGV" secondAttribute="bottom" constant="35" id="2Pz-SS-0UJ"/>
                             <constraint firstItem="nTt-yy-xa8" firstAttribute="trailing" secondItem="Dec-Df-Bqa" secondAttribute="trailing" id="3Gw-nI-gmf"/>
                             <constraint firstItem="BGn-4o-OGV" firstAttribute="leading" secondItem="9yb-Gc-MIH" secondAttribute="leadingMargin" id="3RV-Os-THr"/>
-                            <constraint firstItem="as2-4d-AeI" firstAttribute="trailing" secondItem="9yb-Gc-MIH" secondAttribute="trailingMargin" id="3yM-DP-jWj"/>
-                            <constraint firstItem="as2-4d-AeI" firstAttribute="trailing" secondItem="BGn-4o-OGV" secondAttribute="trailing" id="5Yf-Nt-u1B"/>
+                            <constraint firstItem="BGn-4o-OGV" firstAttribute="top" secondItem="WuS-zh-fgg" secondAttribute="bottom" constant="42" id="CKQ-dd-ysX"/>
                             <constraint firstItem="dgV-Yv-h84" firstAttribute="top" secondItem="040-9a-DdB" secondAttribute="bottom" constant="31" id="EtC-aM-qdr"/>
                             <constraint firstItem="QTk-eS-5DV" firstAttribute="top" secondItem="Dec-Df-Bqa" secondAttribute="bottom" constant="42" id="IAf-IW-9Eb"/>
-                            <constraint firstItem="dgV-Yv-h84" firstAttribute="leading" secondItem="as2-4d-AeI" secondAttribute="leading" id="IXA-ri-xtq"/>
-                            <constraint firstItem="BGn-4o-OGV" firstAttribute="top" secondItem="as2-4d-AeI" secondAttribute="bottom" constant="30" id="KH6-93-72p"/>
-                            <constraint firstItem="dgV-Yv-h84" firstAttribute="trailing" secondItem="as2-4d-AeI" secondAttribute="trailing" id="R2P-GF-zSA"/>
                             <constraint firstItem="nTt-yy-xa8" firstAttribute="leading" secondItem="Dec-Df-Bqa" secondAttribute="leading" id="Rso-bf-eWR"/>
+                            <constraint firstItem="x2l-ct-vJd" firstAttribute="trailing" secondItem="WuS-zh-fgg" secondAttribute="trailing" constant="51" id="TFr-Vp-3VU"/>
                             <constraint firstItem="dgV-Yv-h84" firstAttribute="top" secondItem="040-9a-DdB" secondAttribute="bottom" constant="35" id="Ujb-tF-eni"/>
                             <constraint firstItem="Dec-Df-Bqa" firstAttribute="top" secondItem="BGn-4o-OGV" secondAttribute="bottom" constant="40" id="VAK-fa-yLc"/>
-                            <constraint firstItem="BGn-4o-OGV" firstAttribute="top" secondItem="as2-4d-AeI" secondAttribute="bottom" constant="42" id="WR7-ma-yfQ"/>
-                            <constraint firstItem="as2-4d-AeI" firstAttribute="leading" secondItem="BGn-4o-OGV" secondAttribute="leading" id="ZM0-88-RXF"/>
                             <constraint firstItem="nTt-yy-xa8" firstAttribute="centerY" secondItem="9yb-Gc-MIH" secondAttribute="centerY" id="a9s-Av-Tmt"/>
+                            <constraint firstItem="x2l-ct-vJd" firstAttribute="top" secondItem="WuS-zh-fgg" secondAttribute="top" id="cun-Kp-4R7"/>
                             <constraint firstItem="Dec-Df-Bqa" firstAttribute="top" secondItem="BGn-4o-OGV" secondAttribute="bottom" constant="50" id="hIL-dL-WI0"/>
                             <constraint firstItem="nTt-yy-xa8" firstAttribute="leading" secondItem="9yb-Gc-MIH" secondAttribute="leading" id="hRQ-gq-M98"/>
+                            <constraint firstItem="WuS-zh-fgg" firstAttribute="trailing" secondItem="BGn-4o-OGV" secondAttribute="trailing" constant="-48" id="jQA-Uv-j6u"/>
                             <constraint firstItem="dgV-Yv-h84" firstAttribute="top" secondItem="040-9a-DdB" secondAttribute="bottom" constant="31" id="jq7-pR-Dem"/>
-                            <constraint firstItem="dgV-Yv-h84" firstAttribute="trailing" secondItem="as2-4d-AeI" secondAttribute="trailing" id="mjb-Bb-ute"/>
-                            <constraint firstItem="as2-4d-AeI" firstAttribute="trailing" secondItem="BGn-4o-OGV" secondAttribute="trailing" id="muM-b9-Odg"/>
-                            <constraint firstItem="as2-4d-AeI" firstAttribute="leading" secondItem="9yb-Gc-MIH" secondAttribute="leadingMargin" id="oI6-Dv-S2W"/>
+                            <constraint firstItem="WuS-zh-fgg" firstAttribute="leading" secondItem="9yb-Gc-MIH" secondAttribute="leadingMargin" id="kGz-4X-k8b"/>
+                            <constraint firstItem="WuS-zh-fgg" firstAttribute="trailing" secondItem="dgV-Yv-h84" secondAttribute="trailing" constant="-48" id="kzf-0O-tTK"/>
+                            <constraint firstItem="WuS-zh-fgg" firstAttribute="leading" secondItem="dgV-Yv-h84" secondAttribute="leading" id="loQ-MD-znJ"/>
                             <constraint firstAttribute="bottom" secondItem="nTt-yy-xa8" secondAttribute="bottom" id="oPr-Mk-cwP"/>
-                            <constraint firstItem="dgV-Yv-h84" firstAttribute="leading" secondItem="as2-4d-AeI" secondAttribute="leading" id="ovO-pN-MHo"/>
+                            <constraint firstItem="WuS-zh-fgg" firstAttribute="leading" secondItem="BGn-4o-OGV" secondAttribute="leading" id="tHX-X5-bHI"/>
                             <constraint firstItem="BGn-4o-OGV" firstAttribute="centerX" secondItem="Dec-Df-Bqa" secondAttribute="centerX" id="toD-MO-kiy"/>
                             <constraint firstItem="Dec-Df-Bqa" firstAttribute="top" secondItem="BGn-4o-OGV" secondAttribute="bottom" constant="35" id="v6Q-oY-oVz"/>
                             <constraint firstItem="dgV-Yv-h84" firstAttribute="centerX" secondItem="Dec-Df-Bqa" secondAttribute="centerX" id="vOh-oQ-aW8"/>
-                            <constraint firstItem="as2-4d-AeI" firstAttribute="leading" secondItem="BGn-4o-OGV" secondAttribute="leading" id="xUu-8q-2qo"/>
+                            <constraint firstItem="x2l-ct-vJd" firstAttribute="bottom" secondItem="WuS-zh-fgg" secondAttribute="bottom" id="y1I-3o-9n2"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="EtC-aM-qdr"/>
                                 <exclude reference="jq7-pR-Dem"/>
-                                <exclude reference="mjb-Bb-ute"/>
-                                <exclude reference="ovO-pN-MHo"/>
                                 <exclude reference="vOh-oQ-aW8"/>
-                                <exclude reference="ZM0-88-RXF"/>
-                                <exclude reference="muM-b9-Odg"/>
                                 <exclude reference="3RV-Os-THr"/>
-                                <exclude reference="KH6-93-72p"/>
                                 <exclude reference="2Pz-SS-0UJ"/>
                                 <exclude reference="VAK-fa-yLc"/>
                                 <exclude reference="hIL-dL-WI0"/>
@@ -316,31 +329,27 @@
                         </variation>
                     </view>
                     <toolbarItems>
-                        <barButtonItem systemItem="save" id="kpb-7a-VZe">
+                        <barButtonItem title="Send Message" id="kpb-7a-VZe">
                             <connections>
-                                <action selector="saveEvent:" destination="2LH-pg-cie" id="i12-GM-Cnm"/>
+                                <action selector="saveSendPush:" destination="2LH-pg-cie" id="iXB-bw-hEf"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="s7D-w4-gja"/>
-                        <barButtonItem systemItem="action" id="3XW-sC-DDG">
-                            <connections>
-                                <action selector="sendPush:" destination="2LH-pg-cie" id="PdY-Jw-FyE"/>
-                            </connections>
-                        </barButtonItem>
                     </toolbarItems>
+                    <navigationItem key="navigationItem" id="Uob-Bz-0XL"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="backgroundImageView" destination="nTt-yy-xa8" id="glw-Xu-ZQc"/>
                         <outlet property="dateLabel" destination="BGn-4o-OGV" id="KHx-0b-T7B"/>
                         <outlet property="datePicker" destination="Dec-Df-Bqa" id="9hy-pH-9lW"/>
-                        <outlet property="locTextField" destination="as2-4d-AeI" id="W3T-6V-JKb"/>
+                        <outlet property="locLabel" destination="WuS-zh-fgg" id="k91-Hp-G6C"/>
                         <outlet property="nameLabel" destination="dgV-Yv-h84" id="ijx-w9-9mA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="afB-oY-k6V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2982" y="1699"/>
+            <point key="canvasLocation" x="2782" y="1693"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="o4W-9j-rKf">
@@ -363,7 +372,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="338-IX-oAf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2217" y="1699"/>
+            <point key="canvasLocation" x="1975" y="1693"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MwI-mO-7en">
@@ -387,7 +396,7 @@
         <!--Pending EventsTVC-->
         <scene sceneID="5Fo-f3-zTy">
             <objects>
-                <tableViewController id="Dq1-7M-tBl" customClass="PendingEventsTVC" customModule="GameOnMockUp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="pendingEventsTVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Dq1-7M-tBl" customClass="PendingEventsTVC" customModule="GameOnMockUp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" id="Ftm-Y0-Jg5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -450,30 +459,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CAt-sv-Yuc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3361" y="1699"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="FzZ-H8-B9u">
-            <objects>
-                <viewController storyboardIdentifier="UVC" id="cnH-j7-yxU" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="BJh-Z9-cQ1"/>
-                        <viewControllerLayoutGuide type="bottom" id="q7g-Wp-bS4"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="qMP-A8-DcT">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yNt-Si-es6" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3726" y="1699"/>
+            <point key="canvasLocation" x="3255" y="1693"/>
         </scene>
     </scenes>
     <resources>
         <image name="female2" width="400" height="400"/>
         <image name="image1" width="207" height="368"/>
+        <image name="map" width="120" height="120"/>
     </resources>
 </document>

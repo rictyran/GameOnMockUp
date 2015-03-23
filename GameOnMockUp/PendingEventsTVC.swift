@@ -12,7 +12,7 @@ import UIKit
 
 class PendingEventsTVC: UITableViewController {
 
-   let cells = [cellOne, cellTwo, cellThree]
+  // let cells = [cellOne, cellTwo, cellThree]
     
   var postShown = [Bool](count: 6, repeatedValue: false)
    
@@ -46,9 +46,9 @@ class PendingEventsTVC: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-                return cells.count
+                return 1
         
-        //return 5
+       
     }
     
 
@@ -67,7 +67,11 @@ class PendingEventsTVC: UITableViewController {
     
     
     
+    func getPendingEvents() {
         
+        
+        
+    }
   
 
     
