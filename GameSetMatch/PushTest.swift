@@ -13,9 +13,11 @@ import UIKit
 
 class PushTest: UIViewController {
 
+    var user: PFUser!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
 
@@ -30,8 +32,8 @@ class PushTest: UIViewController {
         var pushUp = PFObject(className:"Invitation")
         
         pushUp["senderId"] = PFUser.currentUser().objectId
-        pushUp["receiverId"] = user.objectId
-        pushUp["participants"] = [PFUser.currentUser().objectId,user.objectId]
+        pushUp["receiverId"] = "a4bj3ilq6c" // user.objectId
+        pushUp["participants"] = [PFUser.currentUser().objectId,"a4bj3ilq6c"]
         
         pushUp.saveInBackgroundWithBlock {
             (success: Bool, error: NSError!) -> Void in
@@ -43,14 +45,19 @@ class PushTest: UIViewController {
         
         }
         
+        let message = "Someone has invited you to play tennis"
+        
+        var data = [ "title": "Some Title","alert": message]
+        
         var deviceQuery = PFInstallation.query()
         
-        deviceQuery.whereKey("receiverId", equalTo: user.objectId)
+        deviceQuery.whereKey("userId", equalTo: "a4bj3ilq6c")
         
         var push = PFPush()
-        push.setMessage("Someone has invited you to play tennis")
+//        push.setMessage("Someone has invited you to play tennis")
         push.setQuery(deviceQuery)
-        push.sendPush(nil)
+        push.setData(data)
+        push.sendPushInBackground()
     
     }
     

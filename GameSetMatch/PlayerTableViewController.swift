@@ -216,6 +216,8 @@ class PlayerTableViewController: UITableViewController {
         
         var schedulerViewController = storyboard?.instantiateViewControllerWithIdentifier("SVC") as SchedulerVCViewController
         
+        schedulerViewController.user = players[indexPath.row]
+        // set user here
         
         navigationController?.pushViewController(schedulerViewController, animated: true)
         

@@ -59,7 +59,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
         
-        // PFPush.handlePush(userInfo)
+         PFPush.handlePush(userInfo)
         
         NSNotificationCenter.defaultCenter().postNotificationName("Push Touch", object: nil, userInfo: userInfo)
         
