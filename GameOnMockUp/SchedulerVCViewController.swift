@@ -12,10 +12,10 @@ var cellOne: String!
 var cellTwo: String!
 var cellThree: String!
 
+var user: PFUser!
+var messages: [PFObject] = []
 
 class SchedulerVCViewController: UIViewController, UIAlertViewDelegate {
-    
-    
     
     var playerTable = PlayerTableViewController()
     
@@ -62,6 +62,7 @@ class SchedulerVCViewController: UIViewController, UIAlertViewDelegate {
             
             self.savingEvent()
             
+//            self.pushMessage()
             
             let vc = self.storyboard?.instantiateViewControllerWithIdentifier("pendingEventsTVC") as PendingEventsTVC
             
@@ -80,22 +81,27 @@ class SchedulerVCViewController: UIViewController, UIAlertViewDelegate {
         self.presentViewController(actionSheetController, animated: true, completion: nil)
     }
     
-        
-        
-   
-    
     private var imageSet = ["image1"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-
-
       
+//        let messageQuery = PFQuery(className: "Messages")
+//        
+//        messageQuery.whereKey("participants", containsAllObjectsInArray: [user.objectId, PFUser.currentUser().objectId])
+//        
+//        messageQuery.findObjectsInBackgroundWithBlock { (messages, error) -> Void in
+//            
+//            if messages.count > 0 {
+//                
+//                self.messages = messages as [PFObject]
+//                
+//            }
+//            
+//        }
+
        nameLabel.text = newCell
       println(nameLabel.text)
-        
-       
         
         datePicker.addTarget(self, action: Selector("datePickerChanged:"), forControlEvents: UIControlEvents.ValueChanged)
  
@@ -109,18 +115,21 @@ class SchedulerVCViewController: UIViewController, UIAlertViewDelegate {
         blurEffectView.frame = view.bounds
         backgroundImageView.addSubview(blurEffectView)
     
-     
+        
+        
     }
     
-  
-
     func savingEvent() {
     
     var createEvent = PFObject(className:"Event")
     createEvent["name"] = nameLabel.text
     createEvent["date"] = datePicker.date
     createEvent["setLocation"] = locLabel.text
-        
+    
+    createEvent["senderId"] = PFUser.currentUser().objectId
+    createEvent["receiverId"] = user.objectId
+    createEvent["participants"] = [PFUser.currentUser().objectId,user.objectId]
+
     createEvent.saveInBackgroundWithBlock {
     (success: Bool, error: NSError!) -> Void in
     if (success) {
@@ -133,6 +142,32 @@ class SchedulerVCViewController: UIViewController, UIAlertViewDelegate {
     }
     }
     
+    
+    
+//        var message = PFObject(className: "Messages")
+//        
+//        message["content"] = "Someone has invited you to play tennis"
+//        
+//        message.saveInBackgroundWithBlock(nil)
+//        
+//        messages.append(message)
+        
+//        tableView.reloadData()
+    
+    
+//    func pushMessage() {
+//    
+//        var deviceQuery = PFInstallation.query()
+//
+//        deviceQuery.whereKey("userId", equalTo: user.objectId)
+//        
+//        var push = PFPush()
+//        push.setMessage("Someone has invited you to play tennis")
+//        push.setQuery(deviceQuery)
+//        push.sendPush(nil)
+//        
+//    }
+    
     func datePickerChanged(datePicker:UIDatePicker) {
         var dateFormatter = NSDateFormatter()
         
@@ -143,27 +178,21 @@ class SchedulerVCViewController: UIViewController, UIAlertViewDelegate {
         dateLabel.text = strDate
     }
 
-    
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
         self.view.endEditing(true)
     }
 
-    
-    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
         if venueLocation == nil {
             locLabel.text = "Choose Location-->"
         }else{
-        
-        
+    
         locLabel.text = venueLocation
         println(locLabel.text)
     }

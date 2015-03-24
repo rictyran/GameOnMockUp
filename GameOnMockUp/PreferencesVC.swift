@@ -52,6 +52,11 @@ class PreferencesVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
                 
                 user.save()
                 
+                let currentInstallation = PFInstallation.currentInstallation()
+                currentInstallation["userId"] = PFUser.currentUser().objectId
+                currentInstallation.saveInBackgroundWithBlock(nil)
+
+                
                 println("saved success")
                 
 //                var PTVC = Map.storyboard?.instantiateViewControllerWithIdentifier("PlayerTableViewController") as? UITableViewController
