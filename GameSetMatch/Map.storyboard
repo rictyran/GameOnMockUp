@@ -9,7 +9,7 @@
         <!--LVC-->
         <scene sceneID="KGW-Ro-wJC">
             <objects>
-                <viewController storyboardIdentifier="LVC" title="LVC" id="Cz4-z9-cmO" customClass="LocationPickerVC" customModule="GameOnMockUp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LVC" title="LVC" id="Cz4-z9-cmO" customClass="LocationPickerVC" customModule="GameSetMatch" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WNO-xo-Noe"/>
                         <viewControllerLayoutGuide type="bottom" id="m0d-Pb-Gyr"/>
@@ -49,13 +49,13 @@
         <!--Player Table View Controller-->
         <scene sceneID="gyV-9q-94K">
             <objects>
-                <tableViewController storyboardIdentifier="PlayerTVC" id="IXf-xt-3Ub" customClass="PlayerTableViewController" customModule="GameOnMockUp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="PlayerTVC" id="IXf-xt-3Ub" customClass="PlayerTableViewController" customModule="GameSetMatch" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="251" sectionHeaderHeight="22" sectionFooterHeight="22" id="I1K-Cf-6kh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="130" id="Qy5-Sr-rvv" customClass="PlayersTableViewCell" customModule="GameOnMockUp" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="130" id="Qy5-Sr-rvv" customClass="PlayersTableViewCell" customModule="GameSetMatch" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Qy5-Sr-rvv" id="bZt-EN-zq2">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -196,7 +196,7 @@
         <!--SchedulerVC View Controller-->
         <scene sceneID="5Zw-XZ-Zjr">
             <objects>
-                <viewController restorationIdentifier="SVC" storyboardIdentifier="SVC" id="2LH-pg-cie" customClass="SchedulerVCViewController" customModule="GameOnMockUp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="SVC" storyboardIdentifier="SVC" id="2LH-pg-cie" customClass="SchedulerVCViewController" customModule="GameSetMatch" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="040-9a-DdB"/>
                         <viewControllerLayoutGuide type="bottom" id="QTk-eS-5DV"/>
@@ -373,13 +373,13 @@
         <!--Pending EventsTVC-->
         <scene sceneID="5Fo-f3-zTy">
             <objects>
-                <tableViewController storyboardIdentifier="pendingEventsTVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Dq1-7M-tBl" customClass="PendingEventsTVC" customModule="GameOnMockUp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="pendingEventsTVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Dq1-7M-tBl" customClass="PendingEventsTVC" customModule="GameSetMatch" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" id="Ftm-Y0-Jg5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Celly" rowHeight="100" id="SrO-4t-F9W" customClass="PendingTableViewCell" customModule="GameOnMockUp" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Celly" rowHeight="100" id="SrO-4t-F9W" customClass="PendingTableViewCell" customModule="GameSetMatch" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SrO-4t-F9W" id="4l5-7F-9L2">
                                     <autoresizingMask key="autoresizingMask"/>

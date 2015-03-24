@@ -11,9 +11,6 @@ import UIKit
 //var user: PFUser!
 //var messages: [PFObject] = []
 
-
-    
-    
 class PushTest: UIViewController {
 
     override func viewDidLoad() {

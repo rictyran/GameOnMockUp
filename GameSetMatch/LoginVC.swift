@@ -138,9 +138,10 @@ class LoginVC: UIViewController {
         
         if isLoggedIn {
             
-            var FVC = storyboard?.instantiateViewControllerWithIdentifier("FutureVC") as? UIViewController
+            var mapSB = UIStoryboard(name: "Map", bundle: nil)
+            var PETVC = mapSB.instantiateInitialViewController() as UINavigationController
             
-            UIApplication.sharedApplication().keyWindow?.rootViewController = FVC
+            presentViewController(PETVC, animated: true, completion: nil)
             
         } else {
             
@@ -148,6 +149,10 @@ class LoginVC: UIViewController {
             //
         }
         
+    }
+    
+    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+        self.view.endEditing(true)
     }
     
     override func didReceiveMemoryWarning() {
