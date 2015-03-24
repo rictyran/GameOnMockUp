@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:GameOnMockUp.xcodeproj">
+      location = "self:GameSetMatch.xcodeproj">
    </FileRef>
 </Workspace>

@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "5AD066BE1AA00B6A00876FA3"
-               BuildableName = "GameOnMockUp.app"
-               BlueprintName = "GameOnMockUp"
-               ReferencedContainer = "container:GameOnMockUp.xcodeproj">
+               BuildableName = "GameSetMatch.app"
+               BlueprintName = "GameSetMatch"
+               ReferencedContainer = "container:GameSetMatch.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "5AD066D31AA00B6A00876FA3"
-               BuildableName = "GameOnMockUpTests.xctest"
-               BlueprintName = "GameOnMockUpTests"
-               ReferencedContainer = "container:GameOnMockUp.xcodeproj">
+               BuildableName = "GameSetMatchTests.xctest"
+               BlueprintName = "GameSetMatchTests"
+               ReferencedContainer = "container:GameSetMatch.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "5AD066D31AA00B6A00876FA3"
-               BuildableName = "GameOnMockUpTests.xctest"
-               BlueprintName = "GameOnMockUpTests"
-               ReferencedContainer = "container:GameOnMockUp.xcodeproj">
+               BuildableName = "GameSetMatchTests.xctest"
+               BlueprintName = "GameSetMatchTests"
+               ReferencedContainer = "container:GameSetMatch.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5AD066BE1AA00B6A00876FA3"
-            BuildableName = "GameOnMockUp.app"
-            BlueprintName = "GameOnMockUp"
-            ReferencedContainer = "container:GameOnMockUp.xcodeproj">
+            BuildableName = "GameSetMatch.app"
+            BlueprintName = "GameSetMatch"
+            ReferencedContainer = "container:GameSetMatch.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -77,9 +77,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5AD066BE1AA00B6A00876FA3"
-            BuildableName = "GameOnMockUp.app"
-            BlueprintName = "GameOnMockUp"
-            ReferencedContainer = "container:GameOnMockUp.xcodeproj">
+            BuildableName = "GameSetMatch.app"
+            BlueprintName = "GameSetMatch"
+            ReferencedContainer = "container:GameSetMatch.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -96,9 +96,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5AD066BE1AA00B6A00876FA3"
-            BuildableName = "GameOnMockUp.app"
-            BlueprintName = "GameOnMockUp"
-            ReferencedContainer = "container:GameOnMockUp.xcodeproj">
+            BuildableName = "GameSetMatch.app"
+            BlueprintName = "GameSetMatch"
+            ReferencedContainer = "container:GameSetMatch.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

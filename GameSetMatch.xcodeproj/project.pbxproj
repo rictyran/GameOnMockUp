@@ -66,14 +66,14 @@
 		5AC83C151ABF521900E41DB1 /* FeedbackVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackVC.swift; sourceTree = "<group>"; };
 		5AC83C191ABFA14200E41DB1 /* CustomDatePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomDatePicker.swift; sourceTree = "<group>"; };
 		5AC83C1B1AC1961500E41DB1 /* PushTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushTest.swift; sourceTree = "<group>"; };
-		5AD066BF1AA00B6A00876FA3 /* GameOnMockUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameOnMockUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AD066BF1AA00B6A00876FA3 /* GameSetMatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameSetMatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AD066C31AA00B6A00876FA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5AD066C41AA00B6A00876FA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5AD066C61AA00B6A00876FA3 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		5AD066C91AA00B6A00876FA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5AD066CB1AA00B6A00876FA3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5AD066CE1AA00B6A00876FA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		5AD066D41AA00B6A00876FA3 /* GameOnMockUpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameOnMockUpTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AD066D41AA00B6A00876FA3 /* GameSetMatchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameSetMatchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AD066D91AA00B6A00876FA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5AD066DA1AA00B6A00876FA3 /* GameOnMockUpTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOnMockUpTests.swift; sourceTree = "<group>"; };
 		5AD41A2E1AA4F5CB00ACFA78 /* tennisball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tennisball.png; path = ../tennisball.png; sourceTree = "<group>"; };
@@ -143,8 +143,8 @@
 		5AD066B61AA00B6A00876FA3 = {
 			isa = PBXGroup;
 			children = (
-				5AD066C11AA00B6A00876FA3 /* GameOnMockUp */,
-				5AD066D71AA00B6A00876FA3 /* GameOnMockUpTests */,
+				5AD066C11AA00B6A00876FA3 /* GameSetMatch */,
+				5AD066D71AA00B6A00876FA3 /* GameSetMatchTests */,
 				5AD066C01AA00B6A00876FA3 /* Products */,
 				5AD41A401AA63E9100ACFA78 /* Frameworks */,
 			);
@@ -153,13 +153,13 @@
 		5AD066C01AA00B6A00876FA3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5AD066BF1AA00B6A00876FA3 /* GameOnMockUp.app */,
-				5AD066D41AA00B6A00876FA3 /* GameOnMockUpTests.xctest */,
+				5AD066BF1AA00B6A00876FA3 /* GameSetMatch.app */,
+				5AD066D41AA00B6A00876FA3 /* GameSetMatchTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5AD066C11AA00B6A00876FA3 /* GameOnMockUp */ = {
+		5AD066C11AA00B6A00876FA3 /* GameSetMatch */ = {
 			isa = PBXGroup;
 			children = (
 				70FDE5091AB10412002CEAE5 /* MapProfile */,
@@ -169,6 +169,7 @@
 				5AD41A321AA6385E00ACFA78 /* View Controllers */,
 				5AD066C21AA00B6A00876FA3 /* Supporting Files */,
 			);
+			name = GameSetMatch;
 			path = GameOnMockUp;
 			sourceTree = "<group>";
 		};
@@ -187,12 +188,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		5AD066D71AA00B6A00876FA3 /* GameOnMockUpTests */ = {
+		5AD066D71AA00B6A00876FA3 /* GameSetMatchTests */ = {
 			isa = PBXGroup;
 			children = (
 				5AD066DA1AA00B6A00876FA3 /* GameOnMockUpTests.swift */,
 				5AD066D81AA00B6A00876FA3 /* Supporting Files */,
 			);
+			name = GameSetMatchTests;
 			path = GameOnMockUpTests;
 			sourceTree = "<group>";
 		};
@@ -276,9 +278,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5AD066BE1AA00B6A00876FA3 /* GameOnMockUp */ = {
+		5AD066BE1AA00B6A00876FA3 /* GameSetMatch */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5AD066DE1AA00B6A00876FA3 /* Build configuration list for PBXNativeTarget "GameOnMockUp" */;
+			buildConfigurationList = 5AD066DE1AA00B6A00876FA3 /* Build configuration list for PBXNativeTarget "GameSetMatch" */;
 			buildPhases = (
 				5AD066BB1AA00B6A00876FA3 /* Sources */,
 				5AD066BC1AA00B6A00876FA3 /* Frameworks */,
@@ -288,14 +290,14 @@
 			);
 			dependencies = (
 			);
-			name = GameOnMockUp;
+			name = GameSetMatch;
 			productName = GameOnMockUp;
-			productReference = 5AD066BF1AA00B6A00876FA3 /* GameOnMockUp.app */;
+			productReference = 5AD066BF1AA00B6A00876FA3 /* GameSetMatch.app */;
 			productType = "com.apple.product-type.application";
 		};
-		5AD066D31AA00B6A00876FA3 /* GameOnMockUpTests */ = {
+		5AD066D31AA00B6A00876FA3 /* GameSetMatchTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5AD066E11AA00B6A00876FA3 /* Build configuration list for PBXNativeTarget "GameOnMockUpTests" */;
+			buildConfigurationList = 5AD066E11AA00B6A00876FA3 /* Build configuration list for PBXNativeTarget "GameSetMatchTests" */;
 			buildPhases = (
 				5AD066D01AA00B6A00876FA3 /* Sources */,
 				5AD066D11AA00B6A00876FA3 /* Frameworks */,
@@ -306,9 +308,9 @@
 			dependencies = (
 				5AD066D61AA00B6A00876FA3 /* PBXTargetDependency */,
 			);
-			name = GameOnMockUpTests;
+			name = GameSetMatchTests;
 			productName = GameOnMockUpTests;
-			productReference = 5AD066D41AA00B6A00876FA3 /* GameOnMockUpTests.xctest */;
+			productReference = 5AD066D41AA00B6A00876FA3 /* GameSetMatchTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -329,7 +331,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 5AD066BA1AA00B6A00876FA3 /* Build configuration list for PBXProject "GameOnMockUp" */;
+			buildConfigurationList = 5AD066BA1AA00B6A00876FA3 /* Build configuration list for PBXProject "GameSetMatch" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -342,8 +344,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5AD066BE1AA00B6A00876FA3 /* GameOnMockUp */,
-				5AD066D31AA00B6A00876FA3 /* GameOnMockUpTests */,
+				5AD066BE1AA00B6A00876FA3 /* GameSetMatch */,
+				5AD066D31AA00B6A00876FA3 /* GameSetMatchTests */,
 			);
 		};
 /* End PBXProject section */
@@ -413,7 +415,7 @@
 /* Begin PBXTargetDependency section */
 		5AD066D61AA00B6A00876FA3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 5AD066BE1AA00B6A00876FA3 /* GameOnMockUp */;
+			target = 5AD066BE1AA00B6A00876FA3 /* GameSetMatch */;
 			targetProxy = 5AD066D51AA00B6A00876FA3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -527,7 +529,7 @@
 				INFOPLIST_FILE = GameOnMockUp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = GameSetMatch;
 				SWIFT_OBJC_BRIDGING_HEADER = "GameOnMockUp/GameOnMockUp-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -545,7 +547,7 @@
 				INFOPLIST_FILE = GameOnMockUp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = GameSetMatch;
 				SWIFT_OBJC_BRIDGING_HEADER = "GameOnMockUp/GameOnMockUp-Bridging-Header.h";
 			};
 			name = Release;
@@ -564,7 +566,7 @@
 				);
 				INFOPLIST_FILE = GameOnMockUpTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = GameSetMatchTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GameOnMockUp.app/GameOnMockUp";
 			};
 			name = Debug;
@@ -579,7 +581,7 @@
 				);
 				INFOPLIST_FILE = GameOnMockUpTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = GameSetMatchTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GameOnMockUp.app/GameOnMockUp";
 			};
 			name = Release;
@@ -587,7 +589,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5AD066BA1AA00B6A00876FA3 /* Build configuration list for PBXProject "GameOnMockUp" */ = {
+		5AD066BA1AA00B6A00876FA3 /* Build configuration list for PBXProject "GameSetMatch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5AD066DC1AA00B6A00876FA3 /* Debug */,
@@ -596,7 +598,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5AD066DE1AA00B6A00876FA3 /* Build configuration list for PBXNativeTarget "GameOnMockUp" */ = {
+		5AD066DE1AA00B6A00876FA3 /* Build configuration list for PBXNativeTarget "GameSetMatch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5AD066DF1AA00B6A00876FA3 /* Debug */,
@@ -605,7 +607,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5AD066E11AA00B6A00876FA3 /* Build configuration list for PBXNativeTarget "GameOnMockUpTests" */ = {
+		5AD066E11AA00B6A00876FA3 /* Build configuration list for PBXNativeTarget "GameSetMatchTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5AD066E21AA00B6A00876FA3 /* Debug */,
