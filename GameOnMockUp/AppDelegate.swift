@@ -22,8 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        Parse.setApplicationId("bcVknfGq1bDA7N49lStTu8D1GYh2KuhQp7GS3L8s", clientKey: "DvLRccnvpcCb44si4B66bWETsNC1oTruONDWtAzs")
         
         
-        Parse.setApplicationId("WLCT1paiJCd6ZBkskps1bWOnyGUKf8jC2AFedlBk",
-            clientKey:"z701D8h7JrTIjFDOOowTx34bDINlK0aCcagz1MeX")
+        Parse.setApplicationId("bcVknfGq1bDA7N49lStTu8D1GYh2KuhQp7GS3L8s",
+            clientKey:"DvLRccnvpcCb44si4B66bWETsNC1oTruONDWtAzs")
         
         
         // Register for Push Notitications

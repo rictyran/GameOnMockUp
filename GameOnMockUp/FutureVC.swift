@@ -11,11 +11,12 @@ import UIKit
 class FutureVC: UIViewController {
     
     
+    @IBOutlet weak var backgroundImageView: UIImageView!
     
     @IBAction func searchMapButton(sender: AnyObject) {
         
         var mapSB = UIStoryboard(name: "Map", bundle: nil)
-        var locVC = mapSB.instantiateInitialViewController() as LocationPickerVC
+        var locVC = mapSB.instantiateInitialViewController() as UINavigationController
         
         presentViewController(locVC, animated: true, completion: nil)
         
@@ -23,10 +24,20 @@ class FutureVC: UIViewController {
     }
     
     
-    
+     private var imageSet = ["Courts", "Court"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let selectedImageIndex = Int(arc4random_uniform(1))
+        
+        //blurring effect
+        backgroundImageView.image = UIImage(named: imageSet[selectedImageIndex])
+        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.Light)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = view.bounds
+        backgroundImageView.addSubview(blurEffectView)
+
 
         // Do any additional setup after loading the view.
     }
