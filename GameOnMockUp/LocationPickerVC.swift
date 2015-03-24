@@ -39,10 +39,11 @@ class LocationPickerVC: UIViewController, CLLocationManagerDelegate, MKMapViewDe
     
     
     
-    @IBAction func backButton(sender: AnyObject) {
+    @IBAction func cancelButton(sender: AnyObject) {
         
-        dismissViewControllerAnimated(true, completion: nil)
+       navigationController?.popViewControllerAnimated(true)
     }
+  
 
     
     
@@ -129,7 +130,53 @@ class LocationPickerVC: UIViewController, CLLocationManagerDelegate, MKMapViewDe
         
     }
     
+    func mapView(mapView: MKMapView!, regionDidChangeAnimated animated: Bool) {
+        
+        self.refreshMap()
+        
+    }
     
+    
+    func refreshMap() {
+        
+        
+//        var foursquareData = FourSquareRequest.requestVenuesWithLocation(mapView.center)
+        
+        self.mapView.removeAnnotations(self.mapView.annotations)
+        
+        
+        let venues = FourSquareRequest.requestVenuesWithLocation(CLLocation(latitude: mapView.region.center.latitude, longitude: mapView.region.center.longitude))
+        
+        
+        for venue in venues {
+            
+            
+            let venueName = venue["name"] as? String
+            
+            let locationInfo = venue["location"] as [String:AnyObject]
+            
+            let lat = locationInfo["lat"] as CLLocationDegrees
+            let lng = locationInfo["lng"] as CLLocationDegrees
+            
+            let coordinate = CLLocationCoordinate2DMake(lat,lng)
+            
+            let annotation = MKPointAnnotation()
+            
+            annotation.setCoordinate(coordinate)
+            
+            
+            if let venueName = venueName { annotation.title = venueName }
+            
+            self.mapView.addAnnotation(annotation)
+            
+            
+            
+            
+        }
+        
+//        self.mapView.showAnnotations(self.mapView.annotations, animated: true)
+
+    }
     
     func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
         
@@ -231,47 +278,53 @@ class LocationPickerVC: UIViewController, CLLocationManagerDelegate, MKMapViewDe
                 
                 self.mapView.setRegion(region, animated: true)
                 
-                var foursquareData = FourSquareRequest.requestVenuesWithLocation(location)
+                self.refreshMap()
                 
-                
-                var annotationArray = self.mapView.annotations
-                self.mapView.showAnnotations(annotationArray, animated: true)
-                
-                
-                let venues = FourSquareRequest.requestVenuesWithLocation(location)
-                
-                
-                for venue in venues {
-                    
-                    
-                    let venueName = venue["name"] as? String
-                    
-                    let locationInfo = venue["location"] as [String:AnyObject]
-                    
-                    let lat = locationInfo["lat"] as CLLocationDegrees
-                    let lng = locationInfo["lng"] as CLLocationDegrees
-                    
-                    let coordinate = CLLocationCoordinate2DMake(lat,lng)
-                    
-                    let annotation = MKPointAnnotation()
-        
-                    annotation.setCoordinate(coordinate)
-                    
-                    
-                    if let venueName = venueName { annotation.title = venueName }
-        
-                    self.mapView.addAnnotation(annotation)
-            
-                    
-                    
-       
-                }
+//                var foursquareData = FourSquareRequest.requestVenuesWithLocation(location)
+//                
+//                
+//                var annotationArray = self.mapView.annotations
+//                self.mapView.showAnnotations(annotationArray, animated: true)
+//                
+//                
+//                let venues = FourSquareRequest.requestVenuesWithLocation(location)
+//                
+//                
+//                for venue in venues {
+//                    
+//                    
+//                    let venueName = venue["name"] as? String
+//                    
+//                    let locationInfo = venue["location"] as [String:AnyObject]
+//                    
+//                    let lat = locationInfo["lat"] as CLLocationDegrees
+//                    let lng = locationInfo["lng"] as CLLocationDegrees
+//                    
+//                    let coordinate = CLLocationCoordinate2DMake(lat,lng)
+//                    
+//                    let annotation = MKPointAnnotation()
+//        
+//                    annotation.setCoordinate(coordinate)
+//                    
+//                    
+//                    if let venueName = venueName { annotation.title = venueName }
+//        
+//                    self.mapView.addAnnotation(annotation)
+//            
+//                    
+//                    
+//       
+//                }
                 
                 
             }
             
         }
     }
+    
+    
+    
+    
     
     func buttonClicked (sender : ArrowButton!) {
         println("Button Clicked")

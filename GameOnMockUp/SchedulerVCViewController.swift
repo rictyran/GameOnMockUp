@@ -8,9 +8,9 @@
 
 import UIKit
 
-var cellOne: String!
-var cellTwo: String!
-var cellThree: String!
+//var cellOne: String!
+//var cellTwo: String!
+//var cellThree: String!
 
 var user: PFUser!
 var messages: [PFObject] = []
@@ -45,7 +45,9 @@ class SchedulerVCViewController: UIViewController, UIAlertViewDelegate {
     
     @IBAction func saveSendPush(sender: AnyObject) {
         
-        let actionSheetController: UIAlertController = UIAlertController(title: "Notify Player", message: "", preferredStyle: .Alert)
+        let actionSheetController: UIAlertController = UIAlertController(title: "Notify Player?", message: "Let's Play!", preferredStyle: .Alert)
+        
+
         
         //Create and add the Cancel action
         let cancelAction: UIAlertAction = UIAlertAction(title: "Cancel", style: .Cancel) { action -> Void in
@@ -56,27 +58,25 @@ class SchedulerVCViewController: UIViewController, UIAlertViewDelegate {
         let sendAction: UIAlertAction = UIAlertAction(title: "Send", style: .Default) { action -> Void in
             //Do some other stuff
             
-            cellOne = self.nameLabel.text
-            cellTwo = self.dateLabel.text
-            cellThree = self.locLabel.text
-            
             self.savingEvent()
             
 //            self.pushMessage()
             
             let vc = self.storyboard?.instantiateViewControllerWithIdentifier("pendingEventsTVC") as PendingEventsTVC
             
+            vc.pendArray = [[ "cellone" : self.nameLabel!.text!, "celltwo" : self.dateLabel!.text!, "cellthree" : self.locLabel!.text! ]]
+            
              self.navigationController?.pushViewController(vc, animated: true)
-
+            
             
         }
         actionSheetController.addAction(sendAction)
-        //Add a text field
-        actionSheetController.addTextFieldWithConfigurationHandler { textField -> Void in
-            //TextField configuration
-            textField.textColor = UIColor.blueColor()
-        }
-        
+//        //Add a text field
+//        actionSheetController.addTextFieldWithConfigurationHandler { textField -> Void in
+//            //TextField configuration
+//            textField.textColor = UIColor.blueColor()
+//        }
+//        
         //Present the AlertController
         self.presentViewController(actionSheetController, animated: true, completion: nil)
     }
@@ -120,12 +120,19 @@ class SchedulerVCViewController: UIViewController, UIAlertViewDelegate {
     }
     
     func savingEvent() {
-    
+        
     var createEvent = PFObject(className:"Event")
+        
+        // add currentUser
+        // add targetUser
+        // accepted = undefined
+        // declined = undefined
+        // canceled = undefined
+        
+        
     createEvent["name"] = nameLabel.text
     createEvent["date"] = datePicker.date
     createEvent["setLocation"] = locLabel.text
-    
     createEvent["senderId"] = PFUser.currentUser().objectId
     createEvent["receiverId"] = user.objectId
     createEvent["participants"] = [PFUser.currentUser().objectId,user.objectId]
