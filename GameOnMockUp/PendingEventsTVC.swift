@@ -12,14 +12,21 @@ import UIKit
 
 class PendingEventsTVC: UITableViewController {
 
-  // let cells = [cellOne, cellTwo, cellThree]
+  
     
   var postShown = [Bool](count: 6, repeatedValue: false)
-   
+  var pEvents: [PFObject] = []
+  var chosenEvent:[String] = []
+    
+    var pendArray: [[String:String]] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //refreshEvents()
+        
 
+        tableView.reloadData()
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -33,6 +40,28 @@ class PendingEventsTVC: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    
+//    func refreshEvents() {
+//        
+//        var queryEvent = PFQuery(className:"Event")
+//        
+//        queryEvent.getObjectInBackgroundWithId("") {
+//            
+//            (event: PFObject!, error: NSError!) -> Void in
+//            if error == nil && event != nil {
+//                
+//                println(event)
+//                
+//            } else {
+//                println(error)
+//            }
+//            
+//      }
+//       
+//        
+//        
+//    }
+    
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -46,7 +75,7 @@ class PendingEventsTVC: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-                return 1
+                return pendArray.count
         
        
     }
@@ -57,10 +86,12 @@ class PendingEventsTVC: UITableViewController {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("Celly", forIndexPath: indexPath) as PendingTableViewCell
         
-                cell.titleLabel.text = cellOne
-                cell.dateLabel.text = cellTwo
-                cell.locLabel.text = cellThree
+        let item = pendArray[indexPath.row]
         
+        cell.titleLabel.text = item["cellone"]
+        cell.dateLabel.text = item["celltwo"]
+        cell.locLabel.text = item["cellthree"]
+
         return cell
        
     }
@@ -68,10 +99,15 @@ class PendingEventsTVC: UITableViewController {
     
     
     func getPendingEvents() {
+     
+            
+            
+        }
+
         
         
         
-    }
+    
   
 
     

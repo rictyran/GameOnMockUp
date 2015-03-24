@@ -23,13 +23,26 @@ class PlayerTableViewController: UITableViewController {
 
     @IBAction func registerButton(sender: AnyObject) {
         
-//        var mainSB = UIStoryboard(name: "Main", bundle: nil)
-//        var loginVC = mainSB.instantiateInitialViewController() as UINavigationController
-//        
-//        presentViewController(LoginVC(), animated: true, completion: nil)
+        var mainSB = UIStoryboard(name: "Main", bundle: nil)
+        var loginVC = mainSB.instantiateInitialViewController() as UINavigationController
+        
+        presentViewController(LoginVC(), animated: true, completion: nil)
     
     
     }
+    
+    
+    @IBAction func showEvents(sender: AnyObject) {
+        
+        let vc = self.storyboard?.instantiateViewControllerWithIdentifier("pendingEventsTVC") as PendingEventsTVC
+        
+        
+        
+        
+          self.navigationController?.pushViewController(vc, animated: true)
+        
+    }
+    
 
     @IBOutlet weak var segControl: UISegmentedControl!
     
