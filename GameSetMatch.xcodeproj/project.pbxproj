@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A030A641AC1DC51001C2CFC /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A6E88C31AC1DABF004424A6 /* Bolts.framework */; };
+		5A6E88C61AC1DABF004424A6 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A6E88C41AC1DABF004424A6 /* Parse.framework */; };
 		5AAB2E181AB8957A002B9E4F /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAB2E171AB8957A002B9E4F /* Checkbox.swift */; };
 		5AACD5791AA8EAED008E2F6B /* PrettyButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AACD5781AA8EAED008E2F6B /* PrettyButtons.swift */; };
 		5AC83C161ABF521900E41DB1 /* FeedbackVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC83C151ABF521900E41DB1 /* FeedbackVC.swift */; };
@@ -17,14 +19,12 @@
 		5AD066CA1AA00B6A00876FA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AD066C81AA00B6A00876FA3 /* Main.storyboard */; };
 		5AD066CC1AA00B6A00876FA3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AD066CB1AA00B6A00876FA3 /* Images.xcassets */; };
 		5AD066CF1AA00B6A00876FA3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AD066CD1AA00B6A00876FA3 /* LaunchScreen.xib */; };
-		5AD066DB1AA00B6A00876FA3 /* GameOnMockUpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD066DA1AA00B6A00876FA3 /* GameOnMockUpTests.swift */; };
+		5AD066DB1AA00B6A00876FA3 /* GameSetMatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD066DA1AA00B6A00876FA3 /* GameSetMatchTests.swift */; };
 		5AD41A2F1AA4F5CB00ACFA78 /* tennisball.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AD41A2E1AA4F5CB00ACFA78 /* tennisball.png */; };
 		5AD41A311AA6381B00ACFA78 /* RegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD41A301AA6381B00ACFA78 /* RegistrationVC.swift */; };
 		5AD41A371AA63ADF00ACFA78 /* FutureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD41A361AA63ADF00ACFA78 /* FutureVC.swift */; };
 		5AD41A3B1AA63BAD00ACFA78 /* PlayerPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD41A3A1AA63BAD00ACFA78 /* PlayerPickerVC.swift */; };
 		5AD41A3D1AA63BD900ACFA78 /* WeatherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD41A3C1AA63BD900ACFA78 /* WeatherVC.swift */; };
-		5AD41A431AA63EAD00ACFA78 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD41A411AA63EAD00ACFA78 /* Bolts.framework */; };
-		5AD41A441AA63EAD00ACFA78 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD41A421AA63EAD00ACFA78 /* Parse.framework */; };
 		5AD41A461AA63F0900ACFA78 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD41A451AA63F0900ACFA78 /* AudioToolbox.framework */; };
 		5AD41A481AA63F0F00ACFA78 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD41A471AA63F0F00ACFA78 /* CFNetwork.framework */; };
 		5AD41A4A1AA63F1900ACFA78 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD41A491AA63F1900ACFA78 /* CoreGraphics.framework */; };
@@ -56,11 +56,14 @@
 			containerPortal = 5AD066B71AA00B6A00876FA3 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 5AD066BE1AA00B6A00876FA3;
-			remoteInfo = GameOnMockUp;
+			remoteInfo = GameSetMatch;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5A030A631AC1DB5B001C2CFC /* GameSetMatch-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GameSetMatch-Bridging-Header.h"; sourceTree = "<group>"; };
+		5A6E88C31AC1DABF004424A6 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = GameSetMatch/Bolts.framework; sourceTree = SOURCE_ROOT; };
+		5A6E88C41AC1DABF004424A6 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = GameSetMatch/Parse.framework; sourceTree = SOURCE_ROOT; };
 		5AAB2E171AB8957A002B9E4F /* Checkbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
 		5AACD5781AA8EAED008E2F6B /* PrettyButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrettyButtons.swift; sourceTree = "<group>"; };
 		5AC83C151ABF521900E41DB1 /* FeedbackVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackVC.swift; sourceTree = "<group>"; };
@@ -75,14 +78,12 @@
 		5AD066CE1AA00B6A00876FA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		5AD066D41AA00B6A00876FA3 /* GameSetMatchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameSetMatchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AD066D91AA00B6A00876FA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5AD066DA1AA00B6A00876FA3 /* GameOnMockUpTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOnMockUpTests.swift; sourceTree = "<group>"; };
+		5AD066DA1AA00B6A00876FA3 /* GameSetMatchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSetMatchTests.swift; sourceTree = "<group>"; };
 		5AD41A2E1AA4F5CB00ACFA78 /* tennisball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tennisball.png; path = ../tennisball.png; sourceTree = "<group>"; };
 		5AD41A301AA6381B00ACFA78 /* RegistrationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationVC.swift; sourceTree = "<group>"; };
 		5AD41A361AA63ADF00ACFA78 /* FutureVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FutureVC.swift; sourceTree = "<group>"; };
 		5AD41A3A1AA63BAD00ACFA78 /* PlayerPickerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerPickerVC.swift; sourceTree = "<group>"; };
 		5AD41A3C1AA63BD900ACFA78 /* WeatherVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherVC.swift; sourceTree = "<group>"; };
-		5AD41A411AA63EAD00ACFA78 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
-		5AD41A421AA63EAD00ACFA78 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		5AD41A451AA63F0900ACFA78 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		5AD41A471AA63F0F00ACFA78 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		5AD41A491AA63F1900ACFA78 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -94,7 +95,6 @@
 		5AD41A551AA63F5200ACFA78 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		5AD41A571AA63F5C00ACFA78 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		5AD41A591AA63F6200ACFA78 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
-		5AD41A5B1AA63FAE00ACFA78 /* GameOnMockUp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GameOnMockUp-Bridging-Header.h"; sourceTree = "<group>"; };
 		5ADB4E741AAF59FF00A44C91 /* PreferencesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesVC.swift; sourceTree = "<group>"; };
 		705ACE531ABB3FB500F8B8E1 /* SchedulerVCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchedulerVCViewController.swift; sourceTree = "<group>"; };
 		7063B1BA1ABC928600D71784 /* PendingEventsTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PendingEventsTVC.swift; sourceTree = "<group>"; };
@@ -119,14 +119,14 @@
 				5AD41A561AA63F5200ACFA78 /* SystemConfiguration.framework in Frameworks */,
 				5AD41A541AA63F4300ACFA78 /* StoreKit.framework in Frameworks */,
 				5AD41A521AA63F3E00ACFA78 /* Security.framework in Frameworks */,
+				5A6E88C61AC1DABF004424A6 /* Parse.framework in Frameworks */,
 				5AD41A501AA63F3600ACFA78 /* QuartzCore.framework in Frameworks */,
+				5A030A641AC1DC51001C2CFC /* Bolts.framework in Frameworks */,
 				5AD41A4E1AA63F2A00ACFA78 /* MobileCoreServices.framework in Frameworks */,
 				5AD41A4C1AA63F2000ACFA78 /* CoreLocation.framework in Frameworks */,
 				5AD41A4A1AA63F1900ACFA78 /* CoreGraphics.framework in Frameworks */,
 				5AD41A481AA63F0F00ACFA78 /* CFNetwork.framework in Frameworks */,
 				5AD41A461AA63F0900ACFA78 /* AudioToolbox.framework in Frameworks */,
-				5AD41A441AA63EAD00ACFA78 /* Parse.framework in Frameworks */,
-				5AD41A431AA63EAD00ACFA78 /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,13 +169,13 @@
 				5AD41A321AA6385E00ACFA78 /* View Controllers */,
 				5AD066C21AA00B6A00876FA3 /* Supporting Files */,
 			);
-			name = GameSetMatch;
-			path = GameOnMockUp;
+			path = GameSetMatch;
 			sourceTree = "<group>";
 		};
 		5AD066C21AA00B6A00876FA3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5A030A631AC1DB5B001C2CFC /* GameSetMatch-Bridging-Header.h */,
 				5AC83C191ABFA14200E41DB1 /* CustomDatePicker.swift */,
 				5AAB2E171AB8957A002B9E4F /* Checkbox.swift */,
 				5AD41A331AA6389000ACFA78 /* Images */,
@@ -183,7 +183,6 @@
 				5AD066CB1AA00B6A00876FA3 /* Images.xcassets */,
 				5AD066C41AA00B6A00876FA3 /* AppDelegate.swift */,
 				5AD066C31AA00B6A00876FA3 /* Info.plist */,
-				5AD41A5B1AA63FAE00ACFA78 /* GameOnMockUp-Bridging-Header.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -191,11 +190,10 @@
 		5AD066D71AA00B6A00876FA3 /* GameSetMatchTests */ = {
 			isa = PBXGroup;
 			children = (
-				5AD066DA1AA00B6A00876FA3 /* GameOnMockUpTests.swift */,
+				5AD066DA1AA00B6A00876FA3 /* GameSetMatchTests.swift */,
 				5AD066D81AA00B6A00876FA3 /* Supporting Files */,
 			);
-			name = GameSetMatchTests;
-			path = GameOnMockUpTests;
+			path = GameSetMatchTests;
 			sourceTree = "<group>";
 		};
 		5AD066D81AA00B6A00876FA3 /* Supporting Files */ = {
@@ -232,6 +230,8 @@
 		5AD41A401AA63E9100ACFA78 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5A6E88C31AC1DABF004424A6 /* Bolts.framework */,
+				5A6E88C41AC1DABF004424A6 /* Parse.framework */,
 				5AD41A591AA63F6200ACFA78 /* libsqlite3.dylib */,
 				5AD41A571AA63F5C00ACFA78 /* libz.dylib */,
 				5AD41A551AA63F5200ACFA78 /* SystemConfiguration.framework */,
@@ -243,11 +243,9 @@
 				5AD41A491AA63F1900ACFA78 /* CoreGraphics.framework */,
 				5AD41A471AA63F0F00ACFA78 /* CFNetwork.framework */,
 				5AD41A451AA63F0900ACFA78 /* AudioToolbox.framework */,
-				5AD41A411AA63EAD00ACFA78 /* Bolts.framework */,
-				5AD41A421AA63EAD00ACFA78 /* Parse.framework */,
 			);
 			name = Frameworks;
-			path = GameOnMockUp;
+			path = GameSetMatch;
 			sourceTree = "<group>";
 		};
 		70FDE4F71AB0D220002CEAE5 /* Models */ = {
@@ -291,7 +289,7 @@
 			dependencies = (
 			);
 			name = GameSetMatch;
-			productName = GameOnMockUp;
+			productName = GameSetMatch;
 			productReference = 5AD066BF1AA00B6A00876FA3 /* GameSetMatch.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -309,7 +307,7 @@
 				5AD066D61AA00B6A00876FA3 /* PBXTargetDependency */,
 			);
 			name = GameSetMatchTests;
-			productName = GameOnMockUpTests;
+			productName = GameSetMatchTests;
 			productReference = 5AD066D41AA00B6A00876FA3 /* GameSetMatchTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
@@ -324,6 +322,7 @@
 				TargetAttributes = {
 					5AD066BE1AA00B6A00876FA3 = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = 8SM793922U;
 					};
 					5AD066D31AA00B6A00876FA3 = {
 						CreatedOnToolsVersion = 6.2;
@@ -406,7 +405,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5AD066DB1AA00B6A00876FA3 /* GameOnMockUpTests.swift in Sources */,
+				5AD066DB1AA00B6A00876FA3 /* GameSetMatchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -522,15 +521,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/GameOnMockUp",
+					"/Users/rictyran/Downloads/parse-library-1-7",
+					"$(PROJECT_DIR)/GameSetMatch",
 				);
-				INFOPLIST_FILE = GameOnMockUp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/GameSetMatch/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = GameSetMatch;
-				SWIFT_OBJC_BRIDGING_HEADER = "GameOnMockUp/GameOnMockUp-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "GameSetMatch/GameSetMatch-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -540,15 +541,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/GameOnMockUp",
+					"/Users/rictyran/Downloads/parse-library-1-7",
+					"$(PROJECT_DIR)/GameSetMatch",
 				);
-				INFOPLIST_FILE = GameOnMockUp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/GameSetMatch/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = GameSetMatch;
-				SWIFT_OBJC_BRIDGING_HEADER = "GameOnMockUp/GameOnMockUp-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "GameSetMatch/GameSetMatch-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -559,15 +562,16 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)/GameSetMatch",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = GameOnMockUpTests/Info.plist;
+				INFOPLIST_FILE = GameSetMatchTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = GameSetMatchTests;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GameOnMockUp.app/GameOnMockUp";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GameSetMatch.app/GameSetMatch";
 			};
 			name = Debug;
 		};
@@ -578,11 +582,12 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)/GameSetMatch",
 				);
-				INFOPLIST_FILE = GameOnMockUpTests/Info.plist;
+				INFOPLIST_FILE = GameSetMatchTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = GameSetMatchTests;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GameOnMockUp.app/GameOnMockUp";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GameSetMatch.app/GameSetMatch";
 			};
 			name = Release;
 		};
