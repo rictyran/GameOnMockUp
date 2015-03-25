@@ -8,12 +8,8 @@
 
 import UIKit
 
-
-
 class PendingEventsTVC: UITableViewController {
 
-  
-    
   var postShown = [Bool](count: 6, repeatedValue: false)
   var pEvents: [PFObject] = []
   var chosenEvent:[String] = []
@@ -25,7 +21,6 @@ class PendingEventsTVC: UITableViewController {
         
         //refreshEvents()
         
-
         tableView.reloadData()
         
         // Uncomment the following line to preserve selection between presentations
@@ -104,13 +99,6 @@ class PendingEventsTVC: UITableViewController {
             
         }
 
-        
-        
-        
-    
-  
-
-    
     override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         
         
@@ -132,17 +120,18 @@ class PendingEventsTVC: UITableViewController {
     }
     */
 
-    /*
+    
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
             // Delete the row from the data source
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
+        } else  {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
+    
+//    if editingStyle == .Insert
 
     /*
     // Override to support rearranging the table view.

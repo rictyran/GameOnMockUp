@@ -63,7 +63,7 @@ class PlayerTableViewController: UITableViewController {
     
     let gender = ""
     
-    var postShown = [Bool](count: 20, repeatedValue: false)
+    var postShown = [Bool](count: 40, repeatedValue: false)
     
     
     var chosenAgeRanges:[String] = []
