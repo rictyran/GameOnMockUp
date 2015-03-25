@@ -34,7 +34,7 @@ class PlayerTableViewController: UITableViewController {
     
     @IBAction func showEvents(sender: AnyObject) {
         
-        let vc = self.storyboard?.instantiateViewControllerWithIdentifier("pendingEventsTVC") as PendingEventsTVC
+        let vc = self.storyboard?.instantiateViewControllerWithIdentifier("fauxT") as FauxTVC
         
         
         
