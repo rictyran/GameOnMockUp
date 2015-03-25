@@ -34,7 +34,7 @@ class PlayerTableViewController: UITableViewController {
     
     @IBAction func showEvents(sender: AnyObject) {
         
-        let vc = self.storyboard?.instantiateViewControllerWithIdentifier("pendingEventsTVC") as PendingEventsTVC
+        let vc = self.storyboard?.instantiateViewControllerWithIdentifier("fauxT") as FauxTVC
         
         
         
@@ -63,7 +63,7 @@ class PlayerTableViewController: UITableViewController {
     
     let gender = ""
     
-    var postShown = [Bool](count: 20, repeatedValue: false)
+    var postShown = [Bool](count: 40, repeatedValue: false)
     
     
     var chosenAgeRanges:[String] = []

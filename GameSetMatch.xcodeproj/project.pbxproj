@@ -40,6 +40,8 @@
 		705ACE541ABB3FB500F8B8E1 /* SchedulerVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705ACE531ABB3FB500F8B8E1 /* SchedulerVCViewController.swift */; };
 		7063B1BB1ABC928600D71784 /* PendingEventsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7063B1BA1ABC928600D71784 /* PendingEventsTVC.swift */; };
 		7063B1BD1ABC93F300D71784 /* PendingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7063B1BC1ABC93F300D71784 /* PendingTableViewCell.swift */; };
+		70699A911AC2F42F0070456E /* FauxTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70699A901AC2F42F0070456E /* FauxTVC.swift */; };
+		70699A931AC2F4E90070456E /* FauxCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70699A921AC2F4E90070456E /* FauxCell.swift */; };
 		70BAA9561AB6FC4900A95960 /* PlayerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BAA9551AB6FC4900A95960 /* PlayerTableViewController.swift */; };
 		70BAA9581AB6FDD800A95960 /* PlayersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BAA9571AB6FDD800A95960 /* PlayersTableViewCell.swift */; };
 		70BAA95A1AB701B200A95960 /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BAA9591AB701B200A95960 /* CircleButton.swift */; };
@@ -99,6 +101,8 @@
 		705ACE531ABB3FB500F8B8E1 /* SchedulerVCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchedulerVCViewController.swift; sourceTree = "<group>"; };
 		7063B1BA1ABC928600D71784 /* PendingEventsTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PendingEventsTVC.swift; sourceTree = "<group>"; };
 		7063B1BC1ABC93F300D71784 /* PendingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PendingTableViewCell.swift; sourceTree = "<group>"; };
+		70699A901AC2F42F0070456E /* FauxTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FauxTVC.swift; sourceTree = "<group>"; };
+		70699A921AC2F4E90070456E /* FauxCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FauxCell.swift; sourceTree = "<group>"; };
 		70BAA9551AB6FC4900A95960 /* PlayerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerTableViewController.swift; sourceTree = "<group>"; };
 		70BAA9571AB6FDD800A95960 /* PlayersTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayersTableViewCell.swift; sourceTree = "<group>"; };
 		70BAA9591AB701B200A95960 /* CircleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
@@ -269,6 +273,8 @@
 				705ACE531ABB3FB500F8B8E1 /* SchedulerVCViewController.swift */,
 				7063B1BA1ABC928600D71784 /* PendingEventsTVC.swift */,
 				7063B1BC1ABC93F300D71784 /* PendingTableViewCell.swift */,
+				70699A901AC2F42F0070456E /* FauxTVC.swift */,
+				70699A921AC2F4E90070456E /* FauxCell.swift */,
 			);
 			name = MapProfile;
 			sourceTree = "<group>";
@@ -322,7 +328,7 @@
 				TargetAttributes = {
 					5AD066BE1AA00B6A00876FA3 = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = 8SM793922U;
+						DevelopmentTeam = M5GR3WX374;
 					};
 					5AD066D31AA00B6A00876FA3 = {
 						CreatedOnToolsVersion = 6.2;
@@ -389,7 +395,9 @@
 				5AD41A3B1AA63BAD00ACFA78 /* PlayerPickerVC.swift in Sources */,
 				5AC83C161ABF521900E41DB1 /* FeedbackVC.swift in Sources */,
 				5AD41A371AA63ADF00ACFA78 /* FutureVC.swift in Sources */,
+				70699A931AC2F4E90070456E /* FauxCell.swift in Sources */,
 				5AACD5791AA8EAED008E2F6B /* PrettyButtons.swift in Sources */,
+				70699A911AC2F42F0070456E /* FauxTVC.swift in Sources */,
 				70BAA95A1AB701B200A95960 /* CircleButton.swift in Sources */,
 				70BAA9561AB6FC4900A95960 /* PlayerTableViewController.swift in Sources */,
 				5AD066C51AA00B6A00876FA3 /* AppDelegate.swift in Sources */,
