@@ -118,7 +118,7 @@ class SchedulerVCViewController: UIViewController, UIAlertViewDelegate {
         self.presentViewController(actionSheetController, animated: true, completion: nil)
     }
     
-    private var imageSet = ["image1"]
+    private var imageSet = ["bg_720"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -147,7 +147,7 @@ class SchedulerVCViewController: UIViewController, UIAlertViewDelegate {
         
 //         blurring effect
         backgroundImageView.image = UIImage(named: imageSet[selectedImageIndex])
-        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.ExtraLight)
+        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.Light)
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.frame = view.bounds
         backgroundImageView.addSubview(blurEffectView)

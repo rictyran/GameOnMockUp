@@ -73,6 +73,8 @@ class PlayerTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.tableView.rowHeight = 100
+        
         refreshPlayers()
         
         
