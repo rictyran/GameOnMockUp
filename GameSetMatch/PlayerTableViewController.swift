@@ -165,6 +165,31 @@ class PlayerTableViewController: UITableViewController {
         
         let player = players[indexPath.row]
         println(players)
+        
+        
+        let userImageFile = player["avatar"] as PFFile
+        
+        userImageFile.getDataInBackgroundWithBlock {
+            (imageData: NSData!, error: NSError!) -> Void in
+            
+            if error == nil {
+                
+                dispatch_async(dispatch_get_main_queue(),{
+                    
+                    let image = UIImage(data:imageData)
+                    cell.postImageView.image = image
+                    println("got the image: \(image)")
+                    
+                });
+                
+              
+            } else {
+                println("fail")
+            }
+            
+        }
+        
+        
         cell.titleLabel.text = player["firstName"] as? String
         cell.skillLabel.text = player["skillLevel"] as? String
         cell.locLabel.text = player["zipCode"] as? String

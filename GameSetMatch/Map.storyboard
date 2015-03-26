@@ -76,7 +76,7 @@
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="female2" translatesAutoresizingMaskIntoConstraints="NO" id="SUD-wz-0nv">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SUD-wz-0nv">
                                             <rect key="frame" x="8" y="8" width="80" height="60"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="80" id="6ki-QQ-AO5"/>
@@ -702,7 +702,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="female2" width="400" height="400"/>
         <image name="image1" width="207" height="368"/>
         <image name="map" width="120" height="120"/>
     </resources>
