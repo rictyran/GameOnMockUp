@@ -23,8 +23,6 @@
 		5AD41A2F1AA4F5CB00ACFA78 /* tennisball.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AD41A2E1AA4F5CB00ACFA78 /* tennisball.png */; };
 		5AD41A311AA6381B00ACFA78 /* RegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD41A301AA6381B00ACFA78 /* RegistrationVC.swift */; };
 		5AD41A371AA63ADF00ACFA78 /* FutureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD41A361AA63ADF00ACFA78 /* FutureVC.swift */; };
-		5AD41A3B1AA63BAD00ACFA78 /* PlayerPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD41A3A1AA63BAD00ACFA78 /* PlayerPickerVC.swift */; };
-		5AD41A3D1AA63BD900ACFA78 /* WeatherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD41A3C1AA63BD900ACFA78 /* WeatherVC.swift */; };
 		5AD41A461AA63F0900ACFA78 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD41A451AA63F0900ACFA78 /* AudioToolbox.framework */; };
 		5AD41A481AA63F0F00ACFA78 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD41A471AA63F0F00ACFA78 /* CFNetwork.framework */; };
 		5AD41A4A1AA63F1900ACFA78 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD41A491AA63F1900ACFA78 /* CoreGraphics.framework */; };
@@ -84,8 +82,6 @@
 		5AD41A2E1AA4F5CB00ACFA78 /* tennisball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tennisball.png; path = ../tennisball.png; sourceTree = "<group>"; };
 		5AD41A301AA6381B00ACFA78 /* RegistrationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationVC.swift; sourceTree = "<group>"; };
 		5AD41A361AA63ADF00ACFA78 /* FutureVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FutureVC.swift; sourceTree = "<group>"; };
-		5AD41A3A1AA63BAD00ACFA78 /* PlayerPickerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerPickerVC.swift; sourceTree = "<group>"; };
-		5AD41A3C1AA63BD900ACFA78 /* WeatherVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherVC.swift; sourceTree = "<group>"; };
 		5AD41A451AA63F0900ACFA78 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		5AD41A471AA63F0F00ACFA78 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		5AD41A491AA63F1900ACFA78 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -215,8 +211,6 @@
 				5AD41A301AA6381B00ACFA78 /* RegistrationVC.swift */,
 				5ADB4E741AAF59FF00A44C91 /* PreferencesVC.swift */,
 				5AD41A361AA63ADF00ACFA78 /* FutureVC.swift */,
-				5AD41A3A1AA63BAD00ACFA78 /* PlayerPickerVC.swift */,
-				5AD41A3C1AA63BD900ACFA78 /* WeatherVC.swift */,
 				5AC83C151ABF521900E41DB1 /* FeedbackVC.swift */,
 				5AC83C1B1AC1961500E41DB1 /* PushTest.swift */,
 			);
@@ -387,12 +381,10 @@
 				7063B1BD1ABC93F300D71784 /* PendingTableViewCell.swift in Sources */,
 				5AC83C1C1AC1961500E41DB1 /* PushTest.swift in Sources */,
 				70FDE50B1AB119ED002CEAE5 /* ArrowButton.swift in Sources */,
-				5AD41A3D1AA63BD900ACFA78 /* WeatherVC.swift in Sources */,
 				7063B1BB1ABC928600D71784 /* PendingEventsTVC.swift in Sources */,
 				70BAA95C1AB7148700A95960 /* PlayerData.swift in Sources */,
 				70FDE4FD1AB0D272002CEAE5 /* LocationPickerVC.swift in Sources */,
 				70BAA9581AB6FDD800A95960 /* PlayersTableViewCell.swift in Sources */,
-				5AD41A3B1AA63BAD00ACFA78 /* PlayerPickerVC.swift in Sources */,
 				5AC83C161ABF521900E41DB1 /* FeedbackVC.swift in Sources */,
 				5AD41A371AA63ADF00ACFA78 /* FutureVC.swift in Sources */,
 				70699A931AC2F4E90070456E /* FauxCell.swift in Sources */,

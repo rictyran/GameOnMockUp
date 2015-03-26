@@ -145,7 +145,7 @@ class SchedulerVCViewController: UIViewController, UIAlertViewDelegate {
         
         let selectedImageIndex = Int(arc4random_uniform(1))
         
-        // blurring effect
+//         blurring effect
         backgroundImageView.image = UIImage(named: imageSet[selectedImageIndex])
         let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.ExtraLight)
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
@@ -234,7 +234,7 @@ class SchedulerVCViewController: UIViewController, UIAlertViewDelegate {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
         if venueLocation == nil {
-            locLabel.text = "Choose Location-->"
+            locLabel.text = "Choose Location:"
         }else{
             
             locLabel.text = venueLocation
