@@ -15,7 +15,7 @@ class CircleButton: UIButton {
     override func drawRect(rect: CGRect) {
         
         
-        self.layer.cornerRadius = 50 / 2
+        self.layer.cornerRadius = 50 / 5
         self.layer.masksToBounds = true
         
         

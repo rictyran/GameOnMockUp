@@ -13,9 +13,13 @@ class LoginVC: UIViewController {
     @IBOutlet var emailField: UITextField!
     @IBOutlet var passwordField: UITextField!
     
-    //    @IBOutlet var buttonBottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var background: UIImageView!
     
-    // Check to see if user is logged in:
+    @IBOutlet weak var buttonBottomConstraint: NSLayoutConstraint!
+    
+    
+    
+
     
     
     override func viewDidLoad() {
@@ -23,6 +27,34 @@ class LoginVC: UIViewController {
         super.viewDidLoad()
         
         checkIfLoggedIn()
+        
+        
+        
+        
+        NSNotificationCenter.defaultCenter().addObserverForName(UIKeyboardWillShowNotification, object: nil, queue: NSOperationQueue.mainQueue()) { (notification) -> Void in
+            
+            var kbSize = notification.userInfo?[UIKeyboardFrameEndUserInfoKey]?.CGRectValue().size
+            
+            self.buttonBottomConstraint.constant = 20 + kbSize!.height
+            
+            // self.view.frame.origin.y = -kbSize.height
+            
+            self.view.layoutIfNeeded()
+            
+        }
+        
+        
+        NSNotificationCenter.defaultCenter().addObserverForName(UIKeyboardWillHideNotification, object: nil, queue: NSOperationQueue.mainQueue()) { (notification) -> Void in
+            
+            
+            self.buttonBottomConstraint.constant = 20
+            
+            
+            self.view.layoutIfNeeded()
+            
+        }
+        
+        
         
         println(isLoggedIn)
         
@@ -78,6 +110,10 @@ class LoginVC: UIViewController {
     
         
     @IBAction func loginButton(sender: AnyObject) {
+        
+        
+      
+    
         
         var fieldsArray: [String] = [emailField.text,passwordField.text]
         
