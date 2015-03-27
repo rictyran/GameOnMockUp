@@ -81,22 +81,7 @@ class FauxTVC: UITableViewController {
         
         return cell
         
-        
-//        let cell2 = tableView.dequeueReusableCellWithIdentifier("fauxCell2", forIndexPath: indexPath) as FauxCell
-//         let cell3 = tableView.dequeueReusableCellWithIdentifier("fauxCell3", forIndexPath: indexPath) as FauxCell
-//
-//        cell.nameLabel.text = "Jane"
-//        cell.dateLabel.text = "3/27/15, 7:00 PM"
-//        cell.locationLabel.text = "3/27/15, 7:00 PM"
-//        
-//        cell2.nameLabel.text = "Alex"
-//        cell2.dateLabel.text = "3/29/15, 4:00 PM"
-//        cell2.locationLabel.text = "Atlanta Athletic Club"
-//       
-//        cell3.nameLabel.text = "John"
-//        cell3.dateLabel.text = "3/27/15, 7:00 PM"
-//        cell3.locationLabel.text = "Grant Park Tennis Courts"
-        
+
        
     }
 

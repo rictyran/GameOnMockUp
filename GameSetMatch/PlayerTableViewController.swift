@@ -24,11 +24,11 @@ class PlayerTableViewController: UITableViewController {
     @IBAction func registerButton(sender: AnyObject) {
         
         var mainSB = UIStoryboard(name: "Main", bundle: nil)
-        var loginVC = mainSB.instantiateInitialViewController() as UINavigationController
+        var loginVC = mainSB.instantiateViewControllerWithIdentifier("loginVC") as LoginVC
         
-        presentViewController(LoginVC(), animated: true, completion: nil)
+        presentViewController(loginVC, animated: true, completion: nil)
     
-    
+        
     }
     
     
@@ -168,7 +168,7 @@ class PlayerTableViewController: UITableViewController {
         let player = players[indexPath.row]
         println(players)
         
-        
+
 //        let userImageFile = player["avatar"] as PFFile
         
 //        userImageFile.getDataInBackgroundWithBlock {
@@ -190,6 +190,7 @@ class PlayerTableViewController: UITableViewController {
 //            }
 //            
 //        }
+
         
         
         cell.titleLabel.text = player["firstName"] as? String
@@ -198,10 +199,10 @@ class PlayerTableViewController: UITableViewController {
         cell.ageLabel.text = player["ageRange"] as? String
         cell.genderLabel.text = player["gender"] as? String
         
-        if cell.genderLabel.text == "male" {
-            cell.postImageView.image = (UIImage (named: "male"))
+        if cell.genderLabel.text == "orb" {
+            cell.postImageView.image = (UIImage (named: "orb"))
         } else {
-            cell.postImageView.image = (UIImage (named: "female2"))
+            cell.postImageView.image = (UIImage (named: "orb"))
         }
         
         return cell

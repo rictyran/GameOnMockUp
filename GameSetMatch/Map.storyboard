@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="lQk-mX-bys">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="lQk-mX-bys">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
@@ -76,8 +76,8 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SUD-wz-0nv">
-                                            <rect key="frame" x="8" y="8" width="80" height="60"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="orb" translatesAutoresizingMaskIntoConstraints="NO" id="SUD-wz-0nv">
+                                            <rect key="frame" x="8" y="16" width="80" height="60"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="80" id="6ki-QQ-AO5"/>
                                                 <constraint firstAttribute="width" constant="80" id="dUp-kT-erS"/>
@@ -120,7 +120,7 @@
                                         <constraint firstItem="ZuZ-fm-i78" firstAttribute="leading" secondItem="yVj-DA-oGM" secondAttribute="trailing" constant="12" id="LYi-EF-Ya5"/>
                                         <constraint firstItem="L0t-By-PGQ" firstAttribute="firstBaseline" secondItem="yqL-md-9zH" secondAttribute="firstBaseline" id="LYr-bo-NWf"/>
                                         <constraint firstItem="yVj-DA-oGM" firstAttribute="top" secondItem="bZt-EN-zq2" secondAttribute="topMargin" id="OnG-xp-PKA"/>
-                                        <constraint firstItem="yVj-DA-oGM" firstAttribute="top" secondItem="SUD-wz-0nv" secondAttribute="top" id="Rhp-oO-h1w"/>
+                                        <constraint firstItem="yVj-DA-oGM" firstAttribute="top" secondItem="SUD-wz-0nv" secondAttribute="top" constant="-8" id="Rhp-oO-h1w"/>
                                         <constraint firstItem="SUD-wz-0nv" firstAttribute="leading" secondItem="bZt-EN-zq2" secondAttribute="leadingMargin" id="RnR-zL-vAb"/>
                                         <constraint firstItem="cJ0-fR-ZwB" firstAttribute="leading" secondItem="bZt-EN-zq2" secondAttribute="leadingMargin" constant="82" id="Ubx-I6-W4y"/>
                                         <constraint firstItem="ZuZ-fm-i78" firstAttribute="trailing" secondItem="bZt-EN-zq2" secondAttribute="trailingMargin" id="Uqy-Rn-zeo"/>
@@ -128,7 +128,7 @@
                                         <constraint firstItem="yVj-DA-oGM" firstAttribute="baseline" secondItem="ZuZ-fm-i78" secondAttribute="baseline" id="ae9-ik-cOl"/>
                                         <constraint firstItem="cJ0-fR-ZwB" firstAttribute="firstBaseline" secondItem="yqL-md-9zH" secondAttribute="firstBaseline" id="c9l-fg-XW1"/>
                                         <constraint firstItem="yVj-DA-oGM" firstAttribute="top" secondItem="ZuZ-fm-i78" secondAttribute="top" id="ft6-1b-W7Q"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="SUD-wz-0nv" secondAttribute="bottom" constant="23" id="hup-Q6-duU"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="SUD-wz-0nv" secondAttribute="bottom" constant="15.5" id="hup-Q6-duU"/>
                                         <constraint firstItem="cJ0-fR-ZwB" firstAttribute="baseline" secondItem="yqL-md-9zH" secondAttribute="baseline" id="nZE-yR-Xlz"/>
                                         <constraint firstItem="yVj-DA-oGM" firstAttribute="leading" secondItem="SUD-wz-0nv" secondAttribute="trailing" constant="8" symbolic="YES" id="qW6-iS-uYt"/>
                                         <constraint firstItem="L0t-By-PGQ" firstAttribute="leading" secondItem="yqL-md-9zH" secondAttribute="trailing" constant="28" id="vCx-te-iDy"/>
@@ -536,134 +536,40 @@
                                                 <constraint firstAttribute="width" constant="133" id="mMc-mp-fi6"/>
                                                 <constraint firstAttribute="height" constant="21" id="zs1-v7-ltw"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="15"/>
-                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="15"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yv8-pV-Atq">
                                             <rect key="frame" x="174" y="8" width="138" height="21"/>
-                                            <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="15"/>
-                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="15"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bW3-eL-Pza">
                                             <rect key="frame" x="8" y="71" width="304" height="21"/>
-                                            <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="14"/>
-                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="14"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="yv8-pV-Atq" firstAttribute="baseline" secondItem="h3d-OY-t0N" secondAttribute="baseline" id="6LS-6k-Soh"/>
+                                        <constraint firstItem="yv8-pV-Atq" firstAttribute="trailing" secondItem="Jj8-qJ-lJN" secondAttribute="trailingMargin" id="7SQ-yo-JJ2"/>
                                         <constraint firstItem="h3d-OY-t0N" firstAttribute="leading" secondItem="Jj8-qJ-lJN" secondAttribute="leadingMargin" id="8n6-3S-Ljn"/>
-                                        <constraint firstItem="yv8-pV-Atq" firstAttribute="firstBaseline" secondItem="h3d-OY-t0N" secondAttribute="firstBaseline" id="E2H-jq-YDe"/>
-                                        <constraint firstItem="bW3-eL-Pza" firstAttribute="top" secondItem="yv8-pV-Atq" secondAttribute="bottom" constant="42" id="bfU-hG-LOD"/>
+                                        <constraint firstItem="yv8-pV-Atq" firstAttribute="leading" secondItem="h3d-OY-t0N" secondAttribute="trailing" constant="33" id="K9J-OL-Agh"/>
+                                        <constraint firstItem="bW3-eL-Pza" firstAttribute="top" secondItem="yv8-pV-Atq" secondAttribute="bottom" constant="42" id="Vmd-M9-S9n"/>
+                                        <constraint firstItem="yv8-pV-Atq" firstAttribute="firstBaseline" secondItem="h3d-OY-t0N" secondAttribute="firstBaseline" id="XH8-pQ-8eG"/>
                                         <constraint firstItem="bW3-eL-Pza" firstAttribute="leading" secondItem="h3d-OY-t0N" secondAttribute="leading" id="dlF-hm-AgR"/>
-                                        <constraint firstItem="yv8-pV-Atq" firstAttribute="leading" secondItem="h3d-OY-t0N" secondAttribute="trailing" constant="33" id="eAz-dl-HZI"/>
+                                        <constraint firstItem="yv8-pV-Atq" firstAttribute="bottom" secondItem="h3d-OY-t0N" secondAttribute="bottom" id="eaa-fq-iRZ"/>
+                                        <constraint firstItem="yv8-pV-Atq" firstAttribute="trailing" secondItem="bW3-eL-Pza" secondAttribute="trailing" id="fHE-u4-8kc"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="bW3-eL-Pza" secondAttribute="bottom" constant="-0.5" id="hO3-sV-BhH"/>
                                         <constraint firstItem="h3d-OY-t0N" firstAttribute="top" secondItem="Jj8-qJ-lJN" secondAttribute="topMargin" id="jOi-82-O4w"/>
-                                        <constraint firstItem="bW3-eL-Pza" firstAttribute="trailing" secondItem="yv8-pV-Atq" secondAttribute="trailing" id="lbb-3Q-DxF"/>
-                                        <constraint firstItem="yv8-pV-Atq" firstAttribute="trailing" secondItem="Jj8-qJ-lJN" secondAttribute="trailingMargin" id="tkF-8D-ekK"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="dateLabel" destination="yv8-pV-Atq" id="vO2-g9-XqB"/>
                                     <outlet property="locationLabel" destination="bW3-eL-Pza" id="OFq-jr-3Bj"/>
                                     <outlet property="nameLabel" destination="h3d-OY-t0N" id="asS-wI-paj"/>
-                                </connections>
-                            </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="fauxCell2" rowHeight="100" id="Vii-Rf-n2j" customClass="FauxCell" customModule="GameSetMatch" customModuleProvider="target">
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vii-Rf-n2j" id="3Wi-EO-5er">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aF6-BG-q2s">
-                                            <rect key="frame" x="8" y="8" width="133" height="21"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="133" id="59f-ua-tHY"/>
-                                                <constraint firstAttribute="height" constant="21" id="ZhX-q7-ynG"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="15"/>
-                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mnU-qr-2Ja">
-                                            <rect key="frame" x="174" y="8" width="138" height="21"/>
-                                            <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="15"/>
-                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Haq-Ji-Fpj">
-                                            <rect key="frame" x="8" y="71" width="304" height="21"/>
-                                            <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="14"/>
-                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="mnU-qr-2Ja" firstAttribute="leading" secondItem="aF6-BG-q2s" secondAttribute="trailing" constant="33" id="CEt-Cr-vQE"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="Haq-Ji-Fpj" secondAttribute="bottom" constant="-0.5" id="Fii-q3-kxc"/>
-                                        <constraint firstItem="aF6-BG-q2s" firstAttribute="top" secondItem="3Wi-EO-5er" secondAttribute="topMargin" id="JfW-rD-TMe"/>
-                                        <constraint firstItem="mnU-qr-2Ja" firstAttribute="baseline" secondItem="aF6-BG-q2s" secondAttribute="baseline" id="Rij-Wg-4Hm"/>
-                                        <constraint firstItem="Haq-Ji-Fpj" firstAttribute="top" secondItem="mnU-qr-2Ja" secondAttribute="bottom" constant="42" id="UFc-4c-760"/>
-                                        <constraint firstItem="mnU-qr-2Ja" firstAttribute="firstBaseline" secondItem="aF6-BG-q2s" secondAttribute="firstBaseline" id="VF8-zJ-Udt"/>
-                                        <constraint firstItem="aF6-BG-q2s" firstAttribute="leading" secondItem="3Wi-EO-5er" secondAttribute="leadingMargin" id="ZSS-1m-C0e"/>
-                                        <constraint firstItem="Haq-Ji-Fpj" firstAttribute="trailing" secondItem="mnU-qr-2Ja" secondAttribute="trailing" id="a3D-P1-Pm3"/>
-                                        <constraint firstItem="mnU-qr-2Ja" firstAttribute="trailing" secondItem="3Wi-EO-5er" secondAttribute="trailingMargin" id="e49-82-bUD"/>
-                                        <constraint firstItem="Haq-Ji-Fpj" firstAttribute="leading" secondItem="aF6-BG-q2s" secondAttribute="leading" id="mp0-ki-ilL"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="dateLabel" destination="mnU-qr-2Ja" id="mJd-Ur-Sbc"/>
-                                    <outlet property="locationLabel" destination="Haq-Ji-Fpj" id="axu-XN-MnT"/>
-                                    <outlet property="nameLabel" destination="aF6-BG-q2s" id="SCc-fw-tOE"/>
-                                </connections>
-                            </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="fauxCell3" rowHeight="100" id="iIL-05-OUw" customClass="FauxCell" customModule="GameSetMatch" customModuleProvider="target">
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iIL-05-OUw" id="rgj-ZS-qQ7">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8lt-p4-kmB">
-                                            <rect key="frame" x="8" y="8" width="133" height="21"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="133" id="KTn-Cf-P7l"/>
-                                                <constraint firstAttribute="height" constant="21" id="wDm-Mb-dUX"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="15"/>
-                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gmd-0u-hS6">
-                                            <rect key="frame" x="174" y="8" width="138" height="21"/>
-                                            <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="15"/>
-                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CHa-b1-Hjl">
-                                            <rect key="frame" x="8" y="71" width="304" height="21"/>
-                                            <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="14"/>
-                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="CHa-b1-Hjl" firstAttribute="trailing" secondItem="Gmd-0u-hS6" secondAttribute="trailing" id="1SA-3f-Ouw"/>
-                                        <constraint firstItem="Gmd-0u-hS6" firstAttribute="baseline" secondItem="8lt-p4-kmB" secondAttribute="baseline" id="947-ua-KyJ"/>
-                                        <constraint firstItem="CHa-b1-Hjl" firstAttribute="top" secondItem="Gmd-0u-hS6" secondAttribute="bottom" constant="42" id="FwE-CI-q07"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="CHa-b1-Hjl" secondAttribute="bottom" constant="-0.5" id="Rgn-kb-gAJ"/>
-                                        <constraint firstItem="8lt-p4-kmB" firstAttribute="top" secondItem="rgj-ZS-qQ7" secondAttribute="topMargin" id="XS1-Sm-quh"/>
-                                        <constraint firstItem="8lt-p4-kmB" firstAttribute="leading" secondItem="rgj-ZS-qQ7" secondAttribute="leadingMargin" id="axy-Kq-ISu"/>
-                                        <constraint firstItem="Gmd-0u-hS6" firstAttribute="firstBaseline" secondItem="8lt-p4-kmB" secondAttribute="firstBaseline" id="b6E-oG-mvr"/>
-                                        <constraint firstItem="Gmd-0u-hS6" firstAttribute="leading" secondItem="8lt-p4-kmB" secondAttribute="trailing" constant="33" id="bT0-8h-bbi"/>
-                                        <constraint firstItem="CHa-b1-Hjl" firstAttribute="leading" secondItem="8lt-p4-kmB" secondAttribute="leading" id="c5S-zB-peC"/>
-                                        <constraint firstItem="Gmd-0u-hS6" firstAttribute="trailing" secondItem="rgj-ZS-qQ7" secondAttribute="trailingMargin" id="ceK-EN-Ujw"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="dateLabel" destination="Gmd-0u-hS6" id="Cgu-Hr-oyV"/>
-                                    <outlet property="locationLabel" destination="CHa-b1-Hjl" id="xIP-TA-3dK"/>
-                                    <outlet property="nameLabel" destination="8lt-p4-kmB" id="xdF-GZ-GLS"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -703,5 +609,6 @@
     <resources>
         <image name="bg_720" width="203" height="360"/>
         <image name="map" width="120" height="120"/>
+        <image name="orb" width="256" height="256"/>
     </resources>
 </document>
