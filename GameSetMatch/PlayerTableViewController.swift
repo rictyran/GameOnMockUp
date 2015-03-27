@@ -169,27 +169,27 @@ class PlayerTableViewController: UITableViewController {
         println(players)
         
         
-        let userImageFile = player["avatar"] as PFFile
+//        let userImageFile = player["avatar"] as PFFile
         
-        userImageFile.getDataInBackgroundWithBlock {
-            (imageData: NSData!, error: NSError!) -> Void in
-            
-            if error == nil {
-                
-                dispatch_async(dispatch_get_main_queue(),{
-                    
-                    let image = UIImage(data:imageData)
-                    cell.postImageView.image = image
-                    println("got the image: \(image)")
-                    
-                });
-                
-              
-            } else {
-                println("fail")
-            }
-            
-        }
+//        userImageFile.getDataInBackgroundWithBlock {
+//            (imageData: NSData!, error: NSError!) -> Void in
+//            
+//            if error == nil {
+//                
+//                dispatch_async(dispatch_get_main_queue(),{
+//                    
+//                    let image = UIImage(data:imageData)
+//                    cell.postImageView.image = image
+//                    println("got the image: \(image)")
+//                    
+//                });
+//                
+//              
+//            } else {
+//                println("fail")
+//            }
+//            
+//        }
         
         
         cell.titleLabel.text = player["firstName"] as? String

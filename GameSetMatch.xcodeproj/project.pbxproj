@@ -14,6 +14,7 @@
 		5AC83C161ABF521900E41DB1 /* FeedbackVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC83C151ABF521900E41DB1 /* FeedbackVC.swift */; };
 		5AC83C1A1ABFA14200E41DB1 /* CustomDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC83C191ABFA14200E41DB1 /* CustomDatePicker.swift */; };
 		5AC83C1C1AC1961500E41DB1 /* PushTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC83C1B1AC1961500E41DB1 /* PushTest.swift */; };
+		5AC8FF1B1AC50FD6008DEF26 /* logo-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AC8FF1A1AC50FD6008DEF26 /* logo-2.png */; };
 		5AD066C51AA00B6A00876FA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD066C41AA00B6A00876FA3 /* AppDelegate.swift */; };
 		5AD066C71AA00B6A00876FA3 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD066C61AA00B6A00876FA3 /* LoginVC.swift */; };
 		5AD066CA1AA00B6A00876FA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AD066C81AA00B6A00876FA3 /* Main.storyboard */; };
@@ -69,6 +70,7 @@
 		5AC83C151ABF521900E41DB1 /* FeedbackVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackVC.swift; sourceTree = "<group>"; };
 		5AC83C191ABFA14200E41DB1 /* CustomDatePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomDatePicker.swift; sourceTree = "<group>"; };
 		5AC83C1B1AC1961500E41DB1 /* PushTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushTest.swift; sourceTree = "<group>"; };
+		5AC8FF1A1AC50FD6008DEF26 /* logo-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-2.png"; sourceTree = "<group>"; };
 		5AD066BF1AA00B6A00876FA3 /* GameSetMatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameSetMatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AD066C31AA00B6A00876FA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5AD066C41AA00B6A00876FA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				5AD41A2E1AA4F5CB00ACFA78 /* tennisball.png */,
+				5AC8FF1A1AC50FD6008DEF26 /* logo-2.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 				70FDE5081AB103FB002CEAE5 /* Map.storyboard in Resources */,
 				5AD066CF1AA00B6A00876FA3 /* LaunchScreen.xib in Resources */,
 				5AD066CC1AA00B6A00876FA3 /* Images.xcassets in Resources */,
+				5AC8FF1B1AC50FD6008DEF26 /* logo-2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
