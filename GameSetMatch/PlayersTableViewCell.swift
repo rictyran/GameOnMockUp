@@ -21,7 +21,36 @@ class PlayersTableViewCell: UITableViewCell {
     
     @IBOutlet weak var postImageView:UIImageView!
     
-       
+    var userImage: PFObject? {
+        
+        didSet {
+            
+            let userImageFile = userImage?["avatar"] as PFFile
+            
+            userImageFile.getDataInBackgroundWithBlock {
+                (imageData: NSData!, error: NSError!) -> Void in
+                
+                if error == nil {
+                    
+                    let image = UIImage(data:imageData)
+                    self.postImageView.image = image
+                    println("got the image")
+                } else {
+                    println("fail")
+                }
+                
+            }
+            
+        }
+    }
+
+    
+    
+    
+//    func getProfileImage(){
+//        
+//    }
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

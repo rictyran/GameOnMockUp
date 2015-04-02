@@ -1,28 +1,47 @@
 //
-//  PendingEventsTVC.swift
-//  GameOnMockUp
+//  FauxTVC.swift
+//  GameSetMatch
 //
-//  Created by Jeanie House on 3/20/15.
+//  Created by Jeanie House on 3/25/15.
 //  Copyright (c) 2015 Richard Tyran. All rights reserved.
 //
 
 import UIKit
 
-class PendingEventsTVC: UITableViewController {
+class FauxTVC: UITableViewController {
+    
+      var postShown = [Bool](count: 10, repeatedValue: false)
+    
+    var names = [String]()
+    var dates = [String]()
+    var location = [String]()
+    
 
-  var postShown = [Bool](count: 6, repeatedValue: false)
-  var pEvents: [PFObject] = []
-  var chosenEvent:[String] = []
-    
-    var pendArray: [[String:String]] = []
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //refreshEvents()
         
+        names = ["Ellie",
+            "Alex",
+            "John",
+            "Emily",
+            "Robert"]
+        
+        dates = ["3/27/15, 5:00 PM",
+            "3/28/15, 1:00 PM",
+            "3/29/15, 4:00 PM",
+            "3/30/15, 7:00 PMv",
+            "3/21/15, 6:00 PM"]
+        
+        location = ["Atlanta Athletic Club",
+            "Piedmont Park Tennis Courts",
+            "Laurel Park",
+            "Bitsy Grant",
+            "Sugarloaf Country Club"]
+        
+
         tableView.reloadData()
-        
+
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -35,28 +54,6 @@ class PendingEventsTVC: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    
-//    func refreshEvents() {
-//        
-//        var queryEvent = PFQuery(className:"Event")
-//        
-//        queryEvent.getObjectInBackgroundWithId("") {
-//            
-//            (event: PFObject!, error: NSError!) -> Void in
-//            if error == nil && event != nil {
-//                
-//                println(event)
-//                
-//            } else {
-//                println(error)
-//            }
-//            
-//      }
-//       
-//        
-//        
-//    }
-    
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -65,40 +62,31 @@ class PendingEventsTVC: UITableViewController {
         return 1
     }
 
- 
-    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-                return pendArray.count
-        
-       
+        return names.count
     }
-    
 
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> PendingTableViewCell {
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("fauxCell", forIndexPath: indexPath) as FauxCell
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("Celly", forIndexPath: indexPath) as PendingTableViewCell
         
-        let item = pendArray[indexPath.row]
+        let row = indexPath.row
         
-        cell.titleLabel.text = item["cellone"]
-        cell.dateLabel.text = item["celltwo"]
-        cell.locLabel.text = item["cellthree"]
-
+        cell.nameLabel.text = names[row]
+       cell.dateLabel.text = dates[row]
+        cell.locationLabel.text = location[row]
+        
         return cell
+        
+
        
     }
-    
-    
-    
-    func getPendingEvents() {
-     
-            
-            
-        }
 
+    
+    
     override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         
         
@@ -110,8 +98,7 @@ class PendingEventsTVC: UITableViewController {
     }
     
     
-    
-    
+
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
@@ -120,24 +107,17 @@ class PendingEventsTVC: UITableViewController {
     }
     */
 
-    
+    /*
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
             // Delete the row from the data source
-            
-            pendArray.removeAtIndex(indexPath.row)
-            
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-            
-            tableView.reloadData()
-            
-        } else  {
+        } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    
-//    if editingStyle == .Insert
+    */
 
     /*
     // Override to support rearranging the table view.

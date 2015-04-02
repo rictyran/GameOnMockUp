@@ -14,6 +14,7 @@
 		5AC83C161ABF521900E41DB1 /* FeedbackVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC83C151ABF521900E41DB1 /* FeedbackVC.swift */; };
 		5AC83C1A1ABFA14200E41DB1 /* CustomDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC83C191ABFA14200E41DB1 /* CustomDatePicker.swift */; };
 		5AC83C1C1AC1961500E41DB1 /* PushTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC83C1B1AC1961500E41DB1 /* PushTest.swift */; };
+		5AC8FF1B1AC50FD6008DEF26 /* logo-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AC8FF1A1AC50FD6008DEF26 /* logo-2.png */; };
 		5AD066C51AA00B6A00876FA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD066C41AA00B6A00876FA3 /* AppDelegate.swift */; };
 		5AD066C71AA00B6A00876FA3 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD066C61AA00B6A00876FA3 /* LoginVC.swift */; };
 		5AD066CA1AA00B6A00876FA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AD066C81AA00B6A00876FA3 /* Main.storyboard */; };
@@ -23,8 +24,6 @@
 		5AD41A2F1AA4F5CB00ACFA78 /* tennisball.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AD41A2E1AA4F5CB00ACFA78 /* tennisball.png */; };
 		5AD41A311AA6381B00ACFA78 /* RegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD41A301AA6381B00ACFA78 /* RegistrationVC.swift */; };
 		5AD41A371AA63ADF00ACFA78 /* FutureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD41A361AA63ADF00ACFA78 /* FutureVC.swift */; };
-		5AD41A3B1AA63BAD00ACFA78 /* PlayerPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD41A3A1AA63BAD00ACFA78 /* PlayerPickerVC.swift */; };
-		5AD41A3D1AA63BD900ACFA78 /* WeatherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD41A3C1AA63BD900ACFA78 /* WeatherVC.swift */; };
 		5AD41A461AA63F0900ACFA78 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD41A451AA63F0900ACFA78 /* AudioToolbox.framework */; };
 		5AD41A481AA63F0F00ACFA78 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD41A471AA63F0F00ACFA78 /* CFNetwork.framework */; };
 		5AD41A4A1AA63F1900ACFA78 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD41A491AA63F1900ACFA78 /* CoreGraphics.framework */; };
@@ -40,6 +39,8 @@
 		705ACE541ABB3FB500F8B8E1 /* SchedulerVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705ACE531ABB3FB500F8B8E1 /* SchedulerVCViewController.swift */; };
 		7063B1BB1ABC928600D71784 /* PendingEventsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7063B1BA1ABC928600D71784 /* PendingEventsTVC.swift */; };
 		7063B1BD1ABC93F300D71784 /* PendingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7063B1BC1ABC93F300D71784 /* PendingTableViewCell.swift */; };
+		70699A911AC2F42F0070456E /* FauxTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70699A901AC2F42F0070456E /* FauxTVC.swift */; };
+		70699A931AC2F4E90070456E /* FauxCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70699A921AC2F4E90070456E /* FauxCell.swift */; };
 		70BAA9561AB6FC4900A95960 /* PlayerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BAA9551AB6FC4900A95960 /* PlayerTableViewController.swift */; };
 		70BAA9581AB6FDD800A95960 /* PlayersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BAA9571AB6FDD800A95960 /* PlayersTableViewCell.swift */; };
 		70BAA95A1AB701B200A95960 /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BAA9591AB701B200A95960 /* CircleButton.swift */; };
@@ -69,6 +70,7 @@
 		5AC83C151ABF521900E41DB1 /* FeedbackVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackVC.swift; sourceTree = "<group>"; };
 		5AC83C191ABFA14200E41DB1 /* CustomDatePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomDatePicker.swift; sourceTree = "<group>"; };
 		5AC83C1B1AC1961500E41DB1 /* PushTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushTest.swift; sourceTree = "<group>"; };
+		5AC8FF1A1AC50FD6008DEF26 /* logo-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-2.png"; sourceTree = "<group>"; };
 		5AD066BF1AA00B6A00876FA3 /* GameSetMatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameSetMatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AD066C31AA00B6A00876FA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5AD066C41AA00B6A00876FA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -82,8 +84,6 @@
 		5AD41A2E1AA4F5CB00ACFA78 /* tennisball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tennisball.png; path = ../tennisball.png; sourceTree = "<group>"; };
 		5AD41A301AA6381B00ACFA78 /* RegistrationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationVC.swift; sourceTree = "<group>"; };
 		5AD41A361AA63ADF00ACFA78 /* FutureVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FutureVC.swift; sourceTree = "<group>"; };
-		5AD41A3A1AA63BAD00ACFA78 /* PlayerPickerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerPickerVC.swift; sourceTree = "<group>"; };
-		5AD41A3C1AA63BD900ACFA78 /* WeatherVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherVC.swift; sourceTree = "<group>"; };
 		5AD41A451AA63F0900ACFA78 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		5AD41A471AA63F0F00ACFA78 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		5AD41A491AA63F1900ACFA78 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -99,6 +99,8 @@
 		705ACE531ABB3FB500F8B8E1 /* SchedulerVCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchedulerVCViewController.swift; sourceTree = "<group>"; };
 		7063B1BA1ABC928600D71784 /* PendingEventsTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PendingEventsTVC.swift; sourceTree = "<group>"; };
 		7063B1BC1ABC93F300D71784 /* PendingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PendingTableViewCell.swift; sourceTree = "<group>"; };
+		70699A901AC2F42F0070456E /* FauxTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FauxTVC.swift; sourceTree = "<group>"; };
+		70699A921AC2F4E90070456E /* FauxCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FauxCell.swift; sourceTree = "<group>"; };
 		70BAA9551AB6FC4900A95960 /* PlayerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerTableViewController.swift; sourceTree = "<group>"; };
 		70BAA9571AB6FDD800A95960 /* PlayersTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayersTableViewCell.swift; sourceTree = "<group>"; };
 		70BAA9591AB701B200A95960 /* CircleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
@@ -211,8 +213,6 @@
 				5AD41A301AA6381B00ACFA78 /* RegistrationVC.swift */,
 				5ADB4E741AAF59FF00A44C91 /* PreferencesVC.swift */,
 				5AD41A361AA63ADF00ACFA78 /* FutureVC.swift */,
-				5AD41A3A1AA63BAD00ACFA78 /* PlayerPickerVC.swift */,
-				5AD41A3C1AA63BD900ACFA78 /* WeatherVC.swift */,
 				5AC83C151ABF521900E41DB1 /* FeedbackVC.swift */,
 				5AC83C1B1AC1961500E41DB1 /* PushTest.swift */,
 			);
@@ -223,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				5AD41A2E1AA4F5CB00ACFA78 /* tennisball.png */,
+				5AC8FF1A1AC50FD6008DEF26 /* logo-2.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -269,6 +270,8 @@
 				705ACE531ABB3FB500F8B8E1 /* SchedulerVCViewController.swift */,
 				7063B1BA1ABC928600D71784 /* PendingEventsTVC.swift */,
 				7063B1BC1ABC93F300D71784 /* PendingTableViewCell.swift */,
+				70699A901AC2F42F0070456E /* FauxTVC.swift */,
+				70699A921AC2F4E90070456E /* FauxCell.swift */,
 			);
 			name = MapProfile;
 			sourceTree = "<group>";
@@ -322,7 +325,7 @@
 				TargetAttributes = {
 					5AD066BE1AA00B6A00876FA3 = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = 8SM793922U;
+						DevelopmentTeam = M5GR3WX374;
 					};
 					5AD066D31AA00B6A00876FA3 = {
 						CreatedOnToolsVersion = 6.2;
@@ -359,6 +362,7 @@
 				70FDE5081AB103FB002CEAE5 /* Map.storyboard in Resources */,
 				5AD066CF1AA00B6A00876FA3 /* LaunchScreen.xib in Resources */,
 				5AD066CC1AA00B6A00876FA3 /* Images.xcassets in Resources */,
+				5AC8FF1B1AC50FD6008DEF26 /* logo-2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,15 +385,15 @@
 				7063B1BD1ABC93F300D71784 /* PendingTableViewCell.swift in Sources */,
 				5AC83C1C1AC1961500E41DB1 /* PushTest.swift in Sources */,
 				70FDE50B1AB119ED002CEAE5 /* ArrowButton.swift in Sources */,
-				5AD41A3D1AA63BD900ACFA78 /* WeatherVC.swift in Sources */,
 				7063B1BB1ABC928600D71784 /* PendingEventsTVC.swift in Sources */,
 				70BAA95C1AB7148700A95960 /* PlayerData.swift in Sources */,
 				70FDE4FD1AB0D272002CEAE5 /* LocationPickerVC.swift in Sources */,
 				70BAA9581AB6FDD800A95960 /* PlayersTableViewCell.swift in Sources */,
-				5AD41A3B1AA63BAD00ACFA78 /* PlayerPickerVC.swift in Sources */,
 				5AC83C161ABF521900E41DB1 /* FeedbackVC.swift in Sources */,
 				5AD41A371AA63ADF00ACFA78 /* FutureVC.swift in Sources */,
+				70699A931AC2F4E90070456E /* FauxCell.swift in Sources */,
 				5AACD5791AA8EAED008E2F6B /* PrettyButtons.swift in Sources */,
+				70699A911AC2F42F0070456E /* FauxTVC.swift in Sources */,
 				70BAA95A1AB701B200A95960 /* CircleButton.swift in Sources */,
 				70BAA9561AB6FC4900A95960 /* PlayerTableViewController.swift in Sources */,
 				5AD066C51AA00B6A00876FA3 /* AppDelegate.swift in Sources */,

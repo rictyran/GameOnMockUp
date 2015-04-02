@@ -32,8 +32,7 @@ class MyPointAnnotation: MKPointAnnotation {
 
 class LocationPickerVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
-    
-    
+    var user: PFUser!
     
     @IBOutlet weak var mapView: MKMapView!
     
@@ -348,6 +347,7 @@ class LocationPickerVC: UIViewController, CLLocationManagerDelegate, MKMapViewDe
         
         var schedulerViewController = storyboard?.instantiateViewControllerWithIdentifier("SVC") as SchedulerVCViewController
         
+        schedulerViewController.user = user
         
         navigationController?.pushViewController(schedulerViewController, animated: true)
         

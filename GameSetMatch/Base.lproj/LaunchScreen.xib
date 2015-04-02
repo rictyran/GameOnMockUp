@@ -16,16 +16,37 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-2.png" translatesAutoresizingMaskIntoConstraints="NO" id="8fS-BG-8kP">
+                    <rect key="frame" x="44" y="49" width="392" height="381"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="392" id="VL7-HY-arr"/>
+                        <constraint firstAttribute="height" constant="381" id="phK-C9-HHP"/>
+                        <constraint firstAttribute="height" constant="381" id="y2e-Uc-Y0s"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="VL7-HY-arr"/>
+                            <exclude reference="phK-C9-HHP"/>
+                        </mask>
+                    </variation>
+                </imageView>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.25098040700000002" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
+                <constraint firstItem="8ie-xW-0ye" firstAttribute="top" secondItem="8fS-BG-8kP" secondAttribute="bottom" constant="9" id="496-RR-w70"/>
                 <constraint firstAttribute="bottom" secondItem="8ie-xW-0ye" secondAttribute="bottom" constant="20" id="Kzo-t9-V3l"/>
                 <constraint firstItem="8ie-xW-0ye" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" symbolic="YES" id="MfP-vx-nX0"/>
+                <constraint firstItem="8fS-BG-8kP" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="44" id="NzW-VY-auv"/>
+                <constraint firstItem="8fS-BG-8kP" firstAttribute="centerX" secondItem="8ie-xW-0ye" secondAttribute="centerX" id="YLn-3f-MbW"/>
                 <constraint firstAttribute="centerX" secondItem="8ie-xW-0ye" secondAttribute="centerX" id="ZEH-qu-HZ9"/>
+                <constraint firstItem="8fS-BG-8kP" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="49" id="oU8-pG-mY3"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="548" y="455"/>
         </view>
     </objects>
+    <resources>
+        <image name="logo-2.png" width="258" height="317"/>
+    </resources>
 </document>

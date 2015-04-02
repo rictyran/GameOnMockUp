@@ -24,17 +24,17 @@ class PlayerTableViewController: UITableViewController {
     @IBAction func registerButton(sender: AnyObject) {
         
         var mainSB = UIStoryboard(name: "Main", bundle: nil)
-        var loginVC = mainSB.instantiateInitialViewController() as UINavigationController
+        var loginVC = mainSB.instantiateViewControllerWithIdentifier("loginVC") as LoginVC
         
-        presentViewController(LoginVC(), animated: true, completion: nil)
+        presentViewController(loginVC, animated: true, completion: nil)
     
-    
+        
     }
     
     
     @IBAction func showEvents(sender: AnyObject) {
         
-        let vc = self.storyboard?.instantiateViewControllerWithIdentifier("pendingEventsTVC") as PendingEventsTVC
+        let vc = self.storyboard?.instantiateViewControllerWithIdentifier("fauxT") as FauxTVC
         
         
         
@@ -63,7 +63,7 @@ class PlayerTableViewController: UITableViewController {
     
     let gender = ""
     
-    var postShown = [Bool](count: 20, repeatedValue: false)
+    var postShown = [Bool](count: 40, repeatedValue: false)
     
     
     var chosenAgeRanges:[String] = []
@@ -72,6 +72,8 @@ class PlayerTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.tableView.rowHeight = 100
         
         refreshPlayers()
         
@@ -165,16 +167,42 @@ class PlayerTableViewController: UITableViewController {
         
         let player = players[indexPath.row]
         println(players)
+        
+
+//        let userImageFile = player["avatar"] as PFFile
+        
+//        userImageFile.getDataInBackgroundWithBlock {
+//            (imageData: NSData!, error: NSError!) -> Void in
+//            
+//            if error == nil {
+//                
+//                dispatch_async(dispatch_get_main_queue(),{
+//                    
+//                    let image = UIImage(data:imageData)
+//                    cell.postImageView.image = image
+//                    println("got the image: \(image)")
+//                    
+//                });
+//                
+//              
+//            } else {
+//                println("fail")
+//            }
+//            
+//        }
+
+        
+        
         cell.titleLabel.text = player["firstName"] as? String
         cell.skillLabel.text = player["skillLevel"] as? String
         cell.locLabel.text = player["zipCode"] as? String
         cell.ageLabel.text = player["ageRange"] as? String
         cell.genderLabel.text = player["gender"] as? String
         
-        if cell.genderLabel.text == "male" {
-            cell.postImageView.image = (UIImage (named: "male"))
+        if cell.genderLabel.text == "orb" {
+            cell.postImageView.image = (UIImage (named: "orb"))
         } else {
-            cell.postImageView.image = (UIImage (named: "female2"))
+            cell.postImageView.image = (UIImage (named: "orb"))
         }
         
         return cell
@@ -216,6 +244,8 @@ class PlayerTableViewController: UITableViewController {
         
         var schedulerViewController = storyboard?.instantiateViewControllerWithIdentifier("SVC") as SchedulerVCViewController
         
+        schedulerViewController.user = players[indexPath.row]
+        // set user here
         
         navigationController?.pushViewController(schedulerViewController, animated: true)
         
